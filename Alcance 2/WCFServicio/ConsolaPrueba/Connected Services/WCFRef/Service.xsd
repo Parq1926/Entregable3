@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/WCFServicio.Entities" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/WCFServicio.Entities" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="RetiroRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Cvv" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FechaVencimiento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdComercioOCajero" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Monto" type="xs:decimal" />
+      <xs:element minOccurs="0" name="NombreCliente" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NumeroTarjeta" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Pin" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RetiroRequest" nillable="true" type="tns:RetiroRequest" />
+  <xs:complexType name="RetiroResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Mensaje" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Resultado" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RetiroResponse" nillable="true" type="tns:RetiroResponse" />
+  <xs:complexType name="ConsultaRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Cvv" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FechaVencimiento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdComercioOCajero" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NumeroTarjeta" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ConsultaRequest" nillable="true" type="tns:ConsultaRequest" />
+  <xs:complexType name="ConsultaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Mensaje" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Resultado" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Saldo" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ConsultaResponse" nillable="true" type="tns:ConsultaResponse" />
+  <xs:complexType name="CambioPinRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Cvv" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FechaVencimiento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdComercioOCajero" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NumeroTarjeta" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PinActual" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PinNuevo" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CambioPinRequest" nillable="true" type="tns:CambioPinRequest" />
+  <xs:complexType name="CambioPinResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Mensaje" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Resultado" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CambioPinResponse" nillable="true" type="tns:CambioPinResponse" />
+</xs:schema>

@@ -1,0 +1,97 @@
+﻿/* SIMULADOR DE COMPRA - CSS BASE */
+
+.simulador-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.simulador-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+    .simulador-header h1 {
+        color: #1e3a8a;
+        font-size: 1.8rem;
+    }
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+    .form-group label {
+        display: block;
+        margin-bottom: 0.3rem;
+        font-weight: 500;
+        color: #1e293b;
+    }
+
+.form-control {
+    width: 100%;
+    padding: 0.6rem 0.8rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+    .form-control:focus {
+        outline: none;
+        border-color: #1e3a8a;
+        box-shadow: 0 0 0 2px rgba(30, 58, 138, 0.2);
+    }
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 0.8rem;
+    background: #1e3a8a;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+    .btn-submit:hover {
+        background: #2563eb;
+    }
+
+.alert {
+    padding: 0.8rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.alert-success {
+    background: #d1fae5;
+    color: #065f46;
+    border-left: 4px solid #10b981;
+}
+
+.alert-error {
+    background: #fee2e2;
+    color: #991b1b;
+    border-left: 4px solid #ef4444;
+}
+
+.text-danger {
+    color: #ef4444;
+    font-size: 0.8rem;
+}
+
+.text-muted {
+    color: #64748b;
+    font-size: 0.7rem;
+}
+
+.pin-field {
+    transition: all 0.3s ease;
+}

@@ -1,0 +1,330 @@
+D:\Descargas\ProyectosC#\SistemaTarjetas\bin\Debug\net8.0\appsettings.Development.json
+D:\Descargas\ProyectosC#\SistemaTarjetas\bin\Debug\net8.0\appsettings.json
+D:\Descargas\ProyectosC#\SistemaTarjetas\bin\Debug\net8.0\SistemaTarjetas.staticwebassets.runtime.json
+D:\Descargas\ProyectosC#\SistemaTarjetas\bin\Debug\net8.0\SistemaTarjetas.staticwebassets.endpoints.json
+D:\Descargas\ProyectosC#\SistemaTarjetas\bin\Debug\net8.0\SistemaTarjetas.exe
+D:\Descargas\ProyectosC#\SistemaTarjetas\bin\Debug\net8.0\SistemaTarjetas.deps.json
+D:\Descargas\ProyectosC#\SistemaTarjetas\bin\Debug\net8.0\SistemaTarjetas.runtimeconfig.json
+D:\Descargas\ProyectosC#\SistemaTarjetas\bin\Debug\net8.0\SistemaTarjetas.dll
+D:\Descargas\ProyectosC#\SistemaTarjetas\bin\Debug\net8.0\SistemaTarjetas.pdb
+D:\Descargas\ProyectosC#\SistemaTarjetas\obj\Debug\net8.0\rpswa.dswa.cache.json
+D:\Descargas\ProyectosC#\SistemaTarjetas\obj\Debug\net8.0\SistemaTarjetas.GeneratedMSBuildEditorConfig.editorconfig
+D:\Descargas\ProyectosC#\SistemaTarjetas\obj\Debug\net8.0\SistemaTarjetas.AssemblyInfoInputs.cache
+D:\Descargas\ProyectosC#\SistemaTarjetas\obj\Debug\net8.0\SistemaTarjetas.AssemblyInfo.cs
+D:\Descargas\ProyectosC#\SistemaTarjetas\obj\Debug\net8.0\SistemaTarjetas.csproj.CoreCompileInputs.cache
+D:\Descargas\ProyectosC#\SistemaTarjetas\obj\Debug\net8.0\SistemaTarjetas.MvcApplicationPartsAssemblyInfo.cache
+D:\Descargas\ProyectosC#\SistemaTarjetas\obj\Debug\net8.0\SistemaTarjetas.RazorAssemblyInfo.cache
+D:\Descargas\ProyectosC#\SistemaTarjetas\obj\Debug\net8.0\SistemaTarjetas.RazorAssemblyInfo.cs
+D:\Descargas\ProyectosC#\SistemaTarjetas\obj\Debug\net8.0\rjimswa.dswa.cache.json
+D:\Descargas\ProyectosC#\SistemaTarjetas\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
+D:\Descargas\ProyectosC#\SistemaTarjetas\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
+D:\Descargas\ProyectosC#\SistemaTarjetas\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+D:\Descargas\ProyectosC#\SistemaTarjetas\obj\Debug\net8.0\scopedcss\bundle\SistemaTarjetas.styles.css
+D:\Descargas\ProyectosC#\SistemaTarjetas\obj\Debug\net8.0\scopedcss\projectbundle\SistemaTarjetas.bundle.scp.css
+D:\Descargas\ProyectosC#\SistemaTarjetas\obj\Debug\net8.0\staticwebassets.build.json
+D:\Descargas\ProyectosC#\SistemaTarjetas\obj\Debug\net8.0\staticwebassets.build.json.cache
+D:\Descargas\ProyectosC#\SistemaTarjetas\obj\Debug\net8.0\staticwebassets.development.json
+D:\Descargas\ProyectosC#\SistemaTarjetas\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+D:\Descargas\ProyectosC#\SistemaTarjetas\obj\Debug\net8.0\swae.build.ex.cache
+D:\Descargas\ProyectosC#\SistemaTarjetas\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+D:\Descargas\ProyectosC#\SistemaTarjetas\obj\Debug\net8.0\SistemaTarjetas.dll
+D:\Descargas\ProyectosC#\SistemaTarjetas\obj\Debug\net8.0\refint\SistemaTarjetas.dll
+D:\Descargas\ProyectosC#\SistemaTarjetas\obj\Debug\net8.0\SistemaTarjetas.pdb
+D:\Descargas\ProyectosC#\SistemaTarjetas\obj\Debug\net8.0\SistemaTarjetas.genruntimeconfig.cache
+D:\Descargas\ProyectosC#\SistemaTarjetas\obj\Debug\net8.0\ref\SistemaTarjetas.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\appsettings.json
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\SistemaTarjetas.staticwebassets.runtime.json
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\SistemaTarjetas.staticwebassets.endpoints.json
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\SistemaTarjetas.exe
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\SistemaTarjetas.deps.json
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\SistemaTarjetas.runtimeconfig.json
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\SistemaTarjetas.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\SistemaTarjetas.pdb
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\obj\Debug\net8.0\rpswa.dswa.cache.json
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\obj\Debug\net8.0\SistemaTarjetas.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\obj\Debug\net8.0\SistemaTarjetas.AssemblyInfoInputs.cache
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\obj\Debug\net8.0\SistemaTarjetas.AssemblyInfo.cs
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\obj\Debug\net8.0\SistemaTarjetas.csproj.CoreCompileInputs.cache
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\obj\Debug\net8.0\SistemaTarjetas.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\obj\Debug\net8.0\SistemaTarjetas.RazorAssemblyInfo.cache
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\obj\Debug\net8.0\SistemaTarjetas.RazorAssemblyInfo.cs
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\obj\Debug\net8.0\rjimswa.dswa.cache.json
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\obj\Debug\net8.0\scopedcss\bundle\SistemaTarjetas.styles.css
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\obj\Debug\net8.0\scopedcss\projectbundle\SistemaTarjetas.bundle.scp.css
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\obj\Debug\net8.0\staticwebassets.build.json.cache
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\obj\Debug\net8.0\swae.build.ex.cache
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\obj\Debug\net8.0\SistemaTarjetas.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\obj\Debug\net8.0\refint\SistemaTarjetas.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\obj\Debug\net8.0\SistemaTarjetas.pdb
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\obj\Debug\net8.0\SistemaTarjetas.genruntimeconfig.cache
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\obj\Debug\net8.0\ref\SistemaTarjetas.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\obj\Debug\net8.0\SistemaTarjetas.csproj.AssemblyReference.cache
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\Connected Services\IServicioAutenticacion\ConnectedService.json
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\Connected Services\WSAutorizador\ConnectedService.json
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\Microsoft.Extensions.ObjectPool.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\System.Security.Cryptography.Pkcs.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\System.Security.Cryptography.Xml.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\System.ServiceModel.Http.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\System.ServiceModel.NetFramingBase.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\System.ServiceModel.NetTcp.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\System.ServiceModel.Duplex.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\System.ServiceModel.Primitives.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\System.ServiceModel.Security.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\System.ServiceModel.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\cs\System.ServiceModel.Http.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\de\System.ServiceModel.Http.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\es\System.ServiceModel.Http.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\fr\System.ServiceModel.Http.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\it\System.ServiceModel.Http.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\ja\System.ServiceModel.Http.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\ko\System.ServiceModel.Http.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\pl\System.ServiceModel.Http.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\pt-BR\System.ServiceModel.Http.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\ru\System.ServiceModel.Http.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\tr\System.ServiceModel.Http.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\zh-Hans\System.ServiceModel.Http.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\zh-Hant\System.ServiceModel.Http.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\cs\System.ServiceModel.NetFramingBase.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\de\System.ServiceModel.NetFramingBase.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\es\System.ServiceModel.NetFramingBase.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\fr\System.ServiceModel.NetFramingBase.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\it\System.ServiceModel.NetFramingBase.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\ja\System.ServiceModel.NetFramingBase.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\ko\System.ServiceModel.NetFramingBase.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\pl\System.ServiceModel.NetFramingBase.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\pt-BR\System.ServiceModel.NetFramingBase.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\ru\System.ServiceModel.NetFramingBase.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\tr\System.ServiceModel.NetFramingBase.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\zh-Hans\System.ServiceModel.NetFramingBase.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\zh-Hant\System.ServiceModel.NetFramingBase.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\cs\System.ServiceModel.NetTcp.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\de\System.ServiceModel.NetTcp.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\es\System.ServiceModel.NetTcp.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\fr\System.ServiceModel.NetTcp.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\it\System.ServiceModel.NetTcp.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\ja\System.ServiceModel.NetTcp.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\ko\System.ServiceModel.NetTcp.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\pl\System.ServiceModel.NetTcp.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\pt-BR\System.ServiceModel.NetTcp.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\ru\System.ServiceModel.NetTcp.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\tr\System.ServiceModel.NetTcp.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\zh-Hans\System.ServiceModel.NetTcp.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\zh-Hant\System.ServiceModel.NetTcp.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\cs\System.ServiceModel.Primitives.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\de\System.ServiceModel.Primitives.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\es\System.ServiceModel.Primitives.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\fr\System.ServiceModel.Primitives.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\it\System.ServiceModel.Primitives.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\ja\System.ServiceModel.Primitives.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\ko\System.ServiceModel.Primitives.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\pl\System.ServiceModel.Primitives.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\pt-BR\System.ServiceModel.Primitives.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\ru\System.ServiceModel.Primitives.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\tr\System.ServiceModel.Primitives.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\zh-Hans\System.ServiceModel.Primitives.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\zh-Hant\System.ServiceModel.Primitives.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Security.Cryptography.Pkcs.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\obj\Debug\net8.0\SistemaT.CFA68FD3.Up2Date
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\Humanizer.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\Microsoft.AspNetCore.Razor.Language.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\Microsoft.Build.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\Microsoft.Build.Framework.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\Microsoft.CodeAnalysis.AnalyzerUtilities.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\Microsoft.CodeAnalysis.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.Features.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\Microsoft.CodeAnalysis.Elfie.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\Microsoft.CodeAnalysis.Features.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\Microsoft.CodeAnalysis.Razor.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\Microsoft.CodeAnalysis.Workspaces.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\Microsoft.DiaSymReader.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\Microsoft.DotNet.Scaffolding.Shared.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\Microsoft.Extensions.Logging.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\Microsoft.NET.StringTools.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGeneration.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGeneration.Core.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\dotnet-aspnet-codegenerator-design.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\Mono.TextTemplating.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\NuGet.Common.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\NuGet.Configuration.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\NuGet.DependencyResolver.Core.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\NuGet.Frameworks.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\NuGet.LibraryModel.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\NuGet.Packaging.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\NuGet.ProjectModel.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\NuGet.Protocol.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\NuGet.Versioning.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\System.CodeDom.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\System.Composition.AttributedModel.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\System.Composition.Convention.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\System.Composition.Hosting.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\System.Composition.Runtime.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\System.Composition.TypedParts.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\System.Reflection.MetadataLoadContext.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\af\Humanizer.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\ar\Humanizer.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\az\Humanizer.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\bg\Humanizer.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\bn-BD\Humanizer.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\cs\Humanizer.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\da\Humanizer.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\de\Humanizer.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\el\Humanizer.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\es\Humanizer.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\fa\Humanizer.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\fi-FI\Humanizer.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\fr\Humanizer.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\fr-BE\Humanizer.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\he\Humanizer.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\hr\Humanizer.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\hu\Humanizer.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\hy\Humanizer.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\id\Humanizer.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\is\Humanizer.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\it\Humanizer.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\ja\Humanizer.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\ko-KR\Humanizer.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\ku\Humanizer.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\lv\Humanizer.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\ms-MY\Humanizer.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\mt\Humanizer.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\nb\Humanizer.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\nb-NO\Humanizer.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\nl\Humanizer.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\pl\Humanizer.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\pt\Humanizer.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\ro\Humanizer.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\ru\Humanizer.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\sk\Humanizer.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\sl\Humanizer.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\sr\Humanizer.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\sr-Latn\Humanizer.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\sv\Humanizer.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\th-TH\Humanizer.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\tr\Humanizer.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\uk\Humanizer.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\uz-Cyrl-UZ\Humanizer.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\uz-Latn-UZ\Humanizer.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\vi\Humanizer.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\zh-CN\Humanizer.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\zh-Hans\Humanizer.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\zh-Hant\Humanizer.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.Features.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.Features.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.Features.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.Features.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.Features.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.Features.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.Features.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.Features.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.Features.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.Features.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Features.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Features.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Features.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.Scripting.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.Scripting.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.Scripting.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.Scripting.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.Scripting.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.Scripting.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.Scripting.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.Scripting.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.Scripting.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.Scripting.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Scripting.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Scripting.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Scripting.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll

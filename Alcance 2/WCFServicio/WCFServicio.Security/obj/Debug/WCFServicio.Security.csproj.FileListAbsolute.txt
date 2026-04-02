@@ -1,0 +1,12 @@
+D:\Descargas\ProyectosC#\WCFServicio\WCFServicio.Security\bin\Debug\WCFServicio.Security.dll
+D:\Descargas\ProyectosC#\WCFServicio\WCFServicio.Security\bin\Debug\WCFServicio.Security.pdb
+D:\Descargas\ProyectosC#\WCFServicio\WCFServicio.Security\obj\Debug\WCFServicio.Security.csproj.AssemblyReference.cache
+D:\Descargas\ProyectosC#\WCFServicio\WCFServicio.Security\obj\Debug\WCFServicio.Security.csproj.CoreCompileInputs.cache
+D:\Descargas\ProyectosC#\WCFServicio\WCFServicio.Security\obj\Debug\WCFServicio.Security.dll
+D:\Descargas\ProyectosC#\WCFServicio\WCFServicio.Security\obj\Debug\WCFServicio.Security.pdb
+C:\Users\rojas\OneDrive\Progra\Entregable 3\Alcance 2\WCFServicio\WCFServicio.Security\bin\Debug\WCFServicio.Security.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\Alcance 2\WCFServicio\WCFServicio.Security\bin\Debug\WCFServicio.Security.pdb
+C:\Users\rojas\OneDrive\Progra\Entregable 3\Alcance 2\WCFServicio\WCFServicio.Security\obj\Debug\WCFServicio.Security.csproj.AssemblyReference.cache
+C:\Users\rojas\OneDrive\Progra\Entregable 3\Alcance 2\WCFServicio\WCFServicio.Security\obj\Debug\WCFServicio.Security.csproj.CoreCompileInputs.cache
+C:\Users\rojas\OneDrive\Progra\Entregable 3\Alcance 2\WCFServicio\WCFServicio.Security\obj\Debug\WCFServicio.Security.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\Alcance 2\WCFServicio\WCFServicio.Security\obj\Debug\WCFServicio.Security.pdb
