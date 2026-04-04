@@ -60,6 +60,8 @@ public class Service : IService
                 Monto = monto
             });
 
+         
+
             Console.WriteLine("🔐 JSON enviado: " + jsonRetiro);
 
             string respuestaRetiro = socket.Enviar(jsonRetiro);

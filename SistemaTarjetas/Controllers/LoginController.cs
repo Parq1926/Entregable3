@@ -1,12 +1,20 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using SistemaTarjetas.Models;
-using WSAutenticador;  // ← Este es el namespace de tu WS Autenticador
+using SistemaTarjetas.Services;
+using SistemaTarjetas.Helpers;  // Para AES
 using System.Threading.Tasks;
 
 namespace SistemaTarjetas.Controllers
 {
     public class LoginController : Controller
     {
+        private readonly IAutenticadorService _authService;
+
+        public LoginController(IAutenticadorService authService)
+        {
+            _authService = authService;
+        }
+
         // GET: Login
         public IActionResult Login()
         {
@@ -23,41 +31,37 @@ namespace SistemaTarjetas.Controllers
                 return View(model);
             }
 
-            try
+            // Encriptar con AES (mismo método que el WS)
+            string usuarioEncriptado = Encriptacion.Encriptar(model.Usuario);
+            string contrasenaEncriptada = Encriptacion.Encriptar(model.Contra);
+
+            // Validar contra WS Autenticador (tipo 0 = cualquier tipo, o usa 1/2 según necesites)
+            var response = await _authService.Autenticar(usuarioEncriptado, contrasenaEncriptada, 0);
+
+            if (response.Resultado)
             {
-                // Crear cliente del WS Autenticador
-                var client = new ServicioAutenticacionClient();
+                // Guardar sesión
+                HttpContext.Session.SetString("Usuario", model.Usuario);
+                HttpContext.Session.SetInt32("TipoUsuario", response.TipoUsuario);
 
-                // Preparar credenciales (encriptadas)
-                var credenciales = new Credenciales
+                // Redirigir según el tipo de usuario
+                if (response.TipoUsuario == 1)  // Administrador
                 {
-                    UsuarioEncriptado = Encriptar(model.Usuario),
-                    ContrasenaEncriptada = Encriptar(model.Contra)
-                };
-
-                // Llamar al WS
-                var resultado = await client.ValidarLoginAsync(credenciales);
-
-                // Cerrar cliente
-                await client.CloseAsync();
-
-                if (resultado.Resultado)
-                {
-                    // Guardar sesión
-                    HttpContext.Session.SetString("Usuario", model.Usuario);
-                    HttpContext.Session.SetInt32("TipoUsuario", resultado.TipoUsuario);
-
                     return RedirectToAction("Clientes", "Clientes");
+                }
+                else if (response.TipoUsuario == 2)  // Cliente
+                {
+                    return RedirectToAction("Dashboard", "Cliente");
                 }
                 else
                 {
-                    ViewBag.Error = resultado.Mensaje;
+                    ViewBag.Error = "Tipo de usuario no válido";
                     return View(model);
                 }
             }
-            catch (System.Exception ex)
+            else
             {
-                ViewBag.Error = $"Error al conectar con el servicio de autenticación: {ex.Message}";
+                ViewBag.Error = response.Mensaje;
                 return View(model);
             }
         }
@@ -68,21 +72,6 @@ namespace SistemaTarjetas.Controllers
         {
             HttpContext.Session.Clear();
             return RedirectToAction("Login");
-        }
-
-        // Método de encriptación (debe coincidir con el WS)
-        private string Encriptar(string texto)
-        {
-            using (System.Security.Cryptography.SHA256 sha256 = System.Security.Cryptography.SHA256.Create())
-            {
-                byte[] bytes = sha256.ComputeHash(System.Text.Encoding.UTF8.GetBytes(texto));
-                System.Text.StringBuilder builder = new System.Text.StringBuilder();
-                foreach (var b in bytes)
-                {
-                    builder.Append(b.ToString("x2"));
-                }
-                return builder.ToString();
-            }
         }
     }
 }

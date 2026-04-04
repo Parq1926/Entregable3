@@ -34,6 +34,14 @@ build_property.EnableCodeStyleSeverity =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZXNcQ2xpZW50ZXMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/rojas/OneDrive/Progra/Entregable 3/SistemaTarjetas/Views/Cliente/Dashboard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZVxEYXNoYm9hcmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/rojas/OneDrive/Progra/Entregable 3/SistemaTarjetas/Views/CuentasTarjetas/Dashboard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VlbnRhc1RhcmpldGFzXERhc2hib2FyZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/rojas/OneDrive/Progra/Entregable 3/SistemaTarjetas/Views/Cuentas/Cuentas.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VlbnRhc1xDdWVudGFzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -50,6 +58,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cTG9naW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/rojas/OneDrive/Progra/Entregable 3/SistemaTarjetas/Views/MovimientosCuenta/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW92aW1pZW50b3NDdWVudGFcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/rojas/OneDrive/Progra/Entregable 3/SistemaTarjetas/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -64,6 +76,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/rojas/OneDrive/Progra/Entregable 3/SistemaTarjetas/Views/Tarjetas/Tarjetas.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFyamV0YXNcVGFyamV0YXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/rojas/OneDrive/Progra/Entregable 3/SistemaTarjetas/Views/Usuarios/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3NcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/rojas/OneDrive/Progra/Entregable 3/SistemaTarjetas/Views/Usuarios/Usuarios.cshtml]

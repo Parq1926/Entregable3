@@ -2,14 +2,14 @@ using SistemaTarjetas.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddSession();
 
 // Registrar servicios
-builder.Services.AddScoped<IAutorizadorService, AutorizadorService>();
+builder.Services.AddScoped<IAutenticadorService, AutenticadorService>();
 
 var app = builder.Build();
+
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
@@ -23,6 +23,15 @@ app.UseStaticFiles();
 app.UseRouting();
 app.UseSession();
 app.UseAuthorization();
+
+app.MapControllerRoute(
+    name: "default",
+    pattern: "{controller=Login}/{action=Login}/{id?}");
+
+app.MapControllerRoute(
+    name: "movimientosCuenta",
+    pattern: "MovimientosCuenta/{action}/{numeroCuenta?}",
+    defaults: new { controller = "MovimientosCuenta", action = "MovimientosCuenta" });
 
 app.MapControllerRoute(
     name: "default",

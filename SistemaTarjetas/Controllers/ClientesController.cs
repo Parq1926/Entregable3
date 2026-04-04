@@ -1,5 +1,4 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 
 namespace SistemaTarjetas.Controllers
 {
@@ -7,8 +6,11 @@ namespace SistemaTarjetas.Controllers
     {
         public IActionResult Clientes()
         {
-            if (HttpContext.Session.GetString("Usuario") == null)
+            var usuario = HttpContext.Session.GetString("Usuario");
+            if (string.IsNullOrEmpty(usuario))
+            {
                 return RedirectToAction("Login", "Login");
+            }
 
             return View();
         }

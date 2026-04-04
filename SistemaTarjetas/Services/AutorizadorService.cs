@@ -1,5 +1,6 @@
 ﻿using ServiceReference2;  // ← Tu WS Autorizador
 using SistemaTarjetas.Models;
+using SistemaTarjetas.Helpers;  // ← Para usar la misma encriptación AES
 using System;
 using System.Diagnostics;
 using System.Threading.Tasks;
@@ -13,37 +14,38 @@ namespace SistemaTarjetas.Services
             try
             {
                 Debug.WriteLine("=== LLAMANDO A WS AUTORIZADOR ===");
-                Debug.WriteLine($"URL: http://localhost:64771/Service.svc");
                 Debug.WriteLine($"Monto: {request.Monto}");
                 Debug.WriteLine($"Tarjeta: {request.NumeroTarjeta}");
-                Debug.WriteLine($"CVV: {request.CVV}");
-                Debug.WriteLine($"PIN: {request.PIN ?? "No proporcionado"}");
-                Debug.WriteLine($"Comercio: {request.IdentificacionComercio}");
 
-                // Crear cliente del WS Autorizador
+                // Encriptar datos
+                string tarjetaEncriptada = Encriptacion.Encriptar(request.NumeroTarjeta);
+                string cvvEncriptado = Encriptacion.Encriptar(request.CVV);
+                string pinEncriptado = string.IsNullOrEmpty(request.PIN) ? "" : Encriptacion.Encriptar(request.PIN);
+                string fechaEncriptada = Encriptacion.Encriptar(request.FechaVencimiento);
+
+                Debug.WriteLine($"Tarjeta encriptada: {tarjetaEncriptada}");
+
+                // Crear cliente del WS
                 var client = new ServiceClient();
 
-                // Preparar request para el WS
                 var wsRequest = new RetiroRequest
                 {
-                    NumeroTarjeta = request.NumeroTarjeta,
-                    Cvv = request.CVV,
-                    Pin = request.PIN ?? "",
-                    FechaVencimiento = request.FechaVencimiento,
+                    NumeroTarjeta = tarjetaEncriptada,
+                    Cvv = cvvEncriptado,
+                    Pin = pinEncriptado,
+                    FechaVencimiento = fechaEncriptada,
                     NombreCliente = request.NombreCliente,
                     IdComercioOCajero = request.IdentificacionComercio,
                     Monto = request.Monto
                 };
 
-                Debug.WriteLine("Enviando request al WS...");
+                Debug.WriteLine("Enviando request al WS Autorizador...");
 
                 // Llamar al WS
                 var wsResponse = await client.RetiroAsync(wsRequest);
-
-                Debug.WriteLine($"Respuesta WS - Resultado: {wsResponse.Resultado}, Mensaje: {wsResponse.Mensaje}");
-
-                // Cerrar cliente
                 await client.CloseAsync();
+
+                Debug.WriteLine($"Respuesta del WS: Resultado={wsResponse.Resultado}, Mensaje={wsResponse.Mensaje}");
 
                 return new AutorizacionResponse
                 {
@@ -53,7 +55,9 @@ namespace SistemaTarjetas.Services
             }
             catch (Exception ex)
             {
-                Debug.WriteLine($"ERROR WS: {ex.Message}");
+                Debug.WriteLine($"ERROR en AutorizadorService: {ex.Message}");
+                Debug.WriteLine($"Stack Trace: {ex.StackTrace}");
+
                 return new AutorizacionResponse
                 {
                     Resultado = false,
@@ -66,13 +70,18 @@ namespace SistemaTarjetas.Services
         {
             try
             {
+                // Encriptar datos sensibles
+                string tarjetaEncriptada = Encriptacion.Encriptar(request.NumeroTarjeta);
+                string cvvEncriptado = Encriptacion.Encriptar(request.CVV);
+                string fechaEncriptada = Encriptacion.Encriptar(request.FechaVencimiento);
+
                 var client = new ServiceClient();
 
                 var wsRequest = new ConsultaRequest
                 {
-                    NumeroTarjeta = request.NumeroTarjeta,
-                    Cvv = request.CVV,
-                    FechaVencimiento = request.FechaVencimiento,
+                    NumeroTarjeta = tarjetaEncriptada,
+                    Cvv = cvvEncriptado,
+                    FechaVencimiento = fechaEncriptada,
                     IdComercioOCajero = request.IdentificacionComercio
                 };
 
@@ -106,15 +115,22 @@ namespace SistemaTarjetas.Services
         {
             try
             {
+                // Encriptar datos sensibles
+                string tarjetaEncriptada = Encriptacion.Encriptar(request.NumeroTarjeta);
+                string cvvEncriptado = Encriptacion.Encriptar(request.CVV);
+                string pinActualEncriptado = Encriptacion.Encriptar(request.PINActual);
+                string pinNuevoEncriptado = Encriptacion.Encriptar(request.PINNuevo);
+                string fechaEncriptada = Encriptacion.Encriptar(request.FechaVencimiento);
+
                 var client = new ServiceClient();
 
                 var wsRequest = new CambioPinRequest
                 {
-                    NumeroTarjeta = request.NumeroTarjeta,
-                    Cvv = request.CVV,
-                    PinActual = request.PINActual,
-                    PinNuevo = request.PINNuevo,
-                    FechaVencimiento = request.FechaVencimiento,
+                    NumeroTarjeta = tarjetaEncriptada,
+                    Cvv = cvvEncriptado,
+                    PinActual = pinActualEncriptado,
+                    PinNuevo = pinNuevoEncriptado,
+                    FechaVencimiento = fechaEncriptada,
                     IdComercioOCajero = request.IdentificacionComercio
                 };
 

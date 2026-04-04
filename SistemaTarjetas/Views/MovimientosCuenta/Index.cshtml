@@ -1,0 +1,179 @@
+﻿@{
+    Layout = null;
+    ViewData["Title"] = "Movimientos de Cuenta - Banco ABC";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Movimientos de Cuenta - Banco ABC</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #0a2540 0%, #1c5a7a 100%);
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+        }
+
+        .navbar {
+            background: rgba(10, 37, 64, 0.95);
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+            .logo span {
+                color: #ffd700;
+            }
+
+        .user-info {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logout-btn {
+            background: rgba(255,255,255,0.2);
+            border: none;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            margin-bottom: 20px;
+        }
+
+        .card-header {
+            background: linear-gradient(135deg, #0f3b5c 0%, #1c5a7a 100%);
+            padding: 15px 20px;
+            color: white;
+        }
+
+        .card-body {
+            padding: 20px;
+        }
+
+        select, button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            background: #1c5a7a;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .btn-volver {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            color: rgba(255,255,255,0.7);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <div class="logo">Banco <span>ABC</span></div>
+        <div class="user-info">
+            <span>Hola, @ViewBag.Usuario</span>
+            <form asp-action="Logout" asp-controller="Login" method="post">
+                <button type="submit" class="logout-btn">Cerrar Sesión</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <h2>Movimientos de Cuenta</h2>
+            </div>
+            <div class="card-body">
+                <form method="get" action="/MovimientosCuenta/Index">
+                    <label>Seleccione una cuenta:</label>
+                    <select name="numeroCuenta" onchange="this.form.submit()">
+                        <option value="">-- Seleccione --</option>
+                        <option value="100-123456-7" selected="@(ViewBag.NumeroCuenta == "100-123456-7")">100-123456-7</option>
+                        <option value="100-765432-1" selected="@(ViewBag.NumeroCuenta == "100-765432-1")">100-765432-1</option>
+                    </select>
+                </form>
+            </div>
+        </div>
+
+        @if (!string.IsNullOrEmpty(ViewBag.NumeroCuenta))
+        {
+            <div class="card">
+                <div class="card-header">
+                    <h2>Movimientos de: @ViewBag.NumeroCuenta</h2>
+                </div>
+                <div class="card-body">
+                    <table>
+                        <thead>
+                            <tr><th>Fecha</th><th>Descripción</th><th>Monto</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>15/03/2026</td><td>Compra Supermercado</td><td>₡25,000.00</td></tr>
+                            <tr><td>10/03/2026</td><td>Retiro Cajero</td><td>₡50,000.00</td></tr>
+                            <tr><td>05/03/2026</td><td>Pago Servicios</td><td>₡15,000.00</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        }
+
+        <div style="text-align: center; margin-top: 20px;">
+            <a href="/CuentasTarjetas/Dashboard" class="btn-volver">← Volver a mis cuentas</a>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>Banco ABC - Todos los derechos reservados</p>
+    </div>
+
+</body>
+</html>

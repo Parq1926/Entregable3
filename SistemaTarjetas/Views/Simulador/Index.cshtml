@@ -5,14 +5,15 @@
 
 <div class="simulador-container">
     <div class="simulador-header">
-        <h1>Simulador de Compra</h1>
+        <h1><i class="fas fa-shopping-cart"></i> Simulador de Compra</h1>
         <p>Complete los datos para realizar una compra en línea</p>
     </div>
 
     @if (ViewBag.Mensaje != null)
     {
         <div class="alert alert-@ViewBag.Tipo">
-            @ViewBag.Mensaje
+            <i class="fas @ViewBag.Icono"></i>
+            <span>@ViewBag.Mensaje</span>
         </div>
     }
 
@@ -21,9 +22,9 @@
 
         <div class="form-group">
             <label asp-for="Monto"></label>
-            <input asp-for="Monto" class="form-control" type="number" step="0.01" />
+            <input asp-for="Monto" class="form-control" type="number" step="0.01" id="Monto" />
             <span asp-validation-for="Monto" class="text-danger"></span>
-            <small>Si el monto es mayor a ₡50,000, se requerirá el PIN</small>
+            <small class="text-muted">Si el monto es mayor a ₡50,000, se requerirá el PIN</small>
         </div>
 
         <div class="form-group">
@@ -34,7 +35,7 @@
 
         <div class="form-group">
             <label asp-for="NumeroTarjeta"></label>
-            <input asp-for="NumeroTarjeta" class="form-control" placeholder="1234 5678 9012 3456" />
+            <input asp-for="NumeroTarjeta" class="form-control" placeholder="1234 5678 9012 3456" id="NumeroTarjeta" />
             <span asp-validation-for="NumeroTarjeta" class="text-danger"></span>
         </div>
 
@@ -47,24 +48,28 @@
 
             <div class="form-group">
                 <label asp-for="CVV"></label>
-                <input asp-for="CVV" class="form-control" type="password" maxlength="4" />
+                <input asp-for="CVV" class="form-control" type="password" maxlength="4" id="CVV" />
                 <span asp-validation-for="CVV" class="text-danger"></span>
             </div>
         </div>
 
         <div class="form-group">
             <label asp-for="Comercio"></label>
-            <input asp-for="Comercio" class="form-control" />
+            <input asp-for="Comercio" class="form-control" id="Comercio" />
             <span asp-validation-for="Comercio" class="text-danger"></span>
         </div>
 
-        <div class="form-group pin-field" id="pinField">
+        <div class="form-group pin-field" id="pinField" style="display: none;">
             <label asp-for="PIN"></label>
             <input asp-for="PIN" class="form-control" type="password" maxlength="4" />
             <span asp-validation-for="PIN" class="text-danger"></span>
         </div>
 
-        <button type="submit" class="btn-submit">Realizar Compra</button>
+        <button type="submit" class="btn-submit" id="btnSubmit">
+            <i class="fas fa-check-circle"></i>
+            <span class="btn-text">Realizar Compra</span>
+            <span class="loading-spinner"></span>
+        </button>
     </form>
 </div>
 
@@ -84,9 +89,23 @@
 
         document.getElementById('Monto').addEventListener('input', togglePinField);
         togglePinField();
+
+        // Formatear número de tarjeta
+        var tarjetaInput = document.getElementById('NumeroTarjeta');
+        if (tarjetaInput) {
+            tarjetaInput.addEventListener('input', function(e) {
+                var value = this.value.replace(/\s/g, '');
+                if (value.length > 16) value = value.slice(0, 16);
+                var formatted = '';
+                for (var i = 0; i < value.length; i++) {
+                    if (i > 0 && i % 4 === 0) formatted += ' ';
+                    formatted += value[i];
+                }
+                this.value = formatted;
+            });
+        }
     </script>
 }
-
 <style>
     .simulador-container {
         max-width: 600px;
@@ -140,16 +159,21 @@
         font-weight: 600;
         cursor: pointer;
         margin-top: 1rem;
+        transition: all 0.3s ease;
     }
 
         .btn-submit:hover {
             background: #2563eb;
+            transform: translateY(-2px);
         }
 
     .alert {
         padding: 0.8rem;
         border-radius: 8px;
         margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
     }
 
     .alert-success {
@@ -169,7 +193,32 @@
         font-size: 0.8rem;
     }
 
+    .text-muted {
+        color: #64748b;
+        font-size: 0.7rem;
+    }
+
     .pin-field {
         transition: all 0.3s ease;
+    }
+
+    .loading-spinner {
+        display: none;
+        width: 18px;
+        height: 18px;
+        border: 2px solid rgba(255,255,255,0.3);
+        border-radius: 50%;
+        border-top-color: white;
+        animation: spin 0.6s linear infinite;
+    }
+
+    .btn-submit.loading .loading-spinner {
+        display: inline-block;
+    }
+
+    @@keyframes spin {
+        to {
+            transform: rotate(360deg);
+        }
     }
 </style>

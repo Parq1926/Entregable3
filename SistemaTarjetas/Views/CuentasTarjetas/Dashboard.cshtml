@@ -1,0 +1,419 @@
+﻿@{
+    Layout = null;
+    ViewData["Title"] = "Mis Cuentas y Tarjetas - Banco ABC";
+}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banco ABC - Mis Cuentas y Tarjetas</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #0a2540 0%, #1c5a7a 100%);
+            min-height: 100vh;
+        }
+
+        /* ========== NAVBAR ========== */
+        .navbar {
+            background: rgba(10, 37, 64, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.2);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.15);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+            .logo-icon i {
+                font-size: 1.3rem;
+                color: #ffd700;
+            }
+
+        .logo-text {
+            color: white;
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+
+            .logo-text span {
+                color: #ffd700;
+            }
+
+        /* Menú de navegación */
+        .nav-menu {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .nav-link {
+            color: #e2e8f0;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            transition: all 0.3s;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+            .nav-link:hover, .nav-link.active {
+                background: rgba(255,255,255,0.15);
+                color: #ffd700;
+            }
+
+        .user-info {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            color: white;
+        }
+
+            .user-info i {
+                font-size: 1.2rem;
+                color: #ffd700;
+            }
+
+        .logout-btn {
+            background: rgba(255,255,255,0.15);
+            border: none;
+            color: white;
+            padding: 0.4rem 1rem;
+            border-radius: 8px;
+            cursor: pointer;
+            font-family: inherit;
+            transition: all 0.3s;
+        }
+
+            .logout-btn:hover {
+                background: rgba(255,255,255,0.25);
+            }
+
+        /* ========== CONTENEDOR PRINCIPAL ========== */
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+
+        .page-header {
+            margin-bottom: 2rem;
+            color: white;
+        }
+
+            .page-header h1 {
+                font-size: 1.8rem;
+                font-weight: 600;
+                display: flex;
+                align-items: center;
+                gap: 0.8rem;
+            }
+
+                .page-header h1 i {
+                    color: #ffd700;
+                }
+
+            .page-header p {
+                opacity: 0.9;
+                margin-top: 0.3rem;
+            }
+
+        /* Grid de 2 columnas */
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        /* Tarjetas */
+        .card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            transition: transform 0.3s;
+        }
+
+            .card:hover {
+                transform: translateY(-5px);
+            }
+
+        .card-header {
+            background: linear-gradient(135deg, #0f3b5c 0%, #1c5a7a 100%);
+            padding: 1.2rem 1.5rem;
+            color: white;
+        }
+
+            .card-header h2 {
+                font-size: 1.2rem;
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+            }
+
+        .card-body {
+            padding: 1.5rem;
+        }
+
+        /* Tablas */
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+            .table thead tr {
+                border-bottom: 2px solid #e2e8f0;
+            }
+
+            .table th {
+                text-align: left;
+                padding: 0.8rem 0;
+                color: #64748b;
+                font-weight: 500;
+                font-size: 0.8rem;
+            }
+
+            .table td {
+                padding: 0.8rem 0;
+                border-bottom: 1px solid #e2e8f0;
+                color: #1e293b;
+            }
+
+            .table tr:last-child td {
+                border-bottom: none;
+            }
+
+        .saldo {
+            font-weight: 600;
+            color: #10b981;
+        }
+
+        .enlace {
+            color: #1c5a7a;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+            .enlace:hover {
+                text-decoration: underline;
+            }
+
+        .tarjeta-numero {
+            font-family: monospace;
+            font-size: 0.9rem;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 0.2rem 0.6rem;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            font-weight: 500;
+        }
+
+        .badge-debito {
+            background: #dbeafe;
+            color: #1e40af;
+        }
+
+        .badge-credito {
+            background: #fef3c7;
+            color: #92400e;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 1.5rem;
+            color: rgba(255,255,255,0.7);
+            font-size: 0.8rem;
+            margin-top: 2rem;
+        }
+
+        @@media (max-width: 800px) {
+            .dashboard-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .navbar {
+                flex-direction: column;
+            }
+
+            .nav-menu {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ========== NAVBAR ========== -->
+    <nav class="navbar">
+        <div class="logo">
+            <div class="logo-icon">
+                <i class="fas fa-university"></i>
+            </div>
+            <div class="logo-text">Banco <span>ABC</span></div>
+        </div>
+
+        <div class="nav-menu">
+            <a href="@Url.Action("Dashboard", "CuentasTarjetas")" class="nav-link active">
+                <i class="fas fa-list"></i> Lista de cuentas y tarjetas
+            </a>
+            <a href="@Url.Action("MovimientosCuenta", "Cliente")" class="nav-link">
+                <i class="fas fa-chart-line"></i> Ver movimientos de cuentas
+            </a>
+            <a href="@Url.Action("MovimientosTarjetaCredito", "Cliente")" class="nav-link">
+                <i class="fas fa-credit-card"></i> Ver movimientos de tarjetas de crédito
+            </a>
+        </div>
+
+        <div class="user-info">
+            <i class="fas fa-user-circle"></i>
+            <span>Hola, @ViewBag.Usuario</span>
+            <form asp-action="Logout" asp-controller="Login" method="post" style="display: inline;">
+                <button type="submit" class="logout-btn">
+                    <i class="fas fa-sign-out-alt"></i> Cerrar Sesión
+                </button>
+            </form>
+        </div>
+    </nav>
+
+    <!-- ========== CONTENIDO PRINCIPAL ========== -->
+    <div class="container">
+        <div class="page-header">
+            <h1>
+                <i class="fas fa-chart-pie"></i> Mis Finanzas
+            </h1>
+            <p>Aquí puedes ver el resumen de tus cuentas y tarjetas</p>
+        </div>
+
+        <div class="dashboard-grid">
+            <!-- ========== LISTADO DE CUENTAS ========== -->
+            <div class="card">
+                <div class="card-header">
+                    <h2>
+                        <i class="fas fa-chart-line"></i> Mis Cuentas
+                    </h2>
+                </div>
+                <div class="card-body">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Número de Cuenta</th>
+                                <th>Saldo</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Cuenta de Débito - enlace a USR3 -->
+                            <tr>
+                                <td>
+                                    <a href="@Url.Action("MovimientosCuenta", "Cliente", new { numeroCuenta = "100-123456-7" })" class="enlace">
+                                        100-123456-7
+                                    </a>
+                                </td>
+                                <td class="saldo">₡ 150,000.00</td>
+                            </tr>
+                            <!-- Cuenta de Débito - enlace a USR3 -->
+                            <tr>
+                                <td>
+                                    <a href="@Url.Action("MovimientosCuenta", "Cliente", new { numeroCuenta = "100-765432-1" })" class="enlace">
+                                        100-765432-1
+                                    </a>
+                                </td>
+                                <td class="saldo">₡ 25,500.00</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- ========== LISTADO DE TARJETAS ========== -->
+            <div class="card">
+                <div class="card-header">
+                    <h2>
+                        <i class="fas fa-credit-card"></i> Mis Tarjetas
+                    </h2>
+                </div>
+                <div class="card-body">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Número de Tarjeta</th>
+                                <th>Tipo</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Tarjeta de DÉBITO - enlace a USR3 (movimientos de cuenta asociada) -->
+                            <tr>
+                                <td class="tarjeta-numero">
+                                    <a href="@Url.Action("MovimientosCuenta", "Cliente", new { numeroCuenta = "100-123456-7" })" class="enlace">
+                                        9111-11**-****-1234
+                                    </a>
+                                </td>
+                                <td>
+                                    <span class="badge badge-debito">
+                                        <i class="fas fa-credit-card"></i> Débito
+                                    </span>
+                                </td>
+                            </tr>
+                            <!-- Tarjeta de CRÉDITO - enlace a USR4 -->
+                            <tr>
+                                <td class="tarjeta-numero">
+                                    <a href="@Url.Action("MovimientosTarjetaCredito", "Cliente", new { numeroTarjeta = "9111-12**-****-5678" })" class="enlace">
+                                        9111-12**-****-5678
+                                    </a>
+                                </td>
+                                <td>
+                                    <span class="badge badge-credito">
+                                        <i class="fas fa-coins"></i> Crédito
+                                    </span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== FOOTER ========== -->
+    <div class="footer">
+        <p><i class="fas fa-shield-alt"></i> Banco ABC - Seguridad y Confianza</p>
+        <p>&copy; 2026 - Todos los derechos reservados</p>
+    </div>
+
+</body>
+</html>
