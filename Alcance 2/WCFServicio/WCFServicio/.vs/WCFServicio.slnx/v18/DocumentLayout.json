@@ -19,7 +19,7 @@
       "AbsoluteMoniker": "D:0:0:{B3EE27E4-400D-4A30-BDF2-5E9FF443D412}|..\\WCFServicio.DataAccess\\WCFServicio.DataAccess.csproj|c:\\users\\rojas\\onedrive\\progra\\entregable 3\\alcance 2\\wcfservicio\\wcfservicio.dataaccess\\autorizadorclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B6D4A836-72AD-46C9-9F79-9161149A481F}|C:\\Users\\rojas\\OneDrive\\Progra\\Entregable 3\\Alcance 2\\WCFServicio\\WCFServicio|c:\\users\\rojas\\onedrive\\progra\\entregable 3\\alcance 2\\wcfservicio\\wcfservicio\\wcfservicio.slnlaunch.user||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{B6D4A836-72AD-46C9-9F79-9161149A481F}|C:\\Users\\rojas\\OneDrive\\Progra\\Entregable 3\\Alcance 2\\WCFServicio\\WCFServicio|C:\\Users\\rojas\\OneDrive\\Progra\\Entregable 3\\Alcance 2\\WCFServicio\\WCFServicio\\wcfservicio.slnlaunch.user||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{B6D4A836-72AD-46C9-9F79-9161149A481F}|C:\\Users\\rojas\\OneDrive\\Progra\\Entregable 3\\Alcance 2\\WCFServicio\\WCFServicio|solutionrelative:wcfservicio.slnlaunch.user||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
@@ -91,12 +91,12 @@
               "Title": "Delegate.cs",
               "DocumentMoniker": "C:\\Users\\rojas\\AppData\\Local\\Temp\\.vsdbgsrc\\974be2d3c32c1490fc65e41244093a0376130a455bf9d0c7c1380ebbfab5005b\\Delegate.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\974be2d3c32c1490fc65e41244093a0376130a455bf9d0c7c1380ebbfab5005b\\Delegate.cs",
-              "ToolTip": "C:\\Users\\rojas\\AppData\\Local\\Temp\\.vsdbgsrc\\974be2d3c32c1490fc65e41244093a0376130a455bf9d0c7c1380ebbfab5005b\\Delegate.cs [Solo lectura]",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\974be2d3c32c1490fc65e41244093a0376130a455bf9d0c7c1380ebbfab5005b\\Delegate.cs [Solo lectura]",
+              "ToolTip": "C:\\Users\\rojas\\AppData\\Local\\Temp\\.vsdbgsrc\\974be2d3c32c1490fc65e41244093a0376130a455bf9d0c7c1380ebbfab5005b\\Delegate.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\974be2d3c32c1490fc65e41244093a0376130a455bf9d0c7c1380ebbfab5005b\\Delegate.cs",
               "ViewState": "AgIAAJYAAAAAAAAAAAAcwJYAAAACAAAAAQAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-04T01:11:39.74Z",
-              "EditorCaption": " [Solo lectura]"
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -108,8 +108,7 @@
               "RelativeToolTip": "App_Code\\IService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-03T23:52:53.974Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-03T23:52:53.974Z"
             },
             {
               "$type": "Document",
@@ -121,8 +120,7 @@
               "RelativeToolTip": "WCFServicio.slnLaunch.user",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003464|",
-              "WhenOpened": "2026-04-03T22:04:23.451Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-03T22:04:23.451Z"
             },
             {
               "$type": "Document",
@@ -146,8 +144,7 @@
               "RelativeToolTip": "..\\WCFServicio.DataAccess\\AutorizadorClient.cs",
               "ViewState": "AgIAACIAAAAAAAAAAAAwwDYAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-03T22:51:30.32Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-03T22:51:30.32Z"
             },
             {
               "$type": "Document",
@@ -159,8 +156,7 @@
               "RelativeToolTip": "..\\WCFServicio.Security\\AES.cs",
               "ViewState": "AgIAACEAAAAAAAAAAAAwwDAAAABSAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-03T23:03:40.866Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-03T23:03:40.866Z"
             },
             {
               "$type": "Document",
@@ -172,8 +168,7 @@
               "RelativeToolTip": "App_Code\\Service.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-03T23:52:57.451Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-03T23:52:57.451Z"
             },
             {
               "$type": "Document",
@@ -185,8 +180,7 @@
               "RelativeToolTip": "..\\WCFServicio.DataAccess\\ConexionMySQL.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-04T00:04:51.701Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-04T00:04:51.701Z"
             },
             {
               "$type": "Document",

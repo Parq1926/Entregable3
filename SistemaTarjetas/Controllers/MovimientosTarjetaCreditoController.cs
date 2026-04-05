@@ -2,9 +2,9 @@
 
 namespace SistemaTarjetas.Controllers
 {
-    public class MovimientosCuentaController : Controller
+    public class MovimientosTarjetaCreditoController : Controller
     {
-        public IActionResult Index(string numeroCuenta = null)
+        public IActionResult Index(string numeroTarjeta = null)
         {
             var usuario = HttpContext.Session.GetString("Usuario");
             if (string.IsNullOrEmpty(usuario))
@@ -13,8 +13,8 @@ namespace SistemaTarjetas.Controllers
             }
 
             ViewBag.Usuario = usuario;
-            ViewBag.NumeroCuenta = numeroCuenta;
-            return View("~/Views/MovimientosCuenta/Index.cshtml");
+            ViewBag.NumeroTarjeta = numeroTarjeta;
+            return View("~/Views/MovimientosTarjetaCredito/Index.cshtml");
         }
     }
 }

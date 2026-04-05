@@ -24,7 +24,6 @@
             min-height: 100vh;
         }
 
-        /* ========== NAVBAR ========== */
         .navbar {
             background: rgba(10, 37, 64, 0.95);
             backdrop-filter: blur(10px);
@@ -56,10 +55,10 @@
             justify-content: center;
         }
 
-            .logo-icon i {
-                font-size: 1.3rem;
-                color: #ffd700;
-            }
+        .logo-icon i {
+            font-size: 1.3rem;
+            color: #ffd700;
+        }
 
         .logo-text {
             color: white;
@@ -67,11 +66,10 @@
             font-weight: 700;
         }
 
-            .logo-text span {
-                color: #ffd700;
-            }
+        .logo-text span {
+            color: #ffd700;
+        }
 
-        /* Menú de navegación */
         .nav-menu {
             display: flex;
             gap: 1rem;
@@ -90,10 +88,10 @@
             gap: 0.5rem;
         }
 
-            .nav-link:hover, .nav-link.active {
-                background: rgba(255,255,255,0.15);
-                color: #ffd700;
-            }
+        .nav-link:hover, .nav-link.active {
+            background: rgba(255,255,255,0.15);
+            color: #ffd700;
+        }
 
         .user-info {
             display: flex;
@@ -102,10 +100,10 @@
             color: white;
         }
 
-            .user-info i {
-                font-size: 1.2rem;
-                color: #ffd700;
-            }
+        .user-info i {
+            font-size: 1.2rem;
+            color: #ffd700;
+        }
 
         .logout-btn {
             background: rgba(255,255,255,0.15);
@@ -118,11 +116,10 @@
             transition: all 0.3s;
         }
 
-            .logout-btn:hover {
-                background: rgba(255,255,255,0.25);
-            }
+        .logout-btn:hover {
+            background: rgba(255,255,255,0.25);
+        }
 
-        /* ========== CONTENEDOR PRINCIPAL ========== */
         .container {
             max-width: 1200px;
             margin: 2rem auto;
@@ -134,31 +131,29 @@
             color: white;
         }
 
-            .page-header h1 {
-                font-size: 1.8rem;
-                font-weight: 600;
-                display: flex;
-                align-items: center;
-                gap: 0.8rem;
-            }
+        .page-header h1 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
 
-                .page-header h1 i {
-                    color: #ffd700;
-                }
+        .page-header h1 i {
+            color: #ffd700;
+        }
 
-            .page-header p {
-                opacity: 0.9;
-                margin-top: 0.3rem;
-            }
+        .page-header p {
+            opacity: 0.9;
+            margin-top: 0.3rem;
+        }
 
-        /* Grid de 2 columnas */
         .dashboard-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 2rem;
         }
 
-        /* Tarjetas */
         .card {
             background: white;
             border-radius: 20px;
@@ -167,9 +162,9 @@
             transition: transform 0.3s;
         }
 
-            .card:hover {
-                transform: translateY(-5px);
-            }
+        .card:hover {
+            transform: translateY(-5px);
+        }
 
         .card-header {
             background: linear-gradient(135deg, #0f3b5c 0%, #1c5a7a 100%);
@@ -177,44 +172,43 @@
             color: white;
         }
 
-            .card-header h2 {
-                font-size: 1.2rem;
-                display: flex;
-                align-items: center;
-                gap: 0.5rem;
-            }
+        .card-header h2 {
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
 
         .card-body {
             padding: 1.5rem;
         }
 
-        /* Tablas */
         .table {
             width: 100%;
             border-collapse: collapse;
         }
 
-            .table thead tr {
-                border-bottom: 2px solid #e2e8f0;
-            }
+        .table thead tr {
+            border-bottom: 2px solid #e2e8f0;
+        }
 
-            .table th {
-                text-align: left;
-                padding: 0.8rem 0;
-                color: #64748b;
-                font-weight: 500;
-                font-size: 0.8rem;
-            }
+        .table th {
+            text-align: left;
+            padding: 0.8rem 0;
+            color: #64748b;
+            font-weight: 500;
+            font-size: 0.8rem;
+        }
 
-            .table td {
-                padding: 0.8rem 0;
-                border-bottom: 1px solid #e2e8f0;
-                color: #1e293b;
-            }
+        .table td {
+            padding: 0.8rem 0;
+            border-bottom: 1px solid #e2e8f0;
+            color: #1e293b;
+        }
 
-            .table tr:last-child td {
-                border-bottom: none;
-            }
+        .table tr:last-child td {
+            border-bottom: none;
+        }
 
         .saldo {
             font-weight: 600;
@@ -227,9 +221,9 @@
             font-weight: 500;
         }
 
-            .enlace:hover {
-                text-decoration: underline;
-            }
+        .enlace:hover {
+            text-decoration: underline;
+        }
 
         .tarjeta-numero {
             font-family: monospace;
@@ -266,11 +260,9 @@
             .dashboard-grid {
                 grid-template-columns: 1fr;
             }
-
             .navbar {
                 flex-direction: column;
             }
-
             .nav-menu {
                 justify-content: center;
             }
@@ -279,7 +271,6 @@
 </head>
 <body>
 
-    <!-- ========== NAVBAR ========== -->
     <nav class="navbar">
         <div class="logo">
             <div class="logo-icon">
@@ -289,13 +280,13 @@
         </div>
 
         <div class="nav-menu">
-            <a href="@Url.Action("Dashboard", "CuentasTarjetas")" class="nav-link active">
+            <a href="/CuentasTarjetas/Dashboard" class="nav-link active">
                 <i class="fas fa-list"></i> Lista de cuentas y tarjetas
             </a>
-            <a href="@Url.Action("MovimientosCuenta", "Cliente")" class="nav-link">
+            <a href="/MovimientosCuenta/Index" class="nav-link">
                 <i class="fas fa-chart-line"></i> Ver movimientos de cuentas
             </a>
-            <a href="@Url.Action("MovimientosTarjetaCredito", "Cliente")" class="nav-link">
+            <a href="/MovimientosTarjetaCredito/Index" class="nav-link">
                 <i class="fas fa-credit-card"></i> Ver movimientos de tarjetas de crédito
             </a>
         </div>
@@ -311,7 +302,6 @@
         </div>
     </nav>
 
-    <!-- ========== CONTENIDO PRINCIPAL ========== -->
     <div class="container">
         <div class="page-header">
             <h1>
@@ -321,7 +311,6 @@
         </div>
 
         <div class="dashboard-grid">
-            <!-- ========== LISTADO DE CUENTAS ========== -->
             <div class="card">
                 <div class="card-header">
                     <h2>
@@ -337,19 +326,17 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <!-- Cuenta de Débito - enlace a USR3 -->
                             <tr>
                                 <td>
-                                    <a href="@Url.Action("MovimientosCuenta", "Cliente", new { numeroCuenta = "100-123456-7" })" class="enlace">
+                                    <a href="/MovimientosCuenta/Index?numeroCuenta=100-123456-7" class="enlace">
                                         100-123456-7
                                     </a>
                                 </td>
                                 <td class="saldo">₡ 150,000.00</td>
                             </tr>
-                            <!-- Cuenta de Débito - enlace a USR3 -->
                             <tr>
                                 <td>
-                                    <a href="@Url.Action("MovimientosCuenta", "Cliente", new { numeroCuenta = "100-765432-1" })" class="enlace">
+                                    <a href="/MovimientosCuenta/Index?numeroCuenta=100-765432-1" class="enlace">
                                         100-765432-1
                                     </a>
                                 </td>
@@ -360,7 +347,6 @@
                 </div>
             </div>
 
-            <!-- ========== LISTADO DE TARJETAS ========== -->
             <div class="card">
                 <div class="card-header">
                     <h2>
@@ -376,30 +362,24 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <!-- Tarjeta de DÉBITO - enlace a USR3 (movimientos de cuenta asociada) -->
                             <tr>
                                 <td class="tarjeta-numero">
-                                    <a href="@Url.Action("MovimientosCuenta", "Cliente", new { numeroCuenta = "100-123456-7" })" class="enlace">
+                                    <a href="/MovimientosCuenta/Index?numeroCuenta=100-123456-7" class="enlace">
                                         9111-11**-****-1234
                                     </a>
                                 </td>
                                 <td>
-                                    <span class="badge badge-debito">
-                                        <i class="fas fa-credit-card"></i> Débito
-                                    </span>
+                                    <span class="badge badge-debito">Débito</span>
                                 </td>
                             </tr>
-                            <!-- Tarjeta de CRÉDITO - enlace a USR4 -->
                             <tr>
                                 <td class="tarjeta-numero">
-                                    <a href="@Url.Action("MovimientosTarjetaCredito", "Cliente", new { numeroTarjeta = "9111-12**-****-5678" })" class="enlace">
+                                    <a href="/MovimientosTarjetaCredito/Index?numeroTarjeta=9111-12**-****-5678" class="enlace">
                                         9111-12**-****-5678
                                     </a>
                                 </td>
                                 <td>
-                                    <span class="badge badge-credito">
-                                        <i class="fas fa-coins"></i> Crédito
-                                    </span>
+                                    <span class="badge badge-credito">Crédito</span>
                                 </td>
                             </tr>
                         </tbody>
@@ -409,7 +389,6 @@
         </div>
     </div>
 
-    <!-- ========== FOOTER ========== -->
     <div class="footer">
         <p><i class="fas fa-shield-alt"></i> Banco ABC - Seguridad y Confianza</p>
         <p>&copy; 2026 - Todos los derechos reservados</p>
