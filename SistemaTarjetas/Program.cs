@@ -7,8 +7,10 @@ builder.Services.AddSession();
 
 // Registrar servicios
 builder.Services.AddScoped<IAutenticadorService, AutenticadorService>();
+builder.Services.AddScoped<IConsultaClienteService, ConsultaClienteService>();  // ← Agregar
 
 var app = builder.Build();
+
 
 
 // Configure the HTTP request pipeline.
@@ -33,8 +35,5 @@ app.MapControllerRoute(
     pattern: "MovimientosCuenta/{action}/{numeroCuenta?}",
     defaults: new { controller = "MovimientosCuenta", action = "MovimientosCuenta" });
 
-app.MapControllerRoute(
-    name: "default",
-    pattern: "{controller=Login}/{action=Login}/{id?}");
 
 app.Run();

@@ -95,12 +95,6 @@
     <Compile Include="AutorizadorClient.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\WCFServicio.Entities\WCFServicio.Entities.csproj">
-      <Project>{d148e066-44d3-40ac-b4a9-96cd3003d375}</Project>
-      <Name>WCFServicio.Entities</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>

@@ -4,6 +4,7 @@
     {
         public bool Resultado { get; set; }
         public string Mensaje { get; set; }
-        public int TipoUsuario { get; set; }  // ← Agregar campo
+        public int TipoUsuario { get; set; }
+        public string Identificacion { get; set; } = string.Empty; // ← Agregar
     }
 }

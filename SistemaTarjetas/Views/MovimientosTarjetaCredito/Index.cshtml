@@ -1,266 +1,49 @@
 ﻿@{
     Layout = null;
-    ViewData["Title"] = "Movimientos de Tarjeta de Crédito - Banco ABC";
+    ViewData["Title"] = "Movimientos de Tarjeta de Crédito";
+    var movimientos = ViewBag.Movimientos as List<SistemaTarjetas.Models.MovimientoTarjeta>;
 }
 
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <title>Movimientos de Tarjeta de Crédito - Banco ABC</title>
-    <style>
-            body {
-                font-family: Arial, sans-serif;
-                background: linear-gradient(135deg, #0a2540 0%, #1c5a7a 100%);
-                margin: 0;
-                padding: 0;
-                min-height: 100vh;
-            }
-
-            .navbar {
-                background: rgba(10, 37, 64, 0.95);
-                padding: 15px 30px;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                color: white;
-            }
-
-            .logo {
-                font-size: 1.5rem;
-                font-weight: bold;
-            }
-
-                .logo span {
-                    color: #ffd700;
-                }
-
-            .user-info {
-                display: flex;
-                align-items: center;
-                gap: 15px;
-            }
-
-            .logout-btn {
-                background: rgba(255,255,255,0.2);
-                border: none;
-                color: white;
-                padding: 8px 15px;
-                border-radius: 5px;
-                cursor: pointer;
-            }
-
-            .container {
-                max-width: 900px;
-                margin: 30px auto;
-                padding: 0 20px;
-            }
-
-            .card {
-                background: white;
-                border-radius: 15px;
-                overflow: hidden;
-                box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-                margin-bottom: 20px;
-            }
-
-            .card-header {
-                background: linear-gradient(135deg, #0f3b5c 0%, #1c5a7a 100%);
-                padding: 15px 20px;
-                color: white;
-            }
-
-                .card-header h2 {
-                    margin: 0;
-                    font-size: 1.2rem;
-                    display: flex;
-                    align-items: center;
-                    gap: 0.5rem;
-                }
-
-            .card-body {
-                padding: 20px;
-            }
-
-            select, button {
-                width: 100%;
-                padding: 10px;
-                margin: 10px 0;
-                border-radius: 8px;
-                border: 1px solid #ccc;
-                font-size: 1rem;
-            }
-
-            button {
-                background: #1c5a7a;
-                color: white;
-                border: none;
-                cursor: pointer;
-            }
-
-                button:hover {
-                    background: #0f3b5c;
-                }
-
-            table {
-                width: 100%;
-                border-collapse: collapse;
-            }
-
-            th, td {
-                padding: 12px;
-                text-align: left;
-                border-bottom: 1px solid #e2e8f0;
-            }
-
-            th {
-                background: #f8fafc;
-                color: #1e293b;
-                font-weight: 600;
-            }
-
-            .monto {
-                font-weight: 600;
-                color: #10b981;
-            }
-
-            .empty-message {
-                text-align: center;
-                padding: 40px;
-                color: #64748b;
-            }
-
-                .empty-message i {
-                    font-size: 3rem;
-                    margin-bottom: 1rem;
-                    opacity: 0.5;
-                }
-
-            .btn-volver {
-                display: inline-block;
-                background: rgba(255,255,255,0.2);
-                color: white;
-                padding: 10px 20px;
-                border-radius: 8px;
-                text-decoration: none;
-            }
-
-                .btn-volver:hover {
-                    background: rgba(255,255,255,0.3);
-                }
-
-            .footer {
-                text-align: center;
-                padding: 20px;
-                color: rgba(255,255,255,0.7);
-            }
-    </style>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-</head>
-<body>
-
-    <div class="navbar">
-        <div class="logo">Banco <span>ABC</span></div>
-        <div class="user-info">
-            <span>Hola, @ViewBag.Usuario</span>
-            <form asp-action="Logout" asp-controller="Login" method="post">
-                <button type="submit" class="logout-btn">Cerrar Sesión</button>
-            </form>
+@if (!string.IsNullOrEmpty(ViewBag.NumeroTarjeta))
+{
+    <div class="card">
+        <div class="card-header">
+            <h2>Movimientos de la tarjeta: @ViewBag.NumeroTarjeta</h2>
+        </div>
+        <div class="card-body">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Fecha</th>
+                        <th>Código de Autorización</th>
+                        <th>Comercio (Cajero)</th>
+                        <th>Monto</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (movimientos != null && movimientos.Any())
+                    {
+                        @foreach (var movimiento in movimientos)
+                        {
+                            @if (movimiento.Exitoso)
+                            {
+                                <tr>
+                                    <td>@movimiento.Fecha.ToString("dd/MM/yyyy HH:mm")</td>
+                                    <td>@movimiento.CodigoAutorizacion</td>
+                                    <td>@movimiento.Comercio</td>
+                                    <td class="monto">₡ @movimiento.Monto.ToString("N2")</td>
+                                </tr>
+                            }
+                        }
+                    }
+                    else
+                    {
+                        <tr>
+                            <td colspan="4" class="empty-message">No hay movimientos para esta tarjeta</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
         </div>
     </div>
-
-    <div class="container">
-        <div class="card">
-            <div class="card-header">
-                <h2>
-                    <i class="fas fa-credit-card"></i> Movimientos de Tarjeta de Crédito
-                </h2>
-            </div>
-            <div class="card-body">
-                <form method="get" action="/MovimientosTarjetaCredito/Index">
-                    <label for="numeroTarjeta">
-                        <i class="fas fa-search"></i> Seleccione una tarjeta de crédito:
-                    </label>
-                    <select name="numeroTarjeta" id="numeroTarjeta" onchange="this.form.submit()">
-                        <option value="">-- Seleccione una tarjeta --</option>
-                        <option value="9111-12**-****-5678" selected="@(ViewBag.NumeroTarjeta == "9111-12**-****-5678")">9111-12**-****-5678</option>
-                        <option value="9111-13**-****-9012" selected="@(ViewBag.NumeroTarjeta == "9111-13**-****-9012")">9111-13**-****-9012</option>
-                    </select>
-                </form>
-            </div>
-        </div>
-
-        @if (!string.IsNullOrEmpty(ViewBag.NumeroTarjeta))
-        {
-            <div class="card">
-                <div class="card-header">
-                    <h2>
-                        <i class="fas fa-history"></i> Movimientos de la tarjeta: @ViewBag.NumeroTarjeta
-                    </h2>
-                </div>
-                <div class="card-body">
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th>Fecha</th>
-                                <th>Código de Autorización</th>
-                                <th>Comercio (Cajero)</th>
-                                <th>Monto</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>15/03/2026 10:30</td>
-                                <td>AUTH-123456</td>
-                                <td>Tienda Online S.A.</td>
-                                <td class="monto">₡ 75,000.00</td>
-                            </tr>
-                            <tr>
-                                <td>10/03/2026 14:15</td>
-                                <td>AUTH-789012</td>
-                                <td>Restaurante El Buen Sabor</td>
-                                <td class="monto">₡ 35,000.00</td>
-                            </tr>
-                            <tr>
-                                <td>05/03/2026 09:00</td>
-                                <td>AUTH-345678</td>
-                                <td>Supermercado Mega</td>
-                                <td class="monto">₡ 120,000.00</td>
-                            </tr>
-                            <tr>
-                                <td>01/03/2026 18:45</td>
-                                <td>AUTH-901234</td>
-                                <td>Gasolinera La Más Barata</td>
-                                <td class="monto">₡ 45,000.00</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        }
-        else
-        {
-            <div class="card">
-                <div class="card-body">
-                    <div class="empty-message">
-                        <i class="fas fa-info-circle"></i>
-                        <p>Seleccione una tarjeta de crédito para ver sus movimientos</p>
-                    </div>
-                </div>
-            </div>
-        }
-
-        <div style="text-align: center; margin-top: 20px;">
-            <a href="/CuentasTarjetas/Dashboard" class="btn-volver">
-                <i class="fas fa-arrow-left"></i> Volver a mis cuentas y tarjetas
-            </a>
-        </div>
-    </div>
-
-    <div class="footer">
-        <p><i class="fas fa-shield-alt"></i> Banco ABC - Seguridad y Confianza</p>
-        <p>&copy; 2026 - Todos los derechos reservados</p>
-    </div>
-
-</body>
-</html>
+}

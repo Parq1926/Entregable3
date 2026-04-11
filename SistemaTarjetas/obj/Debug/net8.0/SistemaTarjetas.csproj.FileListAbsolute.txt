@@ -68,7 +68,6 @@ C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\obj\Debug\net8.0\Sis
 C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\obj\Debug\net8.0\ref\SistemaTarjetas.dll
 C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\obj\Debug\net8.0\SistemaTarjetas.csproj.AssemblyReference.cache
 C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\Connected Services\IServicioAutenticacion\ConnectedService.json
-C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\Connected Services\WSAutorizador\ConnectedService.json
 C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\Microsoft.Extensions.ObjectPool.dll
 C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\System.Security.Cryptography.Pkcs.dll
 C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\System.Security.Cryptography.Xml.dll
@@ -335,3 +334,4 @@ C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\Mon
 C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\SharpCompress.dll
 C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\Snappier.dll
 C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\ZstdSharp.dll
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\Connected Services\ServiceReference2\ConnectedService.json

@@ -1,6 +1,8 @@
 ﻿@{
     Layout = null;
-    ViewData["Title"] = "Mis Cuentas y Tarjetas - Banco ABC";
+    ViewData["Title"] = "Mis Cuentas y Tarjetas";
+    var cuentas = ViewBag.Cuentas as List<SistemaTarjetas.Models.Cuenta>;
+    var tarjetas = ViewBag.Tarjetas as List<SistemaTarjetas.Models.Tarjeta>;
 }
 
 <!DOCTYPE html>
@@ -32,9 +34,6 @@
             justify-content: space-between;
             align-items: center;
             box-shadow: 0 2px 15px rgba(0,0,0,0.2);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
             flex-wrap: wrap;
             gap: 1rem;
         }
@@ -83,14 +82,11 @@
             border-radius: 8px;
             transition: all 0.3s;
             font-size: 0.9rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
         }
 
         .nav-link:hover, .nav-link.active {
-            background: rgba(255,255,255,0.15);
-            color: #ffd700;
+            background: rgba(255,255,255,0.1);
+            color: white;
         }
 
         .user-info {
@@ -141,11 +137,6 @@
 
         .page-header h1 i {
             color: #ffd700;
-        }
-
-        .page-header p {
-            opacity: 0.9;
-            margin-top: 0.3rem;
         }
 
         .dashboard-grid {
@@ -273,115 +264,94 @@
 
     <nav class="navbar">
         <div class="logo">
-            <div class="logo-icon">
-                <i class="fas fa-university"></i>
-            </div>
+            <div class="logo-icon"><i class="fas fa-university"></i></div>
             <div class="logo-text">Banco <span>ABC</span></div>
         </div>
-
         <div class="nav-menu">
-            <a href="/CuentasTarjetas/Dashboard" class="nav-link active">
-                <i class="fas fa-list"></i> Lista de cuentas y tarjetas
-            </a>
-            <a href="/MovimientosCuenta/Index" class="nav-link">
-                <i class="fas fa-chart-line"></i> Ver movimientos de cuentas
-            </a>
-            <a href="/MovimientosTarjetaCredito/Index" class="nav-link">
-                <i class="fas fa-credit-card"></i> Ver movimientos de tarjetas de crédito
-            </a>
+            <a href="/CuentasTarjetas/Dashboard" class="nav-link active"><i class="fas fa-list"></i> Lista de cuentas y tarjetas</a>
+            <a href="/MovimientosCuenta/Index" class="nav-link"><i class="fas fa-chart-line"></i> Movimientos de cuentas</a>
+            <a href="/MovimientosTarjetaCredito/Index" class="nav-link"><i class="fas fa-credit-card"></i> Movimientos de tarjetas de crédito</a>
         </div>
-
         <div class="user-info">
             <i class="fas fa-user-circle"></i>
             <span>Hola, @ViewBag.Usuario</span>
-            <form asp-action="Logout" asp-controller="Login" method="post" style="display: inline;">
-                <button type="submit" class="logout-btn">
-                    <i class="fas fa-sign-out-alt"></i> Cerrar Sesión
-                </button>
+            <form asp-action="Logout" asp-controller="Login" method="post">
+                <button type="submit" class="logout-btn"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</button>
             </form>
         </div>
     </nav>
 
     <div class="container">
         <div class="page-header">
-            <h1>
-                <i class="fas fa-chart-pie"></i> Mis Finanzas
-            </h1>
+            <h1><i class="fas fa-chart-pie"></i> Mis Finanzas</h1>
             <p>Aquí puedes ver el resumen de tus cuentas y tarjetas</p>
         </div>
 
         <div class="dashboard-grid">
+            <!-- CUENTAS -->
             <div class="card">
                 <div class="card-header">
-                    <h2>
-                        <i class="fas fa-chart-line"></i> Mis Cuentas
-                    </h2>
+                    <h2><i class="fas fa-chart-line"></i> Mis Cuentas</h2>
                 </div>
                 <div class="card-body">
                     <table class="table">
-                        <thead>
-                            <tr>
-                                <th>Número de Cuenta</th>
-                                <th>Saldo</th>
-                            </tr>
-                        </thead>
+                        <thead><tr><th>Número de Cuenta</th><th>Saldo</th></tr></thead>
                         <tbody>
-                            <tr>
-                                <td>
-                                    <a href="/MovimientosCuenta/Index?numeroCuenta=100-123456-7" class="enlace">
-                                        100-123456-7
-                                    </a>
-                                </td>
-                                <td class="saldo">₡ 150,000.00</td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <a href="/MovimientosCuenta/Index?numeroCuenta=100-765432-1" class="enlace">
-                                        100-765432-1
-                                    </a>
-                                </td>
-                                <td class="saldo">₡ 25,500.00</td>
-                            </tr>
+                            @if (cuentas != null && cuentas.Any())
+                            {
+                                @foreach (var cuenta in cuentas)
+                                {
+                                    <tr>
+                                        <td><a href="/MovimientosCuenta/Index?numeroCuenta=@cuenta.NumeroCuenta" class="enlace">@cuenta.NumeroCuenta</a></td>
+                                        <td class="saldo">₡ @cuenta.Saldo.ToString("N2")</td>
+                                    </tr>
+                                }
+                            }
+                            else
+                            {
+                                <tr><td colspan="2">No tiene cuentas registradas</td></tr>
+                            }
                         </tbody>
                     </table>
                 </div>
             </div>
 
+            <!-- TARJETAS -->
             <div class="card">
                 <div class="card-header">
-                    <h2>
-                        <i class="fas fa-credit-card"></i> Mis Tarjetas
-                    </h2>
+                    <h2><i class="fas fa-credit-card"></i> Mis Tarjetas</h2>
                 </div>
                 <div class="card-body">
                     <table class="table">
-                        <thead>
-                            <tr>
-                                <th>Número de Tarjeta</th>
-                                <th>Tipo</th>
-                            </tr>
-                        </thead>
+                        <thead><tr><th>Número de Tarjeta</th><th>Tipo</th></tr></thead>
                         <tbody>
-                            <tr>
-                                <td class="tarjeta-numero">
-                                    <a href="/MovimientosCuenta/Index?numeroCuenta=100-123456-7" class="enlace">
-                                        9111-11**-****-1234
-                                    </a>
-                                </td>
-                                <td>
-                                    <span class="badge badge-debito">Débito</span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="tarjeta-numero">
-                                    <a href="/MovimientosTarjetaCredito/Index?numeroTarjeta=9111-12**-****-5678" class="enlace">
-                                        9111-12**-****-5678
-                                    </a>
-                                </td>
-                                <td>
-                                    <span class="badge badge-credito">Crédito</span>
-                                </td>
-                            </tr>
+                            @if (tarjetas != null && tarjetas.Any())
+                            {
+                                @foreach (var tarjeta in tarjetas)
+                                {
+                                    <tr>
+                                        <td class="tarjeta-numero">
+                                            @if (tarjeta.Tipo == "Credito")
+                                            {
+                                                <a href="/MovimientosTarjetaCredito/Index?numeroTarjeta=@tarjeta.NumeroTarjeta" class="enlace">
+                                                    @FormatearNumeroTarjeta(tarjeta.NumeroTarjeta)
+                                                </a>
+                                            }
+                                            else
+                                            {
+                                                <a href="/MovimientosCuenta/Index?numeroCuenta=@tarjeta.CuentaAsociada" class="enlace">
+                                                    @FormatearNumeroTarjeta(tarjeta.NumeroTarjeta)
+                                                </a>
+                                            }
+                                        </td>
+                                        <td><span class="badge @(tarjeta.Tipo == "Credito" ? "badge-credito" : "badge-debito")">@tarjeta.Tipo</span></td>
+                                    </tr>
+                                }
+                            }
+                            else
+                            {
+                                <tr><td colspan="2">No tiene tarjetas registradas</td></tr>
+                            }
                         </tbody>
                     </table>
                 </div>
@@ -393,6 +363,16 @@
         <p><i class="fas fa-shield-alt"></i> Banco ABC - Seguridad y Confianza</p>
         <p>&copy; 2026 - Todos los derechos reservados</p>
     </div>
-
 </body>
 </html>
+
+@functions {
+    public string FormatearNumeroTarjeta(string numero)
+    {
+        if (!string.IsNullOrEmpty(numero) && numero.Length >= 16)
+        {
+            return $"{numero.Substring(0, 4)}-{numero.Substring(4, 2)}**-****-{numero.Substring(12, 4)}";
+        }
+        return numero;
+    }
+}

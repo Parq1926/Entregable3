@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using SistemaTarjetas.Models;
 using SistemaTarjetas.Services;
-using SistemaTarjetas.Helpers;  // Para AES
+using SistemaTarjetas.Helpers;
 using System.Threading.Tasks;
 
 namespace SistemaTarjetas.Controllers
@@ -31,11 +31,9 @@ namespace SistemaTarjetas.Controllers
                 return View(model);
             }
 
-            // Encriptar con AES (mismo método que el WS)
             string usuarioEncriptado = Encriptacion.Encriptar(model.Usuario);
             string contrasenaEncriptada = Encriptacion.Encriptar(model.Contra);
 
-            // Validar contra WS Autenticador (tipo 0 = cualquier tipo, o usa 1/2 según necesites)
             var response = await _authService.Autenticar(usuarioEncriptado, contrasenaEncriptada, 0);
 
             if (response.Resultado)
@@ -44,14 +42,17 @@ namespace SistemaTarjetas.Controllers
                 HttpContext.Session.SetString("Usuario", model.Usuario);
                 HttpContext.Session.SetInt32("TipoUsuario", response.TipoUsuario);
 
-                // Redirigir según el tipo de usuario
-                if (response.TipoUsuario == 1)  // Administrador
+                // Guardar la identificación (cédula) desde el WS
+                // Debes obtenerla del WS Autenticador o de otro WS
+                HttpContext.Session.SetString("Identificacion", response.Identificacion ?? model.Usuario);
+
+                if (response.TipoUsuario == 1)
                 {
                     return RedirectToAction("Clientes", "Clientes");
                 }
-                else if (response.TipoUsuario == 2)  // Cliente
+                else if (response.TipoUsuario == 2)
                 {
-                    return RedirectToAction("Dashboard", "Cliente");
+                    return RedirectToAction("Dashboard", "CuentasTarjetas");
                 }
                 else
                 {
@@ -66,7 +67,6 @@ namespace SistemaTarjetas.Controllers
             }
         }
 
-        // Logout
         [HttpPost]
         public IActionResult Logout()
         {
