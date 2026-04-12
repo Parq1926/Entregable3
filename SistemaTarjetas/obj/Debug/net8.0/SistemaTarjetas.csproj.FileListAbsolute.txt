@@ -60,7 +60,6 @@ C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\obj\Debug\net8.0\sta
 C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\obj\Debug\net8.0\staticwebassets.build.endpoints.json
 C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\obj\Debug\net8.0\swae.build.ex.cache
-C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\obj\Debug\net8.0\SistemaTarjetas.dll
 C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\obj\Debug\net8.0\refint\SistemaTarjetas.dll
 C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\obj\Debug\net8.0\SistemaTarjetas.pdb
@@ -335,3 +334,4 @@ C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\Sha
 C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\Snappier.dll
 C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\ZstdSharp.dll
 C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\bin\Debug\net8.0\Connected Services\ServiceReference2\ConnectedService.json
+C:\Users\rojas\OneDrive\Progra\Entregable 3\SistemaTarjetas\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

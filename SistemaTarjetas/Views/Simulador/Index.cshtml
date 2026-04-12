@@ -1,85 +1,185 @@
 ﻿@model SistemaTarjetas.Models.CompraViewModel
+
 @{
     ViewData["Title"] = "Simulador de Compra";
 }
 
-<div class="simulador-container">
-    <div class="simulador-header">
-        <h1><i class="fas fa-shopping-cart"></i> Simulador de Compra</h1>
-        <p>Complete los datos para realizar una compra en línea</p>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Simulador de Compra - Banco ABC</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #0a2540 0%, #1c5a7a 100%);
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+        }
+        .navbar {
+            background: rgba(10, 37, 64, 0.95);
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+        }
+        .logo { font-size: 1.5rem; font-weight: bold; }
+        .logo span { color: #ffd700; }
+        .container { max-width: 500px; margin: 50px auto; padding: 0 20px; }
+        .card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        .card-header {
+            background: linear-gradient(135deg, #0f3b5c 0%, #1c5a7a 100%);
+            padding: 15px 20px;
+            color: white;
+            text-align: center;
+        }
+        .card-body { padding: 30px; }
+        .form-group { margin-bottom: 15px; }
+        label { display: block; margin-bottom: 5px; font-weight: bold; color: #1e293b; }
+        input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 1rem;
+            box-sizing: border-box;
+        }
+        .text-danger { color: #ef4444; font-size: 0.8rem; }
+        button {
+            width: 100%;
+            padding: 12px;
+            background: #1c5a7a;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        button:hover { background: #0f3b5c; }
+        .alert {
+            padding: 12px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .alert-success {
+            background: #d1fae5;
+            color: #065f46;
+            border-left: 4px solid #10b981;
+        }
+        .alert-error {
+            background: #fee2e2;
+            color: #991b1b;
+            border-left: 4px solid #ef4444;
+        }
+        .footer { text-align: center; padding: 20px; color: rgba(255,255,255,0.7); }
+        .btn-volver {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            margin-top: 20px;
+        }
+        .row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <div class="logo">Banco <span>ABC</span></div>
+        <div class="user-info"></div>
     </div>
 
-    @if (ViewBag.Mensaje != null)
-    {
-        <div class="alert alert-@ViewBag.Tipo">
-            <i class="fas @ViewBag.Icono"></i>
-            <span>@ViewBag.Mensaje</span>
-        </div>
-    }
-
-    <form asp-action="Index" method="post">
-        @Html.AntiForgeryToken()
-
-        <div class="form-group">
-            <label asp-for="Monto"></label>
-            <input asp-for="Monto" class="form-control" type="number" step="0.01" id="Monto" />
-            <span asp-validation-for="Monto" class="text-danger"></span>
-            <small class="text-muted">Si el monto es mayor a ₡50,000, se requerirá el PIN</small>
-        </div>
-
-        <div class="form-group">
-            <label asp-for="NombreCliente"></label>
-            <input asp-for="NombreCliente" class="form-control" />
-            <span asp-validation-for="NombreCliente" class="text-danger"></span>
-        </div>
-
-        <div class="form-group">
-            <label asp-for="NumeroTarjeta"></label>
-            <input asp-for="NumeroTarjeta" class="form-control" placeholder="1234 5678 9012 3456" id="NumeroTarjeta" />
-            <span asp-validation-for="NumeroTarjeta" class="text-danger"></span>
-        </div>
-
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
-            <div class="form-group">
-                <label asp-for="FechaVencimiento"></label>
-                <input asp-for="FechaVencimiento" class="form-control" placeholder="MM/YYYY" />
-                <span asp-validation-for="FechaVencimiento" class="text-danger"></span>
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <h2>🛒 Simulador de Compra</h2>
+                <p>Complete los datos para realizar una compra en línea</p>
             </div>
+            <div class="card-body">
+                @if (ViewBag.Mensaje != null)
+                {
+                    <div class="alert alert-@(ViewBag.Tipo == "success" ? "success" : "error")">
+                        @ViewBag.Mensaje
+                    </div>
+                }
 
-            <div class="form-group">
-                <label asp-for="CVV"></label>
-                <input asp-for="CVV" class="form-control" type="password" maxlength="4" id="CVV" />
-                <span asp-validation-for="CVV" class="text-danger"></span>
+                <form asp-action="Index" method="post">
+                    @Html.AntiForgeryToken()
+
+                    <div class="form-group">
+                        <label asp-for="NumeroTarjeta">Número de Tarjeta</label>
+                        <input asp-for="NumeroTarjeta" class="form-control" placeholder="1234 5678 9012 3456" required />
+                        <span asp-validation-for="NumeroTarjeta" class="text-danger"></span>
+                    </div>
+
+                    <div class="row">
+                        <div class="form-group">
+                            <label asp-for="Monto">Monto</label>
+                            <input asp-for="Monto" class="form-control" type="number" step="0.01" required />
+                            <span asp-validation-for="Monto" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="Comercio">Comercio</label>
+                            <input asp-for="Comercio" class="form-control" required />
+                            <span asp-validation-for="Comercio" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="form-group">
+                            <label asp-for="CVV">CVV</label>
+                            <input asp-for="CVV" class="form-control" type="password" maxlength="4" required />
+                            <span asp-validation-for="CVV" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="FechaVencimiento">Fecha Vencimiento</label>
+                            <input asp-for="FechaVencimiento" class="form-control" placeholder="MM/YYYY" required />
+                            <span asp-validation-for="FechaVencimiento" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group" id="pinField" style="display: none;">
+                        <label asp-for="PIN">PIN</label>
+                        <input asp-for="PIN" class="form-control" type="password" maxlength="4" />
+                        <span asp-validation-for="PIN" class="text-danger"></span>
+                        <small>Requerido para montos mayores a ₡50,000</small>
+                    </div>
+
+                    <button type="submit">Realizar Compra</button>
+                </form>
             </div>
         </div>
 
-        <div class="form-group">
-            <label asp-for="Comercio"></label>
-            <input asp-for="Comercio" class="form-control" id="Comercio" />
-            <span asp-validation-for="Comercio" class="text-danger"></span>
+        <div style="text-align: center;">
+            <a href="/CuentasTarjetas/Dashboard" class="btn-volver">Volver al Dashboard</a>
         </div>
+    </div>
 
-        <div class="form-group pin-field" id="pinField" style="display: none;">
-            <label asp-for="PIN"></label>
-            <input asp-for="PIN" class="form-control" type="password" maxlength="4" />
-            <span asp-validation-for="PIN" class="text-danger"></span>
-        </div>
+    <div class="footer">
+        <p>Banco ABC - Seguridad y Confianza</p>
+    </div>
 
-        <button type="submit" class="btn-submit" id="btnSubmit">
-            <i class="fas fa-check-circle"></i>
-            <span class="btn-text">Realizar Compra</span>
-            <span class="loading-spinner"></span>
-        </button>
-    </form>
-</div>
-
-@section Scripts {
-    <partial name="_ValidationScriptsPartial" />
     <script>
         function togglePinField() {
             var monto = parseFloat(document.getElementById('Monto').value) || 0;
             var pinField = document.getElementById('pinField');
-
             if (monto > 50000) {
                 pinField.style.display = 'block';
             } else {
@@ -87,138 +187,11 @@
             }
         }
 
-        document.getElementById('Monto').addEventListener('input', togglePinField);
-        togglePinField();
-
-        // Formatear número de tarjeta
-        var tarjetaInput = document.getElementById('NumeroTarjeta');
-        if (tarjetaInput) {
-            tarjetaInput.addEventListener('input', function(e) {
-                var value = this.value.replace(/\s/g, '');
-                if (value.length > 16) value = value.slice(0, 16);
-                var formatted = '';
-                for (var i = 0; i < value.length; i++) {
-                    if (i > 0 && i % 4 === 0) formatted += ' ';
-                    formatted += value[i];
-                }
-                this.value = formatted;
-            });
+        var montoInput = document.getElementById('Monto');
+        if (montoInput) {
+            montoInput.addEventListener('input', togglePinField);
+            togglePinField();
         }
     </script>
-}
-<style>
-    .simulador-container {
-        max-width: 600px;
-        margin: 0 auto;
-        padding: 2rem;
-    }
-
-    .simulador-header {
-        text-align: center;
-        margin-bottom: 2rem;
-    }
-
-        .simulador-header h1 {
-            color: #1e3a8a;
-            font-size: 1.8rem;
-        }
-
-    .form-group {
-        margin-bottom: 1rem;
-    }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 0.3rem;
-            font-weight: 500;
-            color: #1e293b;
-        }
-
-    .form-control {
-        width: 100%;
-        padding: 0.6rem 0.8rem;
-        border: 1px solid #cbd5e1;
-        border-radius: 8px;
-        font-size: 1rem;
-    }
-
-        .form-control:focus {
-            outline: none;
-            border-color: #1e3a8a;
-            box-shadow: 0 0 0 2px rgba(30, 58, 138, 0.2);
-        }
-
-    .btn-submit {
-        width: 100%;
-        padding: 0.8rem;
-        background: #1e3a8a;
-        color: white;
-        border: none;
-        border-radius: 8px;
-        font-size: 1rem;
-        font-weight: 600;
-        cursor: pointer;
-        margin-top: 1rem;
-        transition: all 0.3s ease;
-    }
-
-        .btn-submit:hover {
-            background: #2563eb;
-            transform: translateY(-2px);
-        }
-
-    .alert {
-        padding: 0.8rem;
-        border-radius: 8px;
-        margin-bottom: 1rem;
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-    }
-
-    .alert-success {
-        background: #d1fae5;
-        color: #065f46;
-        border-left: 4px solid #10b981;
-    }
-
-    .alert-error {
-        background: #fee2e2;
-        color: #991b1b;
-        border-left: 4px solid #ef4444;
-    }
-
-    .text-danger {
-        color: #ef4444;
-        font-size: 0.8rem;
-    }
-
-    .text-muted {
-        color: #64748b;
-        font-size: 0.7rem;
-    }
-
-    .pin-field {
-        transition: all 0.3s ease;
-    }
-
-    .loading-spinner {
-        display: none;
-        width: 18px;
-        height: 18px;
-        border: 2px solid rgba(255,255,255,0.3);
-        border-radius: 50%;
-        border-top-color: white;
-        animation: spin 0.6s linear infinite;
-    }
-
-    .btn-submit.loading .loading-spinner {
-        display: inline-block;
-    }
-
-    @@keyframes spin {
-        to {
-            transform: rotate(360deg);
-        }
-    }
-</style>
+</body>
+</html>

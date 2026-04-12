@@ -15,6 +15,9 @@
 
             <ul class="nav-links">
                 <li>@Html.ActionLink("Inicio", "Index", "Home")</li>
+                
+                <!-- SIMULADOR - Visible siempre (fuera del login) -->
+                <li><a href="@Url.Action("Index", "Simulador")">🛒 Simulador de Compra</a></li>
 
                 @if (Context.Session.GetString("Usuario") != null)
                 {
@@ -27,7 +30,6 @@
                             <a href="@Url.Action("Usuarios", "Usuarios")">Usuarios</a>
                         </div>
                     </li>
-                    <li><a href="@Url.Action("Index", "Simulador")">🛒 Simulador de Compra</a></li>
                     <li>
                         <form asp-controller="Auth" asp-action="Logout" method="post">
                             <button type="submit" class="btn-link">Cerrar Sesión</button>

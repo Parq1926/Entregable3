@@ -7,10 +7,9 @@ builder.Services.AddSession();
 
 // Registrar servicios
 builder.Services.AddScoped<IAutenticadorService, AutenticadorService>();
-builder.Services.AddScoped<IConsultaClienteService, ConsultaClienteService>();  // ← Agregar
+builder.Services.AddScoped<IAutorizadorService, AutorizadorService>();  // ← Agrega esta línea
 
 var app = builder.Build();
-
 
 
 // Configure the HTTP request pipeline.

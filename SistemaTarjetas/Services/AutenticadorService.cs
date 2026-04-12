@@ -1,8 +1,7 @@
-﻿using ServiceReference2;  // WS Autenticador
+﻿using WSAutenticador;
 using SistemaTarjetas.Models;
 using System;
 using System.Threading.Tasks;
-using WSAutenticador;
 
 namespace SistemaTarjetas.Services
 {
@@ -33,6 +32,7 @@ namespace SistemaTarjetas.Services
                     Resultado = resultado.Resultado,
                     Mensaje = resultado.Mensaje,
                     TipoUsuario = resultado.TipoUsuario
+                    // NO pongas Identificacion aquí porque no existe
                 };
             }
             catch (Exception ex)

@@ -38,13 +38,13 @@ namespace SistemaTarjetas.Controllers
 
             if (response.Resultado)
             {
-                // Guardar sesión
+                // Guardar usuario
                 HttpContext.Session.SetString("Usuario", model.Usuario);
                 HttpContext.Session.SetInt32("TipoUsuario", response.TipoUsuario);
 
-                // Guardar la identificación (cédula) desde el WS
-                // Debes obtenerla del WS Autenticador o de otro WS
-                HttpContext.Session.SetString("Identificacion", response.Identificacion ?? model.Usuario);
+                // Temporal: usa el nombre de usuario como cédula
+                string identificacion = model.Usuario;
+                HttpContext.Session.SetString("Identificacion", identificacion);
 
                 if (response.TipoUsuario == 1)
                 {
@@ -67,6 +67,7 @@ namespace SistemaTarjetas.Controllers
             }
         }
 
+        // Logout
         [HttpPost]
         public IActionResult Logout()
         {

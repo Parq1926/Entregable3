@@ -58,6 +58,10 @@
               "target": "Package",
               "version": "[3.7.1, )"
             },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.4, )"
+            },
             "System.ServiceModel.Http": {
               "target": "Package",
               "version": "[8.*, )"

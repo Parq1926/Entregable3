@@ -4,32 +4,31 @@ namespace SistemaTarjetas.Models
 {
     public class CompraViewModel
     {
-        // Monto de la transacción
+        [Required(ErrorMessage = "El monto es requerido")]
         [Display(Name = "Monto de la transacción")]
         public decimal Monto { get; set; }
 
-        // Nombre del cliente
+        [Required(ErrorMessage = "El nombre del cliente es requerido")]
         [Display(Name = "Nombre del cliente")]
-        public string NombreCliente { get; set; }
+        public string NombreCliente { get; set; } = string.Empty;
 
-        // Número de tarjeta
+        [Required(ErrorMessage = "El número de tarjeta es requerido")]
         [Display(Name = "Número de tarjeta")]
-        public string NumeroTarjeta { get; set; }
+        public string NumeroTarjeta { get; set; } = string.Empty;
 
-        // Fecha de vencimiento
+        [Required(ErrorMessage = "La fecha de vencimiento es requerida")]
         [Display(Name = "Fecha de vencimiento")]
-        public string FechaVencimiento { get; set; }
+        public string FechaVencimiento { get; set; } = string.Empty;
 
-        // CVV
+        [Required(ErrorMessage = "El CVV es requerido")]
         [Display(Name = "CVV")]
-        public string CVV { get; set; }
+        public string CVV { get; set; } = string.Empty;
 
-        // Comercio / Cajero
+        [Required(ErrorMessage = "El comercio es requerido")]
         [Display(Name = "Comercio / Cajero")]
-        public string Comercio { get; set; }
+        public string Comercio { get; set; } = string.Empty;
 
-        // PIN (opcional, solo si monto > 50,000)
         [Display(Name = "PIN")]
-        public string PIN { get; set; }
+        public string PIN { get; set; } = string.Empty;
     }
 }

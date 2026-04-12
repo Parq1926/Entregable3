@@ -1,49 +1,186 @@
 ﻿@{
     Layout = null;
     ViewData["Title"] = "Movimientos de Tarjeta de Crédito";
-    var movimientos = ViewBag.Movimientos as List<SistemaTarjetas.Models.MovimientoTarjeta>;
+    var tarjetas = ViewBag.Tarjetas as List<dynamic>;
+    var movimientos = ViewBag.Movimientos as List<dynamic>;
 }
 
-@if (!string.IsNullOrEmpty(ViewBag.NumeroTarjeta))
-{
-    <div class="card">
-        <div class="card-header">
-            <h2>Movimientos de la tarjeta: @ViewBag.NumeroTarjeta</h2>
-        </div>
-        <div class="card-body">
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th>Fecha</th>
-                        <th>Código de Autorización</th>
-                        <th>Comercio (Cajero)</th>
-                        <th>Monto</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @if (movimientos != null && movimientos.Any())
-                    {
-                        @foreach (var movimiento in movimientos)
-                        {
-                            @if (movimiento.Exitoso)
-                            {
-                                <tr>
-                                    <td>@movimiento.Fecha.ToString("dd/MM/yyyy HH:mm")</td>
-                                    <td>@movimiento.CodigoAutorizacion</td>
-                                    <td>@movimiento.Comercio</td>
-                                    <td class="monto">₡ @movimiento.Monto.ToString("N2")</td>
-                                </tr>
-                            }
-                        }
-                    }
-                    else
-                    {
-                        <tr>
-                            <td colspan="4" class="empty-message">No hay movimientos para esta tarjeta</td>
-                        </tr>
-                    }
-                </tbody>
-            </table>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Movimientos de Tarjeta de Crédito - Banco ABC</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #0a2540 0%, #1c5a7a 100%);
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+        }
+        .navbar {
+            background: rgba(10, 37, 64, 0.95);
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+        }
+        .logo { font-size: 1.5rem; font-weight: bold; }
+        .logo span { color: #ffd700; }
+        .user-info { display: flex; align-items: center; gap: 15px; }
+        .logout-btn {
+            background: rgba(255,255,255,0.2);
+            border: none;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .container { max-width: 1000px; margin: 30px auto; padding: 0 20px; }
+        .card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            margin-bottom: 20px;
+        }
+        .card-header {
+            background: linear-gradient(135deg, #0f3b5c 0%, #1c5a7a 100%);
+            padding: 15px 20px;
+            color: white;
+        }
+        .card-body { padding: 20px; }
+        select, button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            font-size: 1rem;
+        }
+        button {
+            background: #1c5a7a;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        table { width: 100%; border-collapse: collapse; }
+        th, td { padding: 12px; text-align: left; border-bottom: 1px solid #e2e8f0; }
+        th { background: #f8fafc; color: #1e293b; }
+        .monto { font-weight: 600; color: #10b981; }
+        .btn-volver {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+        }
+        .footer { text-align: center; padding: 20px; color: rgba(255,255,255,0.7); }
+        .badge-exitosa {
+            background: #d1fae5;
+            color: #065f46;
+            padding: 2px 8px;
+            border-radius: 20px;
+            font-size: 0.7rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <div class="logo">Banco <span>ABC</span></div>
+        <div class="user-info">
+            <span>Hola, @ViewBag.Usuario</span>
+            <form asp-action="Logout" asp-controller="Login" method="post">
+                <button type="submit" class="logout-btn">Cerrar Sesión</button>
+            </form>
         </div>
     </div>
+
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <h2>Movimientos de Tarjeta de Crédito</h2>
+            </div>
+            <div class="card-body">
+                <form method="get" action="/MovimientosTarjetaCredito/Index">
+                    <label for="numeroTarjeta">Seleccione una tarjeta de crédito:</label>
+                    <select name="numeroTarjeta" id="numeroTarjeta" onchange="this.form.submit()">
+                        <option value="">-- Seleccione una tarjeta --</option>
+                        @if (tarjetas != null)
+                        {
+                            @foreach (var tarjeta in tarjetas)
+                            {
+                                <option value="@tarjeta.NumeroTarjeta" selected="@(ViewBag.NumeroTarjeta == tarjeta.NumeroTarjeta)">
+                                    @FormatearNumeroTarjeta(tarjeta.NumeroTarjeta) - ₡ @tarjeta.Saldo.ToString("N2")
+                                </option>
+                            }
+                        }
+                    </select>
+                </form>
+            </div>
+        </div>
+
+        @if (!string.IsNullOrEmpty(ViewBag.NumeroTarjeta) && movimientos != null && movimientos.Count > 0)
+        {
+            <div class="card">
+                <div class="card-header">
+                    <h2>Movimientos de la tarjeta: @FormatearNumeroTarjeta(ViewBag.NumeroTarjeta)</h2>
+                </div>
+                <div class="card-body">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Fecha</th>
+                                <th>Código de Autorización</th>
+                                <th>Comercio (Cajero)</th>
+                                <th>Monto</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var m in movimientos)
+                            {
+                                <tr>
+                                    <td>@m.Fecha</td>
+                                    <td>@m.Codigo</td>
+                                    <td>@m.Comercio</td>
+                                    <td class="monto">₡ @m.Monto.ToString("N2")</td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        }
+        else if (!string.IsNullOrEmpty(ViewBag.NumeroTarjeta))
+        {
+            <div class="card">
+                <div class="card-body">
+                    <p>No hay movimientos para esta tarjeta de crédito</p>
+                </div>
+            </div>
+        }
+
+        <div style="text-align: center; margin-top: 20px;">
+            <a href="/CuentasTarjetas/Dashboard" class="btn-volver">Volver a mis cuentas y tarjetas</a>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>Banco ABC - Seguridad y Confianza</p>
+    </div>
+</body>
+</html>
+
+@functions {
+    public string FormatearNumeroTarjeta(string numero)
+    {
+        if (!string.IsNullOrEmpty(numero) && numero.Length >= 16)
+        {
+            return $"{numero.Substring(0, 4)}-{numero.Substring(4, 2)}**-****-{numero.Substring(12, 4)}";
+        }
+        return numero;
+    }
 }

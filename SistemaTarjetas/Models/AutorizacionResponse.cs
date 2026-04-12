@@ -1,6 +1,4 @@
-﻿//Para respuesta del WS
-
-namespace SistemaTarjetas.Models
+﻿namespace SistemaTarjetas.Models
 {
     public class AutorizacionResponse
     {

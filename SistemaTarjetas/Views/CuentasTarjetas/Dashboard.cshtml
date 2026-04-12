@@ -1,8 +1,8 @@
 ﻿@{
     Layout = null;
     ViewData["Title"] = "Mis Cuentas y Tarjetas";
-    var cuentas = ViewBag.Cuentas as List<SistemaTarjetas.Models.Cuenta>;
-    var tarjetas = ViewBag.Tarjetas as List<SistemaTarjetas.Models.Tarjeta>;
+    var cuentas = ViewBag.Cuentas as List<dynamic>;
+    var tarjetas = ViewBag.Tarjetas as List<dynamic>;
 }
 
 <!DOCTYPE html>
@@ -295,21 +295,30 @@
                 </div>
                 <div class="card-body">
                     <table class="table">
-                        <thead><tr><th>Número de Cuenta</th><th>Saldo</th></tr></thead>
+                        <thead>
+                            <tr>
+                                <th>Número de Tarjeta</th>
+                                <th>Saldo</th>
+                                <th>Tipo</th>
+                            </tr>
+                        </thead>
                         <tbody>
                             @if (cuentas != null && cuentas.Any())
                             {
                                 @foreach (var cuenta in cuentas)
                                 {
                                     <tr>
-                                        <td><a href="/MovimientosCuenta/Index?numeroCuenta=@cuenta.NumeroCuenta" class="enlace">@cuenta.NumeroCuenta</a></td>
+                                        <td>@cuenta.NumeroTarjeta</td>
                                         <td class="saldo">₡ @cuenta.Saldo.ToString("N2")</td>
+                                        <td>@cuenta.Tipo</td>
                                     </tr>
                                 }
                             }
                             else
                             {
-                                <tr><td colspan="2">No tiene cuentas registradas</td></tr>
+                                <tr>
+                                    <td colspan="3">No tiene cuentas registradas</td>
+                                </tr>
                             }
                         </tbody>
                     </table>
@@ -323,34 +332,32 @@
                 </div>
                 <div class="card-body">
                     <table class="table">
-                        <thead><tr><th>Número de Tarjeta</th><th>Tipo</th></tr></thead>
+                        <thead>
+                            <tr>
+                                <th>Número de Tarjeta</th>
+                                <th>Tipo</th>
+                            </tr>
+                        </thead>
                         <tbody>
                             @if (tarjetas != null && tarjetas.Any())
                             {
                                 @foreach (var tarjeta in tarjetas)
                                 {
                                     <tr>
-                                        <td class="tarjeta-numero">
-                                            @if (tarjeta.Tipo == "Credito")
-                                            {
-                                                <a href="/MovimientosTarjetaCredito/Index?numeroTarjeta=@tarjeta.NumeroTarjeta" class="enlace">
-                                                    @FormatearNumeroTarjeta(tarjeta.NumeroTarjeta)
-                                                </a>
-                                            }
-                                            else
-                                            {
-                                                <a href="/MovimientosCuenta/Index?numeroCuenta=@tarjeta.CuentaAsociada" class="enlace">
-                                                    @FormatearNumeroTarjeta(tarjeta.NumeroTarjeta)
-                                                </a>
-                                            }
+                                        <td class="tarjeta-numero">@FormatearNumeroTarjeta(tarjeta.NumeroTarjeta)</td>
+                                        <td>
+                                            <span class="badge @(tarjeta.Tipo == "Credito" ? "badge-credito" : "badge-debito")">
+                                                @tarjeta.Tipo
+                                            </span>
                                         </td>
-                                        <td><span class="badge @(tarjeta.Tipo == "Credito" ? "badge-credito" : "badge-debito")">@tarjeta.Tipo</span></td>
                                     </tr>
                                 }
                             }
                             else
                             {
-                                <tr><td colspan="2">No tiene tarjetas registradas</td></tr>
+                                <tr>
+                                    <td colspan="2">No tiene tarjetas registradas</td>
+                                </tr>
                             }
                         </tbody>
                     </table>

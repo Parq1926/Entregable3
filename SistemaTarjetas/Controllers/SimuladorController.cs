@@ -1,20 +1,13 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using SistemaTarjetas.Models;
-using SistemaTarjetas.Services;
-using System.Threading.Tasks;
-using System.Diagnostics;
+using System.Net.Sockets;
+using System.Text;
+using System.Text.Json;
 
 namespace SistemaTarjetas.Controllers
 {
     public class SimuladorController : Controller
     {
-        private readonly IAutorizadorService _autorizadorService;
-
-        public SimuladorController(IAutorizadorService autorizadorService)
-        {
-            _autorizadorService = autorizadorService;
-        }
-
         // GET: Simulador
         public IActionResult Index()
         {
@@ -26,61 +19,70 @@ namespace SistemaTarjetas.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Index(CompraViewModel model)
         {
+            Console.WriteLine("=== SIMULADOR - INICIANDO COMPRA ===");
+            Console.WriteLine($"Tarjeta: {model.NumeroTarjeta}");
+            Console.WriteLine($"Monto: {model.Monto}");
+            Console.WriteLine($"Comercio: {model.Comercio}");
+
             if (!ModelState.IsValid)
             {
+                Console.WriteLine("ModelState inválido");
                 return View(model);
             }
 
-            Debug.WriteLine("=== SIMULADOR DE COMPRA ===");
-            Debug.WriteLine($"Monto: {model.Monto}");
-            Debug.WriteLine($"Tarjeta: {model.NumeroTarjeta}");
-            Debug.WriteLine($"CVV: {model.CVV}");
-            Debug.WriteLine($"PIN: {model.PIN ?? "No ingresado"}");
-            Debug.WriteLine($"Comercio: {model.Comercio}");
-            Debug.WriteLine($"Cliente: {model.NombreCliente}");
-
-            // Validación: PIN requerido si monto > 50,000
-            if (model.Monto > 50000 && string.IsNullOrEmpty(model.PIN))
+            // Enviar a Python
+            var request = new
             {
-                ViewBag.Mensaje = "PIN requerido para montos mayores a ₡50,000";
-                ViewBag.Tipo = "error";
-                ViewBag.Icono = "fa-exclamation-circle";
-                return View(model);
-            }
-
-            // Preparar request para el WS
-            var request = new AutorizacionRequest
-            {
+                accion = "compra",
                 NumeroTarjeta = model.NumeroTarjeta,
-                CVV = model.CVV,
-                PIN = model.PIN ?? "",
-                FechaVencimiento = model.FechaVencimiento,
-                NombreCliente = model.NombreCliente,
-                IdentificacionComercio = model.Comercio,
                 Monto = model.Monto,
-                TipoTransaccion = "Retiro"
+                Comercio = model.Comercio,
+                CVV = model.CVV,
+                FechaVencimiento = model.FechaVencimiento,
+                PIN = model.PIN ?? ""
             };
 
-            // Llamar al servicio (esto llama al WS real)
-            var response = await _autorizadorService.AutorizarRetiro(request);
+            var jsonRequest = JsonSerializer.Serialize(request);
+            Console.WriteLine($"Enviando a Python: {jsonRequest}");
 
-            Debug.WriteLine($"Respuesta - Resultado: {response.Resultado}, Mensaje: {response.Mensaje}");
-
-            if (response.Resultado)
+            try
             {
-                ViewBag.Mensaje = "Su compra se ha realizado de manera satisfactoria";
-                ViewBag.Tipo = "success";
-                ViewBag.Icono = "fa-check-circle";
+                using var client = new TcpClient();
+                await client.ConnectAsync("127.0.0.1", 5060);
+                Console.WriteLine("Conectado a Python");
 
-                // Limpiar formulario después de compra exitosa
-                ModelState.Clear();
-                model = new CompraViewModel();
+                using var stream = client.GetStream();
+                var data = Encoding.UTF8.GetBytes(jsonRequest + "\n");
+                await stream.WriteAsync(data);
+                Console.WriteLine("Datos enviados");
+
+                var buffer = new byte[4096];
+                var bytesRead = await stream.ReadAsync(buffer);
+                var jsonResponse = Encoding.UTF8.GetString(buffer, 0, bytesRead);
+                Console.WriteLine($"Respuesta recibida: {jsonResponse}");
+
+                // Deserializar la respuesta
+                var resultado = JsonSerializer.Deserialize<JsonElement>(jsonResponse);
+
+                if (resultado.GetProperty("ok").GetBoolean())
+                {
+                    ViewBag.Mensaje = "Su compra se ha realizado de manera satisfactoria";
+                    ViewBag.Tipo = "success";
+                    ModelState.Clear();
+                    model = new CompraViewModel();
+                }
+                else
+                {
+                    var mensaje = resultado.GetProperty("mensaje").GetString();
+                    ViewBag.Mensaje = mensaje;
+                    ViewBag.Tipo = "error";
+                }
             }
-            else
+            catch (Exception ex)
             {
-                ViewBag.Mensaje = response.Mensaje;
+                Console.WriteLine($"Error: {ex.Message}");
+                ViewBag.Mensaje = $"Error de conexión: {ex.Message}";
                 ViewBag.Tipo = "error";
-                ViewBag.Icono = "fa-exclamation-circle";
             }
 
             return View(model);
