@@ -16,17 +16,34 @@ namespace SistemaTarjetas.Controllers
 
         // POST: Simulador
         [HttpPost]
-        [ValidateAntiForgeryToken]
+        // [ValidateAntiForgeryToken]  // ← Descomenta después de probar
         public async Task<IActionResult> Index(CompraViewModel model)
         {
-            Console.WriteLine("=== SIMULADOR - INICIANDO COMPRA ===");
+            // Log inmediato para ver si llega
+            Console.WriteLine("========== POST RECIBIDO EN SIMULADOR ==========");
+            Console.WriteLine($"Hora: {DateTime.Now}");
+
+            if (model == null)
+            {
+                Console.WriteLine("model es NULL");
+                ViewBag.Mensaje = "Error: modelo nulo";
+                ViewBag.Tipo = "error";
+                return View(new CompraViewModel());
+            }
+
             Console.WriteLine($"Tarjeta: {model.NumeroTarjeta}");
             Console.WriteLine($"Monto: {model.Monto}");
             Console.WriteLine($"Comercio: {model.Comercio}");
+            Console.WriteLine($"CVV: {model.CVV}");
+            Console.WriteLine($"FechaVencimiento: {model.FechaVencimiento}");
+            Console.WriteLine($"PIN: {model.PIN ?? "null"}");
 
-            if (!ModelState.IsValid)
+            // Validar PIN si monto > 50000
+            if (model.Monto > 50000 && string.IsNullOrEmpty(model.PIN))
             {
-                Console.WriteLine("ModelState inválido");
+                Console.WriteLine("PIN requerido para monto > 50000");
+                ViewBag.Mensaje = "❌ PIN requerido para montos mayores a ₡50,000";
+                ViewBag.Tipo = "error";
                 return View(model);
             }
 
@@ -59,14 +76,13 @@ namespace SistemaTarjetas.Controllers
                 var buffer = new byte[4096];
                 var bytesRead = await stream.ReadAsync(buffer);
                 var jsonResponse = Encoding.UTF8.GetString(buffer, 0, bytesRead);
-                Console.WriteLine($"Respuesta recibida: {jsonResponse}");
+                Console.WriteLine($"Respuesta Python: {jsonResponse}");
 
-                // Deserializar la respuesta
                 var resultado = JsonSerializer.Deserialize<JsonElement>(jsonResponse);
 
                 if (resultado.GetProperty("ok").GetBoolean())
                 {
-                    ViewBag.Mensaje = "Su compra se ha realizado de manera satisfactoria";
+                    ViewBag.Mensaje = "✅ ¡COMPRA EXITOSA! Su transacción ha sido aprobada.";
                     ViewBag.Tipo = "success";
                     ModelState.Clear();
                     model = new CompraViewModel();
@@ -74,14 +90,14 @@ namespace SistemaTarjetas.Controllers
                 else
                 {
                     var mensaje = resultado.GetProperty("mensaje").GetString();
-                    ViewBag.Mensaje = mensaje;
+                    ViewBag.Mensaje = $"❌ COMPRA DENEGADA: {mensaje}";
                     ViewBag.Tipo = "error";
                 }
             }
             catch (Exception ex)
             {
                 Console.WriteLine($"Error: {ex.Message}");
-                ViewBag.Mensaje = $"Error de conexión: {ex.Message}";
+                ViewBag.Mensaje = $"❌ Error de conexión: {ex.Message}";
                 ViewBag.Tipo = "error";
             }
 

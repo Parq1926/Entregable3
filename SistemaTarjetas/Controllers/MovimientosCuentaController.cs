@@ -17,7 +17,7 @@ namespace SistemaTarjetas.Controllers
                 return RedirectToAction("Login", "Login");
             }
 
-            // Obtener cuentas del cliente desde Python
+            // Obtener cuentas del cliente
             var cuentas = await ObtenerCuentasCliente(identificacion);
             ViewBag.Cuentas = cuentas;
             ViewBag.NumeroCuenta = numeroCuenta;

@@ -16,7 +16,6 @@
             background: linear-gradient(135deg, #0a2540 0%, #1c5a7a 100%);
             margin: 0;
             padding: 0;
-            min-height: 100vh;
         }
         .navbar {
             background: rgba(10, 37, 64, 0.95);
@@ -28,15 +27,6 @@
         }
         .logo { font-size: 1.5rem; font-weight: bold; }
         .logo span { color: #ffd700; }
-        .user-info { display: flex; align-items: center; gap: 15px; }
-        .logout-btn {
-            background: rgba(255,255,255,0.2);
-            border: none;
-            color: white;
-            padding: 8px 15px;
-            border-radius: 5px;
-            cursor: pointer;
-        }
         .container { max-width: 800px; margin: 30px auto; padding: 0 20px; }
         .card {
             background: white;
@@ -51,19 +41,13 @@
             color: white;
         }
         .card-body { padding: 20px; }
-        select, button {
+        select {
             width: 100%;
             padding: 10px;
             margin: 10px 0;
             border-radius: 8px;
             border: 1px solid #ccc;
             font-size: 1rem;
-        }
-        button {
-            background: #1c5a7a;
-            color: white;
-            border: none;
-            cursor: pointer;
         }
         table { width: 100%; border-collapse: collapse; }
         th, td { padding: 12px; text-align: left; border-bottom: 1px solid #e2e8f0; }
@@ -77,7 +61,6 @@
             border-radius: 8px;
             text-decoration: none;
         }
-        .footer { text-align: center; padding: 20px; color: rgba(255,255,255,0.7); }
     </style>
 </head>
 <body>
@@ -86,9 +69,6 @@
         <div class="logo">Banco <span>ABC</span></div>
         <div class="user-info">
             <span>Hola, @ViewBag.Usuario</span>
-            <form asp-action="Logout" asp-controller="Login" method="post">
-                <button type="submit" class="logout-btn">Cerrar Sesión</button>
-            </form>
         </div>
     </div>
 
@@ -99,15 +79,15 @@
             </div>
             <div class="card-body">
                 <form method="get" action="/MovimientosCuenta/Index">
-                    <label for="numeroCuenta">Seleccione una cuenta:</label>
-                    <select name="numeroCuenta" id="numeroCuenta" onchange="this.form.submit()">
+                    <label>Seleccione una cuenta/tarjeta:</label>
+                    <select name="numeroCuenta" onchange="this.form.submit()">
                         <option value="">-- Seleccione una cuenta --</option>
                         @if (cuentas != null)
                         {
                             @foreach (var cuenta in cuentas)
                             {
                                 <option value="@cuenta.NumeroTarjeta" selected="@(ViewBag.NumeroCuenta == cuenta.NumeroTarjeta)">
-                                    @cuenta.NumeroTarjeta - ₡ @cuenta.Saldo.ToString("N2")
+                                    @cuenta.NumeroTarjeta - @cuenta.Tipo - ₡ @cuenta.Saldo.ToString("N2")
                                 </option>
                             }
                         }
@@ -120,16 +100,12 @@
         {
             <div class="card">
                 <div class="card-header">
-                    <h2>Movimientos de la cuenta: @ViewBag.NumeroCuenta</h2>
+                    <h2>Movimientos</h2>
                 </div>
                 <div class="card-body">
                     <table>
                         <thead>
-                            <tr>
-                                <th>Fecha</th>
-                                <th>Descripción</th>
-                                <th>Monto</th>
-                            </tr>
+                            <tr><th>Fecha</th><th>Descripción</th><th>Monto</th></tr>
                         </thead>
                         <tbody>
                             @foreach (var m in movimientos)
@@ -155,12 +131,8 @@
         }
 
         <div style="text-align: center; margin-top: 20px;">
-            <a href="/CuentasTarjetas/Dashboard" class="btn-volver">Volver a mis cuentas y tarjetas</a>
+            <a href="/CuentasTarjetas/Dashboard" class="btn-volver">Volver al Dashboard</a>
         </div>
-    </div>
-
-    <div class="footer">
-        <p>Banco ABC - Seguridad y Confianza</p>
     </div>
 </body>
 </html>
