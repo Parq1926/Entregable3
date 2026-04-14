@@ -4,29 +4,29 @@ namespace SistemaTarjetas.Models
 {
     public class CompraViewModel
     {
-        [Required(ErrorMessage = "El monto es requerido")]
-        [Display(Name = "Monto de la transacción")]
-        public decimal Monto { get; set; }
-
-        [Required(ErrorMessage = "El nombre del cliente es requerido")]
-        [Display(Name = "Nombre del cliente")]
+        [Required(ErrorMessage = "El nombre del cliente es obligatorio")]
+        [Display(Name = "Nombre del Cliente")]
         public string NombreCliente { get; set; } = string.Empty;
 
-        [Required(ErrorMessage = "El número de tarjeta es requerido")]
-        [Display(Name = "Número de tarjeta")]
+        [Required(ErrorMessage = "El número de tarjeta es obligatorio")]
+        [Display(Name = "Número de Tarjeta")]
         public string NumeroTarjeta { get; set; } = string.Empty;
 
-        [Required(ErrorMessage = "La fecha de vencimiento es requerida")]
-        [Display(Name = "Fecha de vencimiento")]
-        public string FechaVencimiento { get; set; } = string.Empty;
+        [Required(ErrorMessage = "El monto es obligatorio")]
+        [Display(Name = "Monto")]
+        public decimal Monto { get; set; }
 
-        [Required(ErrorMessage = "El CVV es requerido")]
+        [Required(ErrorMessage = "El comercio es obligatorio")]
+        [Display(Name = "Comercio")]
+        public string Comercio { get; set; } = string.Empty;
+
+        [Required(ErrorMessage = "El CVV es obligatorio")]
         [Display(Name = "CVV")]
         public string CVV { get; set; } = string.Empty;
 
-        [Required(ErrorMessage = "El comercio es requerido")]
-        [Display(Name = "Comercio / Cajero")]
-        public string Comercio { get; set; } = string.Empty;
+        [Required(ErrorMessage = "La fecha de vencimiento es obligatoria")]
+        [Display(Name = "Fecha Vencimiento")]
+        public string FechaVencimiento { get; set; } = string.Empty;
 
         [Display(Name = "PIN")]
         public string PIN { get; set; } = string.Empty;

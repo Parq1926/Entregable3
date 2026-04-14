@@ -1,49 +1,395 @@
 ﻿@model SistemaTarjetas.Models.CompraViewModel
 
-<h2>Simulador de Compra</h2>
-
-@if (ViewBag.Mensaje != null)
-{
-    <div style="color: @(ViewBag.Tipo == "success" ? "green" : "red"); margin-bottom: 15px;">
-        <strong>@ViewBag.Mensaje</strong>
-    </div>
+@{
+    ViewData["Title"] = "Simulador de Compra";
 }
 
-<form method="post">
-    <div>
-        <label>Número de Tarjeta:</label>
-        <input asp-for="NumeroTarjeta" value="4111111111111111" />
-    </div>
-    <div>
-        <label>Monto:</label>
-        <input asp-for="Monto" value="10000" />
-    </div>
-    <div>
-        <label>Comercio:</label>
-        <input asp-for="Comercio" value="Tienda Test" />
-    </div>
-    <div>
-        <label>CVV:</label>
-        <input asp-for="CVV" value="123" />
-    </div>
-    <div>
-        <label>Fecha Vencimiento:</label>
-        <input asp-for="FechaVencimiento" value="12/2028" />
-    </div>
-    <div id="pinField" style="display: none;">
-        <label>PIN:</label>
-        <input asp-for="PIN" type="password" />
-    </div>
-    <button type="submit">Realizar Compra</button>
-</form>
-
-<script>
-    document.getElementById('Monto').addEventListener('input', function() {
-        var pinField = document.getElementById('pinField');
-        if (parseFloat(this.value) > 50000) {
-            pinField.style.display = 'block';
-        } else {
-            pinField.style.display = 'none';
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Compra - Banco ABC</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-    });
-</script>
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #0a2540 0%, #1c5a7a 100%);
+            min-height: 100vh;
+        }
+
+        .navbar {
+            background: rgba(10, 37, 64, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.2);
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #ffd700 0%, #ffb347 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo-icon i {
+            font-size: 1.3rem;
+            color: #0a2540;
+        }
+
+        .logo-text {
+            color: white;
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+
+        .logo-text span {
+            color: #ffd700;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .nav-link {
+            color: #e2e8f0;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            transition: all 0.3s;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .nav-link:hover, .nav-link.active {
+            background: rgba(255,255,255,0.1);
+            color: #ffd700;
+        }
+
+        .user-info {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            color: white;
+        }
+
+        .logout-btn {
+            background: rgba(255,255,255,0.15);
+            border: none;
+            color: white;
+            padding: 0.4rem 1rem;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .logout-btn:hover {
+            background: rgba(255,255,255,0.25);
+        }
+
+        .container {
+            max-width: 500px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+
+        .card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            animation: fadeInUp 0.6s ease;
+        }
+
+        .card-header {
+            background: linear-gradient(135deg, #0f3b5c 0%, #1c5a7a 100%);
+            padding: 1.5rem;
+            color: white;
+            text-align: center;
+        }
+
+        .card-header h2 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .card-header p {
+            opacity: 0.9;
+            font-size: 0.9rem;
+        }
+
+        .card-body {
+            padding: 2rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.2rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: #2d3748;
+        }
+
+        .form-group label i {
+            color: #1c5a7a;
+            margin-right: 0.5rem;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 0.8rem;
+            border: 2px solid #e2e8f0;
+            border-radius: 12px;
+            font-size: 1rem;
+            transition: all 0.3s;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: #1c5a7a;
+            box-shadow: 0 0 0 3px rgba(28, 90, 122, 0.2);
+        }
+
+        .row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .btn-submit {
+            width: 100%;
+            padding: 0.8rem;
+            background: linear-gradient(135deg, #1c5a7a 0%, #0f3b5c 100%);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-top: 0.5rem;
+        }
+
+        .btn-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(28, 90, 122, 0.4);
+        }
+
+        .alert {
+            padding: 1rem;
+            border-radius: 12px;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            animation: fadeInUp 0.5s ease;
+        }
+
+        .alert-success {
+            background: #d1fae5;
+            color: #065f46;
+            border-left: 4px solid #10b981;
+        }
+
+        .alert-error {
+            background: #fee2e2;
+            color: #991b1b;
+            border-left: 4px solid #ef4444;
+        }
+
+        .alert i {
+            font-size: 1.2rem;
+        }
+
+        .text-danger {
+            color: #ef4444;
+            font-size: 0.8rem;
+            margin-top: 0.3rem;
+            display: block;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 1.5rem;
+            color: rgba(255,255,255,0.7);
+            font-size: 0.8rem;
+        }
+
+        @@keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @@media (max-width: 600px) {
+            .container {
+                padding: 0 1rem;
+            }
+            .row {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+            <div class="logo-icon">
+                <i class="fas fa-university"></i>
+            </div>
+            <div class="logo-text">Banco <span>ABC</span></div>
+        </div>
+        <div class="nav-menu">
+            <a href="/CuentasTarjetas/Dashboard" class="nav-link"><i class="fas fa-list"></i> Lista de cuentas y tarjetas</a>
+            <a href="/MovimientosCuenta/Index" class="nav-link"><i class="fas fa-chart-line"></i> Ver movimientos de cuentas</a>
+            <a href="/MovimientosTarjetaCredito/Index" class="nav-link"><i class="fas fa-credit-card"></i> Ver movimientos de tarjetas de crédito</a>
+        </div>
+        <div class="user-info">
+            <i class="fas fa-user-circle"></i>
+            <span>Hola, @ViewBag.Usuario</span>
+            <form asp-action="Logout" asp-controller="Login" method="post">
+                <button type="submit" class="logout-btn"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</button>
+            </form>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <h2><i class="fas fa-shopping-cart"></i> Simulador de Compra</h2>
+                <p>Complete los datos para realizar una compra en línea</p>
+            </div>
+            <div class="card-body">
+                @if (ViewBag.Mensaje != null)
+                {
+                    <div class="alert alert-@(ViewBag.Tipo == "success" ? "success" : "error")">
+                        <i class="fas @(ViewBag.Tipo == "success" ? "fa-check-circle" : "fa-exclamation-circle")"></i>
+                        <span>@ViewBag.Mensaje</span>
+                    </div>
+                }
+
+                <form asp-action="Index" method="post">
+                    @Html.AntiForgeryToken()
+
+                    <!-- NOMBRE DEL CLIENTE - NUEVO CAMPO -->
+                    <div class="form-group">
+                        <label><i class="fas fa-user"></i> Nombre del Cliente</label>
+                        <input asp-for="NombreCliente" class="form-control" placeholder="Ingrese su nombre completo" required />
+                        <span asp-validation-for="NombreCliente" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label><i class="fas fa-credit-card"></i> Número de Tarjeta</label>
+                        <input asp-for="NumeroTarjeta" class="form-control" placeholder="Ingrese el número de tarjeta" required />
+                        <span asp-validation-for="NumeroTarjeta" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label><i class="fas fa-dollar-sign"></i> Monto</label>
+                        <input asp-for="Monto" type="number" step="0.01" class="form-control" placeholder="0.00" required />
+                        <span asp-validation-for="Monto" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label><i class="fas fa-store"></i> Comercio</label>
+                        <input asp-for="Comercio" class="form-control" placeholder="Nombre del comercio" required />
+                        <span asp-validation-for="Comercio" class="text-danger"></span>
+                    </div>
+
+                    <div class="row">
+                        <div class="form-group">
+                            <label><i class="fas fa-lock"></i> CVV</label>
+                            <input asp-for="CVV" class="form-control" type="password" maxlength="4" placeholder="123" required />
+                            <span asp-validation-for="CVV" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label><i class="fas fa-calendar"></i> Fecha Vencimiento</label>
+                            <input asp-for="FechaVencimiento" class="form-control" placeholder="MM/YYYY" required />
+                            <span asp-validation-for="FechaVencimiento" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group" id="pinField" style="display: none;">
+                        <label><i class="fas fa-key"></i> PIN</label>
+                        <input asp-for="PIN" class="form-control" type="password" maxlength="4" placeholder="****" />
+                        <small class="text-muted">Requerido para montos mayores a ₡50,000</small>
+                    </div>
+
+                    <button type="submit" class="btn-submit">
+                        <i class="fas fa-check-circle"></i> Realizar Compra
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p><i class="fas fa-shield-alt"></i> Banco ABC - Seguridad y Confianza</p>
+        <p>&copy; 2026 - Todos los derechos reservados</p>
+    </div>
+
+    <script>
+        // Mostrar/ocultar campo PIN según el monto
+        var montoInput = document.getElementById('Monto');
+        if (montoInput) {
+            montoInput.addEventListener('input', function() {
+                var pinField = document.getElementById('pinField');
+                if (parseFloat(this.value) > 50000) {
+                    pinField.style.display = 'block';
+                } else {
+                    pinField.style.display = 'none';
+                }
+            });
+        }
+
+        // Formatear número de tarjeta mientras se escribe
+        var tarjetaInput = document.getElementById('NumeroTarjeta');
+        if (tarjetaInput) {
+            tarjetaInput.addEventListener('input', function(e) {
+                var value = this.value.replace(/\s/g, '');
+                if (value.length > 16) value = value.slice(0, 16);
+                var formatted = '';
+                for (var i = 0; i < value.length; i++) {
+                    if (i > 0 && i % 4 === 0) formatted += ' ';
+                    formatted += value[i];
+                }
+                this.value = formatted;
+            });
+        }
+    </script>
+</body>
+</html>

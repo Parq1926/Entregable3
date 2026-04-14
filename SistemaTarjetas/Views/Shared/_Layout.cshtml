@@ -6,39 +6,64 @@
     <meta charset="utf-8" />
     <title>@ViewData["Title"] - Banco ABC</title>
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
     <header>
         <div class="nav-container">
-            <div class="logo">🏦 Banco ABC</div>
+            <div class="logo">
+                <i class="fas fa-university"></i>
+                <span>Banco ABC</span>
+            </div>
 
             <ul class="nav-links">
-                <li>@Html.ActionLink("Inicio", "Index", "Home")</li>
+                <!-- ==================== BOTONES PRINCIPALES ==================== -->
                 
-                <!-- SIMULADOR - Visible siempre (fuera del login) -->
-                <li><a href="@Url.Action("Index", "Simulador")">🛒 Simulador de Compra</a></li>
+                @if (Context.Session.GetString("Usuario") != null)
+                {
+                    <!-- 1. Lista de cuentas y tarjetas -->
+                    <li><a href="@Url.Action("Dashboard", "CuentasTarjetas")"><i class="fas fa-list"></i> Lista de cuentas y tarjetas</a></li>
+                    
+                    <!-- 2. Ver movimientos de cuentas -->
+                    <li><a href="@Url.Action("Index", "MovimientosCuenta")"><i class="fas fa-chart-line"></i> Ver movimientos de cuentas</a></li>
+                    
+                    <!-- 3. Ver movimientos de tarjetas de crédito -->
+                    <li><a href="@Url.Action("Index", "MovimientosTarjetaCredito")"><i class="fas fa-credit-card"></i> Ver movimientos de tarjetas de crédito</a></li>
+                }
+
+                <!-- ==================== SIMULADOR - SIEMPRE VISIBLE ==================== -->
+                <li><a href="@Url.Action("Index", "Simulador")"><i class="fas fa-shopping-cart"></i> Simulador de Compra</a></li>
 
                 @if (Context.Session.GetString("Usuario") != null)
                 {
-                    <li class="dropdown">
-                        <a href="javascript:void(0)" class="dropbtn">Administración</a>
-                        <div class="dropdown-content">
-                            <a href="@Url.Action("Clientes", "Clientes")">Administración de Clientes</a>
-                            <a href="@Url.Action("Cuentas", "Cuentas")">Registrar Cuenta</a>
-                            <a href="@Url.Action("Tarjetas", "Tarjetas")">Registrar Tarjeta</a>
-                            <a href="@Url.Action("Usuarios", "Usuarios")">Usuarios</a>
-                        </div>
-                    </li>
+                    <!-- ==================== ADMINISTRACIÓN (SOLO ADMINS) ==================== -->
+                    @if (Context.Session.GetInt32("TipoUsuario") == 1)
+                    {
+                        <li class="dropdown">
+                            <a href="javascript:void(0)" class="dropbtn"><i class="fas fa-cog"></i> Administración ▼</a>
+                            <div class="dropdown-content">
+                                <a href="@Url.Action("Clientes", "Clientes")"><i class="fas fa-users"></i> Clientes</a>
+                                <a href="@Url.Action("Cuentas", "Cuentas")"><i class="fas fa-chart-line"></i> Cuentas</a>
+                                <a href="@Url.Action("Tarjetas", "Tarjetas")"><i class="fas fa-credit-card"></i> Tarjetas</a>
+                                <a href="@Url.Action("Usuarios", "Usuarios")"><i class="fas fa-user-shield"></i> Usuarios</a>
+                            </div>
+                        </li>
+                    }
+                    
+                    <!-- ==================== CERRAR SESIÓN ==================== -->
                     <li>
-                        <form asp-controller="Auth" asp-action="Logout" method="post">
-                            <button type="submit" class="btn-link">Cerrar Sesión</button>
+                        <form asp-action="Logout" asp-controller="Login" method="post">
+                            <button type="submit" class="btn-link"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</button>
                         </form>
                     </li>
                 }
                 else
                 {
-                    <li>@Html.ActionLink("Iniciar Sesión", "Login", "Login")</li>
+                    <!-- ==================== SIN LOGIN ==================== -->
+                    <li><a href="@Url.Action("Login", "Login")"><i class="fas fa-sign-in-alt"></i> Iniciar Sesión</a></li>
+                    <li><a href="@Url.Action("Create", "EncargadoLegal")"><i class="fas fa-user-plus"></i> Registrarse</a></li>
                 }
             </ul>
         </div>
@@ -49,116 +74,164 @@
     </main>
 
     <footer>
-        <p>&copy; 2026 - Banco ABC | Plataforma segura</p>
+        <p><i class="fas fa-shield-alt"></i> &copy; 2026 - Banco ABC | Plataforma segura</p>
     </footer>
 
     @RenderSection("Scripts", required: false)
 
     <style>
-            body {
-                margin: 0;
-                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-                background-color: #0f172a;
-                color: white;
-            }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-            /* NAVBAR */
-            header {
-                background: linear-gradient(90deg, #0f172a, #1e3a8a);
-                box-shadow: 0 2px 10px rgba(0,0,0,0.4);
-            }
+        body {
+            font-family: 'Poppins', 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #0a2540 0%, #1c5a7a 100%);
+            min-height: 100vh;
+            color: white;
+        }
 
+        /* NAVBAR */
+        header {
+            background: rgba(10, 37, 64, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 15px rgba(0,0,0,0.2);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.8rem 2rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: white;
+        }
+
+        .logo i {
+            font-size: 1.8rem;
+            color: #ffd700;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 0.2rem;
+        }
+
+        .nav-links li {
+            position: relative;
+        }
+
+        .nav-links li a,
+        .dropbtn,
+        .btn-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #e2e8f0;
+            padding: 0.6rem 1rem;
+            text-decoration: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 0.9rem;
+            border-radius: 8px;
+        }
+
+        .nav-links li a:hover,
+        .dropdown:hover .dropbtn,
+        .btn-link:hover {
+            color: #ffd700;
+            background-color: rgba(255,255,255,0.1);
+        }
+
+        /* DROPDOWN */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #1e293b;
+            min-width: 220px;
+            border-radius: 12px;
+            box-shadow: 0px 10px 25px rgba(0,0,0,0.3);
+            overflow: hidden;
+            z-index: 1;
+            top: 100%;
+            left: 0;
+        }
+
+        .dropdown-content a {
+            color: #e2e8f0;
+            padding: 0.8rem 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            font-size: 0.85rem;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #2563eb;
+            color: white;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* MAIN */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: rgba(2, 6, 23, 0.8);
+            color: #94a3b8;
+            font-size: 0.8rem;
+            margin-top: 2rem;
+        }
+
+        /* BOTONES DE FORMULARIO */
+        li form {
+            display: inline-block;
+            margin: 0;
+        }
+
+        /* RESPONSIVE */
+        @@media (max-width: 900px) {
             .nav-container {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                padding: 10px 30px;
+                flex-direction: column;
+                padding: 1rem;
             }
-
-            .logo {
-                font-size: 1.2em;
-                font-weight: bold;
-            }
-
             .nav-links {
-                list-style: none;
-                display: flex;
-                margin: 0;
-                padding: 0;
-                align-items: center;
+                justify-content: center;
             }
-
-                .nav-links li {
-                    position: relative;
-                }
-
-                    .nav-links li a,
-                    .dropbtn,
-                    .btn-link {
-                        display: inline-block;
-                        color: #e2e8f0;
-                        padding: 12px 16px;
-                        text-decoration: none;
-                        background: none;
-                        border: none;
-                        cursor: pointer;
-                        transition: 0.3s;
-                    }
-
-                        .nav-links li a:hover,
-                        .dropdown:hover .dropbtn,
-                        .btn-link:hover {
-                            color: white;
-                            background-color: rgba(255,255,255,0.1);
-                            border-radius: 6px;
-                        }
-
-            /* DROPDOWN */
-            .dropdown-content {
-                display: none;
-                position: absolute;
-                background-color: #1e293b;
-                min-width: 220px;
-                border-radius: 10px;
-                box-shadow: 0px 10px 25px rgba(0,0,0,0.5);
-                overflow: hidden;
-                z-index: 1;
-            }
-
-                .dropdown-content a {
-                    color: #e2e8f0;
-                    padding: 12px 16px;
-                    display: block;
-                }
-
-                    .dropdown-content a:hover {
-                        background-color: #2563eb;
-                        color: white;
-                    }
-
-            .dropdown:hover .dropdown-content {
-                display: block;
-            }
-
-            /* MAIN */
             .container {
-                padding: 30px;
+                padding: 1rem;
             }
-
-            /* FOOTER */
-            footer {
-                text-align: center;
-                padding: 15px;
-                background-color: #020617;
-                color: #94a3b8;
-                font-size: 0.9em;
-            }
-
-            /* FORM BUTTON */
-            li form {
-                display: inline-block;
-                margin: 0;
-            }
+        }
     </style>
 
 </body>

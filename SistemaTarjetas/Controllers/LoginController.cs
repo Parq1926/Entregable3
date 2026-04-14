@@ -2,6 +2,9 @@
 using SistemaTarjetas.Models;
 using SistemaTarjetas.Services;
 using SistemaTarjetas.Helpers;
+using System.Net.Sockets;
+using System.Text;
+using System.Text.Json;
 using System.Threading.Tasks;
 
 namespace SistemaTarjetas.Controllers
@@ -46,6 +49,11 @@ namespace SistemaTarjetas.Controllers
                 string identificacion = model.Usuario;
                 HttpContext.Session.SetString("Identificacion", identificacion);
 
+                // ================================================
+                // ENVIAR CORREO DE INICIO DE SESIÓN
+                // ================================================
+                await EnviarCorreoLogin(model.Usuario);
+
                 if (response.TipoUsuario == 1)
                 {
                     return RedirectToAction("Clientes", "Clientes");
@@ -73,6 +81,42 @@ namespace SistemaTarjetas.Controllers
         {
             HttpContext.Session.Clear();
             return RedirectToAction("Login");
+        }
+
+        // ================================================
+        // ENVIAR CORREO DE LOGIN
+        // ================================================
+        private async Task EnviarCorreoLogin(string usuario)
+        {
+            try
+            {
+                using var client = new TcpClient();
+                await client.ConnectAsync("127.0.0.1", 5060);
+
+                var request = new
+                {
+                    accion = "enviar_correo_login",
+                    Usuario = usuario
+                };
+
+                var jsonRequest = JsonSerializer.Serialize(request);
+                var data = Encoding.UTF8.GetBytes(jsonRequest + "\n");
+                await client.GetStream().WriteAsync(data);
+
+                var buffer = new byte[4096];
+                var bytesRead = await client.GetStream().ReadAsync(buffer);
+                var jsonResponse = Encoding.UTF8.GetString(buffer, 0, bytesRead);
+                var resultado = JsonSerializer.Deserialize<JsonElement>(jsonResponse);
+
+                if (resultado.GetProperty("ok").GetBoolean())
+                {
+                    Console.WriteLine($"✅ Correo de login enviado para: {usuario}");
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"❌ Error enviando correo de login: {ex.Message}");
+            }
         }
     }
 }

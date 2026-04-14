@@ -11,22 +11,23 @@ namespace SistemaTarjetas.Controllers
         // GET: Simulador
         public IActionResult Index()
         {
+            var usuario = HttpContext.Session.GetString("Usuario");
+            ViewBag.Usuario = usuario ?? "Invitado";
             return View(new CompraViewModel());
         }
 
         // POST: Simulador
         [HttpPost]
-        // [ValidateAntiForgeryToken]  // ← Descomenta después de probar
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> Index(CompraViewModel model)
         {
-            // Log inmediato para ver si llega
             Console.WriteLine("========== POST RECIBIDO EN SIMULADOR ==========");
             Console.WriteLine($"Hora: {DateTime.Now}");
 
             if (model == null)
             {
-                Console.WriteLine("model es NULL");
-                ViewBag.Mensaje = "Error: modelo nulo";
+                Console.WriteLine("ERROR: model es NULL");
+                ViewBag.Mensaje = "Error en los datos";
                 ViewBag.Tipo = "error";
                 return View(new CompraViewModel());
             }
@@ -38,14 +39,63 @@ namespace SistemaTarjetas.Controllers
             Console.WriteLine($"FechaVencimiento: {model.FechaVencimiento}");
             Console.WriteLine($"PIN: {model.PIN ?? "null"}");
 
-            // Validar PIN si monto > 50000
+            var usuario = HttpContext.Session.GetString("Usuario");
+            ViewBag.Usuario = usuario ?? "Invitado";
+
+            // Validar campos obligatorios
+            if (string.IsNullOrEmpty(model.NumeroTarjeta))
+            {
+                ViewBag.Mensaje = "❌ Ingrese el número de tarjeta";
+                ViewBag.Tipo = "error";
+                return View(model);
+            }
+
+            if (model.Monto <= 0)
+            {
+                ViewBag.Mensaje = "❌ Ingrese un monto válido";
+                ViewBag.Tipo = "error";
+                return View(model);
+            }
+
+            if (string.IsNullOrEmpty(model.Comercio))
+            {
+                ViewBag.Mensaje = "❌ Ingrese el comercio";
+                ViewBag.Tipo = "error";
+                return View(model);
+            }
+
+            if (string.IsNullOrEmpty(model.CVV) || (model.CVV.Length != 3 && model.CVV.Length != 4))
+            {
+                ViewBag.Mensaje = "❌ CVV inválido. Debe tener 3 o 4 dígitos";
+                ViewBag.Tipo = "error";
+                return View(model);
+            }
+
+            if (string.IsNullOrEmpty(model.FechaVencimiento) || !model.FechaVencimiento.Contains("/"))
+            {
+                ViewBag.Mensaje = "❌ Fecha de vencimiento inválida. Use formato MM/YYYY";
+                ViewBag.Tipo = "error";
+                return View(model);
+            }
+
+            // Validar nombre del cliente
+            if (string.IsNullOrEmpty(model.NombreCliente))
+            {
+                ViewBag.Mensaje = "❌ Ingrese el nombre del cliente";
+                ViewBag.Tipo = "error";
+                return View(model);
+            }
+
+            // Validar PIN para montos mayores a 50000
             if (model.Monto > 50000 && string.IsNullOrEmpty(model.PIN))
             {
-                Console.WriteLine("PIN requerido para monto > 50000");
                 ViewBag.Mensaje = "❌ PIN requerido para montos mayores a ₡50,000";
                 ViewBag.Tipo = "error";
                 return View(model);
             }
+
+            // Limpiar número de tarjeta (quitar espacios)
+            model.NumeroTarjeta = model.NumeroTarjeta.Replace(" ", "");
 
             // Enviar a Python
             var request = new
@@ -56,7 +106,8 @@ namespace SistemaTarjetas.Controllers
                 Comercio = model.Comercio,
                 CVV = model.CVV,
                 FechaVencimiento = model.FechaVencimiento,
-                PIN = model.PIN ?? ""
+                PIN = model.PIN ?? "",
+                NombreCliente = model.NombreCliente
             };
 
             var jsonRequest = JsonSerializer.Serialize(request);
@@ -82,7 +133,7 @@ namespace SistemaTarjetas.Controllers
 
                 if (resultado.GetProperty("ok").GetBoolean())
                 {
-                    ViewBag.Mensaje = "✅ ¡COMPRA EXITOSA! Su transacción ha sido aprobada.";
+                    ViewBag.Mensaje = "✅ ¡SU COMPRA SE HA REALIZADO DE MANERA EXITOSA!";
                     ViewBag.Tipo = "success";
                     ModelState.Clear();
                     model = new CompraViewModel();
@@ -90,7 +141,7 @@ namespace SistemaTarjetas.Controllers
                 else
                 {
                     var mensaje = resultado.GetProperty("mensaje").GetString();
-                    ViewBag.Mensaje = $"❌ COMPRA DENEGADA: {mensaje}";
+                    ViewBag.Mensaje = $"❌ {mensaje}";
                     ViewBag.Tipo = "error";
                 }
             }

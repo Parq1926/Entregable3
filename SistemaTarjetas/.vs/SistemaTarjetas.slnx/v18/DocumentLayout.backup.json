@@ -3,32 +3,44 @@
   "WorkspaceRootPath": "C:\\Users\\rojas\\OneDrive\\Progra\\Entregable 3\\SistemaTarjetas\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6E33796A-55F5-5F17-03E7-8F248AF6FCAD}|SistemaTarjetas.csproj|c:\\users\\rojas\\onedrive\\progra\\entregable 3\\sistematarjetas\\views\\movimientoscuenta\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{6E33796A-55F5-5F17-03E7-8F248AF6FCAD}|SistemaTarjetas.csproj|solutionrelative:views\\movimientoscuenta\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{6E33796A-55F5-5F17-03E7-8F248AF6FCAD}|SistemaTarjetas.csproj|c:\\users\\rojas\\onedrive\\progra\\entregable 3\\sistematarjetas\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E33796A-55F5-5F17-03E7-8F248AF6FCAD}|SistemaTarjetas.csproj|solutionrelative:controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6E33796A-55F5-5F17-03E7-8F248AF6FCAD}|SistemaTarjetas.csproj|c:\\users\\rojas\\onedrive\\progra\\entregable 3\\sistematarjetas\\controllers\\movimientoscuentacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6E33796A-55F5-5F17-03E7-8F248AF6FCAD}|SistemaTarjetas.csproj|solutionrelative:controllers\\movimientoscuentacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6E33796A-55F5-5F17-03E7-8F248AF6FCAD}|SistemaTarjetas.csproj|c:\\users\\rojas\\onedrive\\progra\\entregable 3\\sistematarjetas\\views\\movimientoscuenta\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6E33796A-55F5-5F17-03E7-8F248AF6FCAD}|SistemaTarjetas.csproj|solutionrelative:views\\movimientoscuenta\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6E33796A-55F5-5F17-03E7-8F248AF6FCAD}|SistemaTarjetas.csproj|c:\\users\\rojas\\onedrive\\progra\\entregable 3\\sistematarjetas\\views\\simulador\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{6E33796A-55F5-5F17-03E7-8F248AF6FCAD}|SistemaTarjetas.csproj|solutionrelative:views\\simulador\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{6E33796A-55F5-5F17-03E7-8F248AF6FCAD}|SistemaTarjetas.csproj|c:\\users\\rojas\\onedrive\\progra\\entregable 3\\sistematarjetas\\views\\cuentastarjetas\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6E33796A-55F5-5F17-03E7-8F248AF6FCAD}|SistemaTarjetas.csproj|solutionrelative:views\\cuentastarjetas\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{6E33796A-55F5-5F17-03E7-8F248AF6FCAD}|SistemaTarjetas.csproj|c:\\users\\rojas\\onedrive\\progra\\entregable 3\\sistematarjetas\\controllers\\simuladorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6E33796A-55F5-5F17-03E7-8F248AF6FCAD}|SistemaTarjetas.csproj|solutionrelative:controllers\\simuladorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6E33796A-55F5-5F17-03E7-8F248AF6FCAD}|SistemaTarjetas.csproj|c:\\users\\rojas\\onedrive\\progra\\entregable 3\\sistematarjetas\\wwwroot\\test.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{6E33796A-55F5-5F17-03E7-8F248AF6FCAD}|SistemaTarjetas.csproj|solutionrelative:wwwroot\\test.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{6E33796A-55F5-5F17-03E7-8F248AF6FCAD}|SistemaTarjetas.csproj|c:\\users\\rojas\\onedrive\\progra\\entregable 3\\sistematarjetas\\models\\compraviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E33796A-55F5-5F17-03E7-8F248AF6FCAD}|SistemaTarjetas.csproj|solutionrelative:models\\compraviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6E33796A-55F5-5F17-03E7-8F248AF6FCAD}|SistemaTarjetas.csproj|c:\\users\\rojas\\onedrive\\progra\\entregable 3\\sistematarjetas\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6E33796A-55F5-5F17-03E7-8F248AF6FCAD}|SistemaTarjetas.csproj|solutionrelative:controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6E33796A-55F5-5F17-03E7-8F248AF6FCAD}|SistemaTarjetas.csproj|c:\\users\\rojas\\onedrive\\progra\\entregable 3\\sistematarjetas\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6E33796A-55F5-5F17-03E7-8F248AF6FCAD}|SistemaTarjetas.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6E33796A-55F5-5F17-03E7-8F248AF6FCAD}|SistemaTarjetas.csproj|c:\\users\\rojas\\onedrive\\progra\\entregable 3\\sistematarjetas\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6E33796A-55F5-5F17-03E7-8F248AF6FCAD}|SistemaTarjetas.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E33796A-55F5-5F17-03E7-8F248AF6FCAD}|SistemaTarjetas.csproj|c:\\users\\rojas\\onedrive\\progra\\entregable 3\\sistematarjetas\\controllers\\movimientoscuentacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E33796A-55F5-5F17-03E7-8F248AF6FCAD}|SistemaTarjetas.csproj|solutionrelative:controllers\\movimientoscuentacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E33796A-55F5-5F17-03E7-8F248AF6FCAD}|SistemaTarjetas.csproj|c:\\users\\rojas\\onedrive\\progra\\entregable 3\\sistematarjetas\\wwwroot\\test.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6E33796A-55F5-5F17-03E7-8F248AF6FCAD}|SistemaTarjetas.csproj|solutionrelative:wwwroot\\test.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6E33796A-55F5-5F17-03E7-8F248AF6FCAD}|SistemaTarjetas.csproj|c:\\users\\rojas\\onedrive\\progra\\entregable 3\\sistematarjetas\\services\\autenticadorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -63,14 +75,6 @@
       "RelativeMoniker": "D:0:0:{6E33796A-55F5-5F17-03E7-8F248AF6FCAD}|SistemaTarjetas.csproj|solutionrelative:services\\iconsultaclienteservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6E33796A-55F5-5F17-03E7-8F248AF6FCAD}|SistemaTarjetas.csproj|c:\\users\\rojas\\onedrive\\progra\\entregable 3\\sistematarjetas\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{6E33796A-55F5-5F17-03E7-8F248AF6FCAD}|SistemaTarjetas.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6E33796A-55F5-5F17-03E7-8F248AF6FCAD}|SistemaTarjetas.csproj|c:\\users\\rojas\\onedrive\\progra\\entregable 3\\sistematarjetas\\models\\compraviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6E33796A-55F5-5F17-03E7-8F248AF6FCAD}|SistemaTarjetas.csproj|solutionrelative:models\\compraviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{6E33796A-55F5-5F17-03E7-8F248AF6FCAD}|SistemaTarjetas.csproj|c:\\users\\rojas\\onedrive\\progra\\entregable 3\\sistematarjetas\\views\\movimientostarjetacredito\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{6E33796A-55F5-5F17-03E7-8F248AF6FCAD}|SistemaTarjetas.csproj|solutionrelative:views\\movimientostarjetacredito\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -81,10 +85,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{6E33796A-55F5-5F17-03E7-8F248AF6FCAD}|SistemaTarjetas.csproj|c:\\users\\rojas\\onedrive\\progra\\entregable 3\\sistematarjetas\\controllers\\cuentastarjetascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6E33796A-55F5-5F17-03E7-8F248AF6FCAD}|SistemaTarjetas.csproj|solutionrelative:controllers\\cuentastarjetascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6E33796A-55F5-5F17-03E7-8F248AF6FCAD}|SistemaTarjetas.csproj|c:\\users\\rojas\\onedrive\\progra\\entregable 3\\sistematarjetas\\views\\cuentastarjetas\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{6E33796A-55F5-5F17-03E7-8F248AF6FCAD}|SistemaTarjetas.csproj|solutionrelative:views\\cuentastarjetas\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6E33796A-55F5-5F17-03E7-8F248AF6FCAD}|SistemaTarjetas.csproj|c:\\users\\rojas\\onedrive\\progra\\entregable 3\\sistematarjetas\\controllers\\cuentascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -106,20 +106,31 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\rojas\\OneDrive\\Progra\\Entregable 3\\SistemaTarjetas\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\rojas\\OneDrive\\Progra\\Entregable 3\\SistemaTarjetas\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAAKAAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "CompraViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\rojas\\OneDrive\\Progra\\Entregable 3\\SistemaTarjetas\\Models\\CompraViewModel.cs",
+              "RelativeDocumentMoniker": "Models\\CompraViewModel.cs",
+              "ToolTip": "C:\\Users\\rojas\\OneDrive\\Progra\\Entregable 3\\SistemaTarjetas\\Models\\CompraViewModel.cs",
+              "RelativeToolTip": "Models\\CompraViewModel.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAA1wCEAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-12T00:54:37.541Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-12T00:34:13.039Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Dashboard.cshtml",
+              "DocumentMoniker": "C:\\Users\\rojas\\OneDrive\\Progra\\Entregable 3\\SistemaTarjetas\\Views\\CuentasTarjetas\\Dashboard.cshtml",
+              "RelativeDocumentMoniker": "Views\\CuentasTarjetas\\Dashboard.cshtml",
+              "ToolTip": "C:\\Users\\rojas\\OneDrive\\Progra\\Entregable 3\\SistemaTarjetas\\Views\\CuentasTarjetas\\Dashboard.cshtml",
+              "RelativeToolTip": "Views\\CuentasTarjetas\\Dashboard.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAIABAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-11T05:22:02.313Z"
             },
             {
               "$type": "Document",
@@ -129,53 +140,63 @@
               "RelativeDocumentMoniker": "Views\\Simulador\\Index.cshtml",
               "ToolTip": "C:\\Users\\rojas\\OneDrive\\Progra\\Entregable 3\\SistemaTarjetas\\Views\\Simulador\\Index.cshtml",
               "RelativeToolTip": "Views\\Simulador\\Index.cshtml",
-              "ViewState": "AgIAABMAAAAAAAAAAAAswDAAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAD4BAAAAAAAAAAAAAF8BAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-04-12T00:34:37.734Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-12T00:34:37.734Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "SimuladorController.cs",
               "DocumentMoniker": "C:\\Users\\rojas\\OneDrive\\Progra\\Entregable 3\\SistemaTarjetas\\Controllers\\SimuladorController.cs",
               "RelativeDocumentMoniker": "Controllers\\SimuladorController.cs",
               "ToolTip": "C:\\Users\\rojas\\OneDrive\\Progra\\Entregable 3\\SistemaTarjetas\\Controllers\\SimuladorController.cs",
               "RelativeToolTip": "Controllers\\SimuladorController.cs",
-              "ViewState": "AgIAADQAAAAAAAAAAAAQwGoAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAHUAAAAAAAAAAAAowIIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-12T00:33:52.097Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-12T00:33:52.097Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "MovimientosCuentaController.cs",
-              "DocumentMoniker": "C:\\Users\\rojas\\OneDrive\\Progra\\Entregable 3\\SistemaTarjetas\\Controllers\\MovimientosCuentaController.cs",
-              "RelativeDocumentMoniker": "Controllers\\MovimientosCuentaController.cs",
-              "ToolTip": "C:\\Users\\rojas\\OneDrive\\Progra\\Entregable 3\\SistemaTarjetas\\Controllers\\MovimientosCuentaController.cs",
-              "RelativeToolTip": "Controllers\\MovimientosCuentaController.cs",
-              "ViewState": "AgIAAEsAAAAAAAAAAAAQwGYAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-04T04:01:48.134Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\rojas\\OneDrive\\Progra\\Entregable 3\\SistemaTarjetas\\Views\\MovimientosCuenta\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\MovimientosCuenta\\Index.cshtml",
               "ToolTip": "C:\\Users\\rojas\\OneDrive\\Progra\\Entregable 3\\SistemaTarjetas\\Views\\MovimientosCuenta\\Index.cshtml",
               "RelativeToolTip": "Views\\MovimientosCuenta\\Index.cshtml",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAABYAAAAaAAAAAAAAAA==",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAAAwAAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2026-04-12T00:00:05.067Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 0,
+              "Title": "LoginController.cs",
+              "DocumentMoniker": "C:\\Users\\rojas\\OneDrive\\Progra\\Entregable 3\\SistemaTarjetas\\Controllers\\LoginController.cs",
+              "RelativeDocumentMoniker": "Controllers\\LoginController.cs",
+              "ToolTip": "C:\\Users\\rojas\\OneDrive\\Progra\\Entregable 3\\SistemaTarjetas\\Controllers\\LoginController.cs*",
+              "RelativeToolTip": "Controllers\\LoginController.cs*",
+              "ViewState": "AgIAAFQAAAAAAAAAAADwv2UAAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-11T05:22:47.496Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\rojas\\OneDrive\\Progra\\Entregable 3\\SistemaTarjetas\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\rojas\\OneDrive\\Progra\\Entregable 3\\SistemaTarjetas\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAANsAAAAAAAAAAAAQwOUAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-12T00:34:52.614Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "AutorizadorService.cs",
               "DocumentMoniker": "C:\\Users\\rojas\\OneDrive\\Progra\\Entregable 3\\SistemaTarjetas\\Services\\AutorizadorService.cs",
               "RelativeDocumentMoniker": "Services\\AutorizadorService.cs",
@@ -187,7 +208,31 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 7,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\rojas\\OneDrive\\Progra\\Entregable 3\\SistemaTarjetas\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\rojas\\OneDrive\\Progra\\Entregable 3\\SistemaTarjetas\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAmwCUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-12T00:54:37.541Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "MovimientosCuentaController.cs",
+              "DocumentMoniker": "C:\\Users\\rojas\\OneDrive\\Progra\\Entregable 3\\SistemaTarjetas\\Controllers\\MovimientosCuentaController.cs",
+              "RelativeDocumentMoniker": "Controllers\\MovimientosCuentaController.cs",
+              "ToolTip": "C:\\Users\\rojas\\OneDrive\\Progra\\Entregable 3\\SistemaTarjetas\\Controllers\\MovimientosCuentaController.cs",
+              "RelativeToolTip": "Controllers\\MovimientosCuentaController.cs",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAQwGYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-04T04:01:48.134Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
               "Title": "AutenticacionResponse.cs",
               "DocumentMoniker": "C:\\Users\\rojas\\OneDrive\\Progra\\Entregable 3\\SistemaTarjetas\\Models\\AutenticacionResponse.cs",
               "RelativeDocumentMoniker": "Models\\AutenticacionResponse.cs",
@@ -199,7 +244,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 9,
               "Title": "test.html",
               "DocumentMoniker": "C:\\Users\\rojas\\OneDrive\\Progra\\Entregable 3\\SistemaTarjetas\\wwwroot\\test.html",
               "RelativeDocumentMoniker": "wwwroot\\test.html",
@@ -207,25 +252,11 @@
               "RelativeToolTip": "wwwroot\\test.html",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2026-04-13T17:03:29.457Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-13T17:03:29.457Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "LoginController.cs",
-              "DocumentMoniker": "C:\\Users\\rojas\\OneDrive\\Progra\\Entregable 3\\SistemaTarjetas\\Controllers\\LoginController.cs",
-              "RelativeDocumentMoniker": "Controllers\\LoginController.cs",
-              "ToolTip": "C:\\Users\\rojas\\OneDrive\\Progra\\Entregable 3\\SistemaTarjetas\\Controllers\\LoginController.cs",
-              "RelativeToolTip": "Controllers\\LoginController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-11T05:22:47.496Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 10,
               "Title": "AutenticadorService.cs",
               "DocumentMoniker": "C:\\Users\\rojas\\OneDrive\\Progra\\Entregable 3\\SistemaTarjetas\\Services\\AutenticadorService.cs",
               "RelativeDocumentMoniker": "Services\\AutenticadorService.cs",
@@ -237,7 +268,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 15,
               "Title": "IAutorizadorService.cs",
               "DocumentMoniker": "C:\\Users\\rojas\\OneDrive\\Progra\\Entregable 3\\SistemaTarjetas\\Services\\IAutorizadorService.cs",
               "RelativeDocumentMoniker": "Services\\IAutorizadorService.cs",
@@ -249,7 +280,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 13,
               "Title": "AutorizacionRequest.cs",
               "DocumentMoniker": "C:\\Users\\rojas\\OneDrive\\Progra\\Entregable 3\\SistemaTarjetas\\Models\\AutorizacionRequest.cs",
               "RelativeDocumentMoniker": "Models\\AutorizacionRequest.cs",
@@ -261,7 +292,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 14,
               "Title": "AutorizacionResponse.cs",
               "DocumentMoniker": "C:\\Users\\rojas\\OneDrive\\Progra\\Entregable 3\\SistemaTarjetas\\Models\\AutorizacionResponse.cs",
               "RelativeDocumentMoniker": "Models\\AutorizacionResponse.cs",
@@ -273,7 +304,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 17,
               "Title": "IConsultaClienteService.cs",
               "DocumentMoniker": "C:\\Users\\rojas\\OneDrive\\Progra\\Entregable 3\\SistemaTarjetas\\Services\\IConsultaClienteService.cs",
               "RelativeDocumentMoniker": "Services\\IConsultaClienteService.cs",
@@ -285,7 +316,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 16,
               "Title": "IAutenticador.cs",
               "DocumentMoniker": "C:\\Users\\rojas\\OneDrive\\Progra\\Entregable 3\\SistemaTarjetas\\Services\\IAutenticador.cs",
               "RelativeDocumentMoniker": "Services\\IAutenticador.cs",
@@ -297,7 +328,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\rojas\\OneDrive\\Progra\\Entregable 3\\SistemaTarjetas\\Views\\MovimientosTarjetaCredito\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\MovimientosTarjetaCredito\\Index.cshtml",
@@ -309,31 +340,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "CompraViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\rojas\\OneDrive\\Progra\\Entregable 3\\SistemaTarjetas\\Models\\CompraViewModel.cs",
-              "RelativeDocumentMoniker": "Models\\CompraViewModel.cs",
-              "ToolTip": "C:\\Users\\rojas\\OneDrive\\Progra\\Entregable 3\\SistemaTarjetas\\Models\\CompraViewModel.cs",
-              "RelativeToolTip": "Models\\CompraViewModel.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAA8wCEAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-12T00:34:13.039Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\rojas\\OneDrive\\Progra\\Entregable 3\\SistemaTarjetas\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\rojas\\OneDrive\\Progra\\Entregable 3\\SistemaTarjetas\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-04-12T00:34:52.614Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 19,
               "Title": "MovimientosTarjetaCreditoController.cs",
               "DocumentMoniker": "C:\\Users\\rojas\\OneDrive\\Progra\\Entregable 3\\SistemaTarjetas\\Controllers\\MovimientosTarjetaCreditoController.cs",
               "RelativeDocumentMoniker": "Controllers\\MovimientosTarjetaCreditoController.cs",
@@ -345,7 +352,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 20,
               "Title": "CuentasTarjetasController.cs",
               "DocumentMoniker": "C:\\Users\\rojas\\OneDrive\\Progra\\Entregable 3\\SistemaTarjetas\\Controllers\\CuentasTarjetasController.cs",
               "RelativeDocumentMoniker": "Controllers\\CuentasTarjetasController.cs",
@@ -354,18 +361,6 @@
               "ViewState": "AgIAACoAAAAAAAAAAAAuwDAAAABIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-11T05:14:24.558Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "Dashboard.cshtml",
-              "DocumentMoniker": "C:\\Users\\rojas\\OneDrive\\Progra\\Entregable 3\\SistemaTarjetas\\Views\\CuentasTarjetas\\Dashboard.cshtml",
-              "RelativeDocumentMoniker": "Views\\CuentasTarjetas\\Dashboard.cshtml",
-              "ToolTip": "C:\\Users\\rojas\\OneDrive\\Progra\\Entregable 3\\SistemaTarjetas\\Views\\CuentasTarjetas\\Dashboard.cshtml",
-              "RelativeToolTip": "Views\\CuentasTarjetas\\Dashboard.cshtml",
-              "ViewState": "AgIAAGYBAAAAAAAAAAAmwIABAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-04-11T05:22:02.313Z"
             },
             {
               "$type": "Document",
