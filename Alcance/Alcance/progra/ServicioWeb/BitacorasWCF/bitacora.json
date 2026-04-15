@@ -1,0 +1,284 @@
+,
+{
+  "fecha": "2026-03-18 18:15:08",
+  "operacion": "INICIO_SERVICIO",
+  "solicitud": {
+    "mensaje": "Servicio iniciado"
+  },
+  "respuesta": null
+},
+{
+  "fecha": "2026-03-18 18:15:09",
+  "operacion": "REGISTRO_EXITOSO",
+  "solicitud": {
+    "usuario": "HqP2nlYsV6TPmoKPt0nFdA==",
+    "email": "diego@gmail.com+",
+    "tipo": 1
+  },
+  "respuesta": {
+    "Exitoso": true,
+    "Mensaje": "Usuario registrado exitosamente"
+  }
+},
+{
+  "fecha": "2026-03-18 18:15:16",
+  "operacion": "INICIO_SERVICIO",
+  "solicitud": {
+    "mensaje": "Servicio iniciado"
+  },
+  "respuesta": null
+},
+{
+  "fecha": "2026-03-18 18:15:16",
+  "operacion": "LOGIN_EXITOSO",
+  "solicitud": {
+    "usuario": "HqP2nlYsV6TPmoKPt0nFdA==",
+    "contrasena": "78Wa0xJfuB052I/Xa3+AwA==",
+    "tipo": 1
+  },
+  "respuesta": {
+    "Resultado": true,
+    "Mensaje": "Exitoso",
+    "TipoUsuario": "tcRIBhWe/XrEg3u2Hk6MWA=="
+  }
+},
+{
+  "fecha": "2026-03-18 18:23:35",
+  "operacion": "INICIO_SERVICIO",
+  "solicitud": {
+    "mensaje": "Servicio iniciado"
+  },
+  "respuesta": null
+},
+{
+  "fecha": "2026-03-18 18:23:35",
+  "operacion": "REGISTRO_EXITOSO",
+  "solicitud": {
+    "usuario": "d5N+rI+GiF1yZBen1WJ9vQ==",
+    "email": "yendry@gmail.com",
+    "tipo": 1
+  },
+  "respuesta": {
+    "Exitoso": true,
+    "Mensaje": "Usuario registrado exitosamente"
+  }
+},
+{
+  "fecha": "2026-03-18 18:23:46",
+  "operacion": "INICIO_SERVICIO",
+  "solicitud": {
+    "mensaje": "Servicio iniciado"
+  },
+  "respuesta": null
+},
+{
+  "fecha": "2026-03-18 18:23:46",
+  "operacion": "LOGIN_EXITOSO",
+  "solicitud": {
+    "usuario": "9rGD0ZDQPXMP7KIDy2Z8+Q==",
+    "contrasena": "VlxgLaDoE8RuQWboDdus/g==",
+    "tipo": 1
+  },
+  "respuesta": {
+    "Resultado": true,
+    "Mensaje": "Exitoso",
+    "TipoUsuario": "tcRIBhWe/XrEg3u2Hk6MWA=="
+  }
+},
+{
+  "fecha": "2026-03-18 18:24:04",
+  "operacion": "INICIO_SERVICIO",
+  "solicitud": {
+    "mensaje": "Servicio iniciado"
+  },
+  "respuesta": null
+},
+{
+  "fecha": "2026-03-18 18:24:04",
+  "operacion": "LOGIN_CONTRASENA_INCORRECTA",
+  "solicitud": {
+    "usuario": "9rGD0ZDQPXMP7KIDy2Z8+Q==",
+    "contrasena": "4RIilcvLd7kfn/Sl1uJErQ==",
+    "motivo": "ContraseÃ±a no coincide"
+  },
+  "respuesta": {
+    "Resultado": false,
+    "Mensaje": "Usuario y/o contraseÃ±a incorrectos",
+    "TipoUsuario": "xDcopbow1gmHjaIUIzTGUQ=="
+  }
+},
+{
+  "fecha": "2026-03-18 18:24:31",
+  "operacion": "INICIO_SERVICIO",
+  "solicitud": {
+    "mensaje": "Servicio iniciado"
+  },
+  "respuesta": null
+},
+{
+  "fecha": "2026-03-18 18:24:31",
+  "operacion": "LOGIN_EXITOSO",
+  "solicitud": {
+    "usuario": "9rGD0ZDQPXMP7KIDy2Z8+Q==",
+    "contrasena": "VlxgLaDoE8RuQWboDdus/g==",
+    "tipo": 1
+  },
+  "respuesta": {
+    "Resultado": true,
+    "Mensaje": "Exitoso",
+    "TipoUsuario": "tcRIBhWe/XrEg3u2Hk6MWA=="
+  }
+},
+{
+  "fecha": "2026-03-18 18:25:26",
+  "operacion": "INICIO_SERVICIO",
+  "solicitud": {
+    "mensaje": "Servicio iniciado"
+  },
+  "respuesta": null
+},
+{
+  "fecha": "2026-03-18 18:25:26",
+  "operacion": "LOGIN_USUARIO_NO_EXISTE",
+  "solicitud": {
+    "usuario": "I6b62Idk7NAnXsyyAnAoRA==",
+    "contrasena": "K0g0BohaWUZuApFaLh9vbw==",
+    "usuarioEncriptadoRecibido": "5Es3EhJXUrhG8VJiHWlRHr2RKuSGjl/VTyu2KaWU9SY="
+  },
+  "respuesta": {
+    "Resultado": false,
+    "Mensaje": "Usuario y/o contraseÃ±a incorrectos",
+    "TipoUsuario": "xDcopbow1gmHjaIUIzTGUQ=="
+  }
+},
+{
+  "fecha": "2026-04-01 21:48:53",
+  "operacion": "INICIO_SERVICIO",
+  "solicitud": {
+    "mensaje": "Servicio iniciado"
+  },
+  "respuesta": null
+},
+{
+  "fecha": "2026-04-01 21:48:56",
+  "operacion": "LOGIN_USUARIO_NO_EXISTE",
+  "solicitud": {
+    "usuario": "VPxmfiKhI4obMdPASeZbJLiusns72BvJcbCePwdslNrjrF5KthwBKTRRTI9JWa+UZY8uYdMnK9HLIh2fxRXVRzZd7OR66lxcDwrFOgpqTlg=",
+    "contrasena": "noahGsOsPxfIxTUZooeG7sSsd6M/11wlQXBU4+iFX7C5B4pdFezh3nRltex5sVza4gA0Ylsjbo74vBqZYescdhV7hhB5kxcB+hCuM7i08gg=",
+    "usuarioEncriptadoRecibido": "VPxmfiKhI4obMdPASeZbJLiusns72BvJcbCePwdslNrjrF5KthwBKTRRTI9JWa+UZY8uYdMnK9HLIh2fxRXVRzZd7OR66lxcDwrFOgpqTlg="
+  },
+  "respuesta": {
+    "Resultado": false,
+    "Mensaje": "Usuario y/o contraseÃ±a incorrectos",
+    "TipoUsuario": "xDcopbow1gmHjaIUIzTGUQ=="
+  }
+},
+{
+  "fecha": "2026-04-01 21:49:08",
+  "operacion": "INICIO_SERVICIO",
+  "solicitud": {
+    "mensaje": "Servicio iniciado"
+  },
+  "respuesta": null
+},
+{
+  "fecha": "2026-04-01 21:49:08",
+  "operacion": "LOGIN_USUARIO_NO_EXISTE",
+  "solicitud": {
+    "usuario": "VPxmfiKhI4obMdPASeZbJLiusns72BvJcbCePwdslNrjrF5KthwBKTRRTI9JWa+UZY8uYdMnK9HLIh2fxRXVRzZd7OR66lxcDwrFOgpqTlg=",
+    "contrasena": "5T2ULYEcbjp6fUkNDFtmuT8/+fh9U7AxlfT6rgnZTw9jySCh7U5JSiVNWcRwRavTYmws4nunZFNf/Mi72Z/vImanP/vRjQeRLWL45a4grR4=",
+    "usuarioEncriptadoRecibido": "VPxmfiKhI4obMdPASeZbJLiusns72BvJcbCePwdslNrjrF5KthwBKTRRTI9JWa+UZY8uYdMnK9HLIh2fxRXVRzZd7OR66lxcDwrFOgpqTlg="
+  },
+  "respuesta": {
+    "Resultado": false,
+    "Mensaje": "Usuario y/o contraseÃ±a incorrectos",
+    "TipoUsuario": "xDcopbow1gmHjaIUIzTGUQ=="
+  }
+},
+{
+  "fecha": "2026-04-01 21:51:02",
+  "operacion": "INICIO_SERVICIO",
+  "solicitud": {
+    "mensaje": "Servicio iniciado"
+  },
+  "respuesta": null
+},
+{
+  "fecha": "2026-04-01 21:51:03",
+  "operacion": "REGISTRO_EXITOSO",
+  "solicitud": {
+    "usuario": "7+c0RYTzfyM9MQ1P3J7ZDA==",
+    "email": "josue@gmail.com",
+    "tipo": 1
+  },
+  "respuesta": {
+    "Exitoso": true,
+    "Mensaje": "Usuario registrado exitosamente"
+  }
+},
+{
+  "fecha": "2026-04-01 21:51:25",
+  "operacion": "INICIO_SERVICIO",
+  "solicitud": {
+    "mensaje": "Servicio iniciado"
+  },
+  "respuesta": null
+},
+{
+  "fecha": "2026-04-01 21:51:25",
+  "operacion": "LOGIN_USUARIO_NO_EXISTE",
+  "solicitud": {
+    "usuario": "JtsoUwTTlEejMxEjOgh0VDZfVSjB8QF2Ei6LutMeV3IHUJZUixr03a8/Pm1GxzsYIa9F5e+rK2Osu5X/CYWaGJJFXRpYo0h4uwjzUIN0g9A=",
+    "contrasena": "5T2ULYEcbjp6fUkNDFtmuT8/+fh9U7AxlfT6rgnZTw9jySCh7U5JSiVNWcRwRavTYmws4nunZFNf/Mi72Z/vImanP/vRjQeRLWL45a4grR4=",
+    "usuarioEncriptadoRecibido": "JtsoUwTTlEejMxEjOgh0VDZfVSjB8QF2Ei6LutMeV3IHUJZUixr03a8/Pm1GxzsYIa9F5e+rK2Osu5X/CYWaGJJFXRpYo0h4uwjzUIN0g9A="
+  },
+  "respuesta": {
+    "Resultado": false,
+    "Mensaje": "Usuario y/o contraseÃ±a incorrectos",
+    "TipoUsuario": "xDcopbow1gmHjaIUIzTGUQ=="
+  }
+},
+{
+  "fecha": "2026-04-01 21:51:36",
+  "operacion": "INICIO_SERVICIO",
+  "solicitud": {
+    "mensaje": "Servicio iniciado"
+  },
+  "respuesta": null
+},
+{
+  "fecha": "2026-04-01 21:51:36",
+  "operacion": "LOGIN_USUARIO_NO_EXISTE",
+  "solicitud": {
+    "usuario": "dTXMjtPjRuapVIG+fVH9VZyMwPOTnWgdHmv7XvMwvGbUjO+kGM7FHTN0hvm+oUTbEPEZoa2J/t/57qlFt8yV0nLKrRdBixB4w0xZoPPt2Xc=",
+    "contrasena": "5T2ULYEcbjp6fUkNDFtmuT8/+fh9U7AxlfT6rgnZTw9jySCh7U5JSiVNWcRwRavTYmws4nunZFNf/Mi72Z/vImanP/vRjQeRLWL45a4grR4=",
+    "usuarioEncriptadoRecibido": "dTXMjtPjRuapVIG+fVH9VZyMwPOTnWgdHmv7XvMwvGbUjO+kGM7FHTN0hvm+oUTbEPEZoa2J/t/57qlFt8yV0nLKrRdBixB4w0xZoPPt2Xc="
+  },
+  "respuesta": {
+    "Resultado": false,
+    "Mensaje": "Usuario y/o contraseÃ±a incorrectos",
+    "TipoUsuario": "xDcopbow1gmHjaIUIzTGUQ=="
+  }
+},
+{
+  "fecha": "2026-04-01 21:54:13",
+  "operacion": "INICIO_SERVICIO",
+  "solicitud": {
+    "mensaje": "Servicio iniciado"
+  },
+  "respuesta": null
+},
+{
+  "fecha": "2026-04-01 21:54:14",
+  "operacion": "LOGIN_USUARIO_NO_EXISTE",
+  "solicitud": {
+    "usuario": "JtsoUwTTlEejMxEjOgh0VDZfVSjB8QF2Ei6LutMeV3IHUJZUixr03a8/Pm1GxzsYIa9F5e+rK2Osu5X/CYWaGJJFXRpYo0h4uwjzUIN0g9A=",
+    "contrasena": "5T2ULYEcbjp6fUkNDFtmuT8/+fh9U7AxlfT6rgnZTw9jySCh7U5JSiVNWcRwRavTYmws4nunZFNf/Mi72Z/vImanP/vRjQeRLWL45a4grR4=",
+    "usuarioEncriptadoRecibido": "JtsoUwTTlEejMxEjOgh0VDZfVSjB8QF2Ei6LutMeV3IHUJZUixr03a8/Pm1GxzsYIa9F5e+rK2Osu5X/CYWaGJJFXRpYo0h4uwjzUIN0g9A="
+  },
+  "respuesta": {
+    "Resultado": false,
+    "Mensaje": "Usuario y/o contraseÃ±a incorrectos",
+    "TipoUsuario": "xDcopbow1gmHjaIUIzTGUQ=="
+  }
+}

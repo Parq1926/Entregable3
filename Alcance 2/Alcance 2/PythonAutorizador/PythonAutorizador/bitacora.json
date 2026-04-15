@@ -1,0 +1,238 @@
+[
+    {
+        "fecha": "07/02/2026",
+        "tarjeta": "4111 11** **** 1111",
+        "cajero": 1,
+        "cliente": "101010101",
+        "tipo": "Retiro",
+        "monto": "100.00"
+    },
+    {
+        "fecha": "07/02/2026",
+        "tarjeta": "4111 11** **** 1111",
+        "cajero": 1,
+        "cliente": "101010101",
+        "tipo": "Retiro",
+        "monto": "300.00"
+    },
+    {
+        "fecha": "09/02/2026",
+        "tarjeta": "4111 11** **** 1111",
+        "cajero": 1,
+        "cliente": "101010101",
+        "tipo": "Retiro",
+        "monto": "1000.00"
+    },
+    {
+        "fecha": "09/02/2026",
+        "tarjeta": "4111 11** **** 1111",
+        "cajero": 1,
+        "cliente": "101010101",
+        "tipo": "ValidacionPIN"
+    },
+    {
+        "fecha": "10/02/2026",
+        "tarjeta": "4111 11** **** 1111",
+        "cajero": 1,
+        "cliente": "101010101",
+        "tipo": "Retiro",
+        "monto": "1000.00"
+    },
+    {
+        "fecha": "10/02/2026",
+        "tarjeta": "4111 11** **** 1111",
+        "cajero": 1,
+        "cliente": "101010101",
+        "tipo": "Retiro",
+        "monto": "10000.00"
+    },
+    {
+        "fecha": "10/02/2026",
+        "tarjeta": "4111 11** **** 1111",
+        "cajero": 1,
+        "cliente": "101010101",
+        "tipo": "CambioPin"
+    },
+    {
+        "fecha": "10/02/2026",
+        "tarjeta": "4111 11** **** 1111",
+        "cajero": 1,
+        "cliente": "101010101",
+        "tipo": "Retiro",
+        "monto": "1200.00"
+    },
+    {
+        "fecha": "10/02/2026",
+        "tarjeta": "4111 11** **** 1111",
+        "cajero": 1,
+        "cliente": "101010101",
+        "tipo": "Retiro",
+        "monto": "3000.00"
+    },
+    {
+        "fecha": "10/02/2026",
+        "tarjeta": "4111 11** **** 1111",
+        "cajero": 1,
+        "cliente": "101010101",
+        "tipo": "Retiro",
+        "monto": "3000.00"
+    },
+    {
+        "fecha": "10/02/2026",
+        "tarjeta": "4111 11** **** 1111",
+        "cajero": 1,
+        "cliente": "101010101",
+        "tipo": "Retiro",
+        "monto": "1.00"
+    },
+    {
+        "fecha": "10/02/2026",
+        "tarjeta": "4111 11** **** 1111",
+        "cajero": 1,
+        "cliente": "101010101",
+        "tipo": "Retiro",
+        "monto": "30000.00"
+    },
+    {
+        "fecha": "10/02/2026",
+        "tarjeta": "4111 11** **** 1111",
+        "cajero": 1,
+        "cliente": "101010101",
+        "tipo": "Retiro",
+        "monto": "600.00"
+    },
+    {
+        "fecha": "10/02/2026",
+        "tarjeta": "4111 11** **** 1111",
+        "cajero": 1,
+        "cliente": "101010101",
+        "tipo": "Retiro",
+        "monto": "30000.00"
+    },
+    {
+        "fecha": "10/02/2026",
+        "tarjeta": "4111 11** **** 1111",
+        "cajero": 1,
+        "cliente": "101010101",
+        "tipo": "Retiro",
+        "monto": "4000.00"
+    },
+    {
+        "fecha": "10/02/2026",
+        "tarjeta": "4111 11** **** 1111",
+        "cajero": 1,
+        "cliente": "101010101",
+        "tipo": "Retiro",
+        "monto": "2000.00"
+    },
+    {
+        "fecha": "10/02/2026",
+        "tarjeta": "4111 11** **** 1111",
+        "cajero": 1,
+        "cliente": "101010101",
+        "tipo": "Retiro",
+        "monto": "200.00"
+    },
+    {
+        "fecha": "10/02/2026",
+        "tarjeta": "4111 11** **** 1111",
+        "cajero": 1,
+        "cliente": "101010101",
+        "tipo": "Retiro",
+        "monto": "40000.00"
+    },
+    {
+        "fecha": "10/02/2026",
+        "tarjeta": "4111 11** **** 1111",
+        "cajero": 1,
+        "cliente": "101010101",
+        "tipo": "Consulta",
+        "monto": "15899.00"
+    },
+    {
+        "fecha": "10/02/2026",
+        "tarjeta": "4111 11** **** 1111",
+        "cajero": 1,
+        "cliente": "101010101",
+        "tipo": "Consulta",
+        "monto": "15899.00"
+    },
+    {
+        "fecha": "10/02/2026",
+        "tarjeta": "4111 11** **** 1111",
+        "cajero": 1,
+        "cliente": "101010101",
+        "tipo": "Consulta",
+        "monto": "15899.00"
+    },
+    {
+        "fecha": "11/02/2026",
+        "tarjeta": "4111 11** **** 1111",
+        "cajero": 1,
+        "cliente": "101010101",
+        "tipo": "Retiro",
+        "monto": "50000.00"
+    },
+    {
+        "fecha": "11/02/2026",
+        "tarjeta": "4111 11** **** 1111",
+        "cajero": 1,
+        "cliente": "101010101",
+        "tipo": "Consulta",
+        "monto": "150000.00"
+    },
+    {
+        "fecha": "11/02/2026",
+        "tarjeta": "4111 11** **** 1111",
+        "cajero": 1,
+        "cliente": "101010101",
+        "tipo": "CambioPin"
+    },
+    {
+        "fecha": "11/02/2026",
+        "tarjeta": "4111 11** **** 1111",
+        "cajero": 1,
+        "cliente": "101010101",
+        "tipo": "Consulta",
+        "monto": "150000.00"
+    },
+    {
+        "fecha": "18/02/2026",
+        "tarjeta": "4111 11** **** 1111",
+        "cajero": 1,
+        "cliente": "101010101",
+        "tipo": "Retiro",
+        "monto": "2000.00"
+    },
+    {
+        "fecha": "09/03/2026 23:50:45",
+        "fecha_iso": "2026-03-09T23:50:45.735442",
+        "tarjeta": "4111 11** **** 1111",
+        "tarjeta_completa": "4111111111111111",
+        "cajero": 1,
+        "cliente": "101010101",
+        "tipo": "Retiro",
+        "monto": "4000.00",
+        "monto_numero": 4000.0
+    },
+    {
+        "fecha": "10/03/2026 20:51:44",
+        "fecha_iso": "2026-03-10T20:51:44.822664",
+        "tarjeta": "4111 11** **** 1111",
+        "tarjeta_completa": "4111111111111111",
+        "cajero": 1,
+        "cliente": "101010101",
+        "tipo": "Retiro",
+        "monto": "3000.00",
+        "monto_numero": 3000.0
+    },
+    {
+        "fecha": "10/03/2026 20:57:53",
+        "fecha_iso": "2026-03-10T20:57:53.306152",
+        "tarjeta": "4111 11** **** 1111",
+        "tarjeta_completa": "4111111111111111",
+        "cajero": 1,
+        "cliente": "101010101",
+        "tipo": "CambioPin"
+    }
+]

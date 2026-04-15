@@ -1,0 +1,27 @@
+<Solution>
+  <Folder Name="/Autorizador/">
+    <File Path="Bitacora.py" />
+    <File Path="CodigoVerificacion.py" />
+    <File Path="conexion_core.py" />
+    <File Path="FechaVencimiento.py" />
+    <File Path="main.py" />
+    <File Path="MontoTotal.py" />
+    <File Path="NuevoPin.py" />
+    <File Path="NumeroTarjeta.py" />
+    <File Path="Pin.py" />
+    <File Path="PuenteWCF.py" />
+    <File Path="Retiro.py" />
+    <File Path="servidor.py" />
+    <File Path="tesr_cliente.py" />
+    <File Path="test_cedula.py" />
+    <File Path="test_core.py" />
+    <File Path="test_correo.py" />
+    <File Path="test_simple.py" />
+  </Folder>
+  <Folder Name="/Datos/">
+    <File Path="Conexion.py" />
+  </Folder>
+  <Project Path="../../../OneDrive/Progra/Nueva carpeta/Python/AurotizadorPython/PythonAutorizador/PythonAutorizador/PythonAutorizador.pyproj" Type="888888a0-9f3d-457c-b088-3a5042f75d52" Id="12f16241-6269-40fd-b155-2305a99c61aa">
+    <Build Project="false" />
+  </Project>
+</Solution>
