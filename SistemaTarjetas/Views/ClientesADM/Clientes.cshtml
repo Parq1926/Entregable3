@@ -1,0 +1,128 @@
+﻿<div class="wrapper">
+
+    <div class="header">
+        <h2>Administración de Clientes</h2>
+        <a href="/ClientesADM/Crear" class="btn-main">+ Nuevo Cliente</a>
+    </div>
+
+    @if (TempData["Success"] != null)
+    {
+        <div class="alert success">@TempData["Success"]</div>
+    }
+
+    @if (TempData["Error"] != null)
+    {
+        <div class="alert error">@TempData["Error"]</div>
+    }
+
+    <div class="panel">
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Apellido 1</th>
+                    <th>Apellido 2</th>
+                    <th></th>
+                </tr>
+            </thead>
+
+            <tbody>
+                @foreach (var c in ViewBag.Clientes)
+                {
+                    <tr>
+                        <td>
+                            <a href="/ClientesADM/Editar?identificacion=@c.Identificacion" class="link">
+                                @c.Identificacion
+                            </a>
+                        </td>
+                        <td>@c.Nombre</td>
+                        <td>@c.Apellido1</td>
+                        <td>@c.Apellido2</td>
+                        <td>
+                            <a href="/ClientesADM/Eliminar?identificacion=@c.Identificacion" class="danger">
+                                Eliminar
+                            </a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
+<style>
+.wrapper {
+    max-width:1100px;
+    margin:40px auto;
+}
+
+.header {
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:20px;
+}
+
+h2 {
+    color:#e2e8f0;
+}
+
+.panel {
+    background:#1e293b;
+    padding:20px;
+    border-radius:12px;
+}
+
+table {
+    width:100%;
+    border-collapse:collapse;
+}
+
+th {
+    text-align:left;
+    padding:12px;
+    color:#94a3b8;
+    border-bottom:1px solid #334155;
+}
+
+td {
+    padding:12px;
+    color:#e2e8f0;
+}
+
+tr:hover {
+    background:#0f172a;
+}
+
+/* LINKS */
+.link {
+    color:#38bdf8;
+    text-decoration:none;
+}
+
+.danger {
+    color:#f87171;
+    text-decoration:none;
+}
+
+/* BOTÓN */
+.btn-main {
+    background:#2563eb;
+    color:white;
+    padding:10px 16px;
+    border-radius:8px;
+    text-decoration:none;
+}
+
+/* ALERTAS */
+.alert {
+    padding:10px;
+    border-radius:6px;
+    margin-bottom:15px;
+}
+
+.success { background:#16a34a; }
+.error { background:#dc2626; }
+</style>

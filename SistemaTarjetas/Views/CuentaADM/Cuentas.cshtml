@@ -1,0 +1,109 @@
+﻿<div class="wrapper">
+
+    <div class="header">
+        <h2>Administración de Cuentas</h2>
+        <a href="/CuentaADM/Crear" class="btn-main">+ Nueva Cuenta</a>
+    </div>
+
+    @if (TempData["Success"] != null)
+    {
+        <div class="alert success">@TempData["Success"]</div>
+    }
+    @if (TempData["Error"] != null)
+    {
+        <div class="alert error">@TempData["Error"]</div>
+    }
+
+    <div class="panel">
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Número</th>
+                    <th class="right">Saldo</th>
+                    <th>ID Cliente</th>
+                    <th>Nombre</th>
+                    <th></th>
+                </tr>
+            </thead>
+
+            <tbody>
+                @foreach (var c in ViewBag.Cuentas)
+                {
+                    <tr>
+                        <td>
+                            <a href="/CuentaADM/Editar?numero=@c.Numero" class="link">
+                                @c.Numero
+                            </a>
+                        </td>
+                        <td class="right">₡@c.Saldo</td>
+                        <td>@c.Identificacion</td>
+                        <td>@c.Nombre</td>
+                        <td>
+                            <a href="/CuentaADM/Eliminar?numero=@c.Numero" class="danger">
+                                Eliminar
+                            </a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+    </div>
+
+</div>
+
+<style>
+.wrapper { max-width:1100px; margin:40px auto; }
+
+.header {
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:20px;
+}
+
+h2 { color:#e2e8f0; }
+
+.panel {
+    background:#1e293b;
+    padding:20px;
+    border-radius:12px;
+}
+
+table {
+    width:100%;
+    border-collapse:collapse;
+}
+
+th {
+    text-align:left;
+    padding:12px;
+    color:#94a3b8;
+    border-bottom:1px solid #334155;
+}
+
+td {
+    padding:12px;
+    color:#e2e8f0;
+}
+
+tr:hover { background:#0f172a; }
+
+.right { text-align:right; font-weight:500; }
+
+.link { color:#38bdf8; text-decoration:none; }
+.danger { color:#f87171; text-decoration:none; }
+
+.btn-main {
+    background:#2563eb;
+    color:white;
+    padding:10px 16px;
+    border-radius:8px;
+    text-decoration:none;
+}
+
+.alert { padding:10px; border-radius:6px; margin-bottom:15px; }
+.success { background:#16a34a; }
+.error { background:#dc2626; }
+</style>

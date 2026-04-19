@@ -1,0 +1,234 @@
+﻿<h2 class="titulo">Registrar Nueva Tarjeta</h2>
+
+<div class="form-wrapper">
+    <div class="form-panel">
+
+        @if (TempData["Error"] != null)
+        {
+            <div class="alert error">@TempData["Error"]</div>
+        }
+
+        <form method="post">
+
+            <div class="field">
+                <label>Identificación Cliente</label>
+                <input name="Identificacion" id="identificacion" required />
+                <small id="nombreCliente" class="hint"></small>
+            </div>
+
+            <div class="field">
+                <label>Tipo Tarjeta</label>
+                <select name="Tipo" id="tipo" required>
+                    <option value="">Seleccione...</option>
+                    @foreach (var t in ViewBag.Tipos)
+                    {
+                        <option value="@t.Id">@t.Nombre</option>
+                    }
+                </select>
+            </div>
+
+            <div class="field">
+                <label>Monto (solo crédito)</label>
+                <input name="Monto" id="monto" type="number" min="0" />
+            </div>
+
+            <div class="field" id="cuentaContainer" style="display:none;">
+                <label>Cuenta asociada (Débito)</label>
+                <select name="Cuenta" id="cuenta">
+                    <option value="">Seleccione una cuenta</option>
+                </select>
+            </div>
+
+            <div class="actions">
+                <button type="submit" class="btn-main">Guardar</button>
+                <a href="/TarjetaADM/Tarjetas" class="btn-alt">Cancelar</a>
+            </div>
+
+        </form>
+
+    </div>
+</div>
+
+<script>
+    let inputId = document.getElementById("identificacion");
+    let selectCuenta = document.getElementById("cuenta");
+    let contCuenta = document.getElementById("cuentaContainer");
+    let montoInput = document.getElementById("monto");
+
+    /* OBTENER CLIENTE Y CUENTAS */
+    inputId.addEventListener("blur", function () {
+
+        let id = this.value;
+
+        if (!id) return;
+
+        // CLIENTE
+        fetch('/TarjetaADM/ObtenerCliente?id=' + id)
+        .then(r => r.json())
+        .then(data => {
+            document.getElementById("nombreCliente").innerText =
+                data ? data : "Cliente no encontrado";
+        });
+
+        // CUENTAS
+        fetch('/TarjetaADM/ObtenerCuentas?id=' + id)
+        .then(r => r.json())
+        .then(data => {
+
+            selectCuenta.innerHTML = "";
+
+            if (data.length === 0) {
+                let option = document.createElement("option");
+                option.text = "No tiene cuentas";
+                option.value = "";
+                selectCuenta.appendChild(option);
+            } else {
+                let defaultOption = document.createElement("option");
+                defaultOption.text = "Seleccione una cuenta";
+                defaultOption.value = "";
+                selectCuenta.appendChild(defaultOption);
+
+                data.forEach(c => {
+                    let option = document.createElement("option");
+                    option.value = c;
+                    option.text = c;
+                    selectCuenta.appendChild(option);
+                });
+            }
+        });
+    });
+
+    document.getElementById("tipo").addEventListener("change", function () {
+
+        let texto = this.options[this.selectedIndex].text;
+
+        if (texto === "Debito") {
+            contCuenta.style.display = "block";
+
+            montoInput.value = "";
+            montoInput.disabled = true;
+        }
+        else if (texto === "Credito") {
+            contCuenta.style.display = "none";
+
+            montoInput.disabled = false;
+        }
+        else {
+            contCuenta.style.display = "none";
+
+            montoInput.value = "";
+            montoInput.disabled = false;
+        }
+    });
+</script>
+
+<style>
+
+    /* TÍTULO */
+    .titulo {
+        text-align: center;
+        color: #e2e8f0;
+        margin-bottom: 10px;
+    }
+
+    /* CONTENEDOR */
+    .form-wrapper {
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+    }
+
+    /* PANEL */
+    .form-panel {
+        width: 420px;
+        background: #1e293b;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+    }
+
+    /* CAMPOS */
+    .field {
+        margin-bottom: 15px;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 5px;
+        color: #94a3b8;
+        font-size: 14px;
+    }
+
+    input, select {
+        width: 100%;
+        padding: 10px;
+        border-radius: 6px;
+        border: 1px solid #334155;
+        background: #0f172a;
+        color: white;
+        transition: 0.2s;
+    }
+
+        input:focus, select:focus {
+            outline: none;
+            border-color: #2563eb;
+            box-shadow: 0 0 0 1px #2563eb;
+        }
+
+    /* HINT */
+    .hint {
+        display: block;
+        margin-top: 5px;
+        font-size: 12px;
+        color: #94a3b8;
+    }
+
+    /* BOTONES */
+    .actions {
+        display: flex;
+        gap: 10px;
+        margin-top: 20px;
+    }
+
+    .btn-main {
+        flex: 1;
+        background: #2563eb;
+        color: white;
+        padding: 10px;
+        border: none;
+        border-radius: 6px;
+        font-weight: 500;
+        cursor: pointer;
+    }
+
+        .btn-main:hover {
+            background: #1d4ed8;
+        }
+
+    .btn-alt {
+        flex: 1;
+        background: #334155;
+        color: white;
+        padding: 10px;
+        border-radius: 6px;
+        text-align: center;
+        text-decoration: none;
+    }
+
+        .btn-alt:hover {
+            background: #475569;
+        }
+
+    /* ALERTAS */
+    .alert {
+        padding: 10px;
+        border-radius: 6px;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+
+    .error {
+        background: #dc2626;
+    }
+
+</style>

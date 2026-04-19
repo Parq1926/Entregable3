@@ -1,0 +1,68 @@
+﻿@{
+    ViewData["Title"] = "Inactivar Tarjeta";
+}
+
+<div class="container">
+
+    <div class="card">
+
+        <h2>Inactivar Tarjeta</h2>
+
+        <p>¿Realmente desea inactivar la tarjeta?</p>
+
+        <form method="post" action="/TarjetaADM/InactivarConfirmado">
+            <input type="hidden" name="Numero" value="@ViewBag.Numero" />
+
+            <div class="actions">
+                <button class="btn-danger">Sí</button>
+                <a href="/TarjetaADM/Tarjetas" class="btn-secondary">No</a>
+            </div>
+        </form>
+
+    </div>
+
+</div>
+
+<style>
+    .container {
+        max-width: 500px;
+        margin: 60px auto;
+    }
+
+    .card {
+        background: #1e293b;
+        padding: 30px;
+        border-radius: 12px;
+        text-align: center;
+    }
+
+    h2 {
+        color: #e2e8f0;
+    }
+
+    p {
+        color: #cbd5f5;
+        margin: 20px 0;
+    }
+
+    .actions {
+        display: flex;
+        gap: 10px;
+    }
+
+    .btn-danger {
+        flex: 1;
+        background: #dc2626;
+        color: white;
+        padding: 10px;
+        border: none;
+    }
+
+    .btn-secondary {
+        flex: 1;
+        background: #334155;
+        color: white;
+        padding: 10px;
+        text-decoration: none;
+    }
+</style>

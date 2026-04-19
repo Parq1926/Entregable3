@@ -1,0 +1,220 @@
+﻿<div class="wrapper">
+
+    <div class="header">
+
+        <h2>Tarjetas Registradas</h2>
+
+        <div class="right-section">
+            <div class="tools">
+                <input type="text" id="filtro" placeholder="Filtrar por ID Cliente" />
+                <button onclick="filtrar()" class="btn-alt small">Buscar</button>
+            </div>
+
+            <a href="/TarjetaADM/Crear" class="btn-main">+ Nueva Tarjeta</a>
+        </div>
+
+    </div>
+
+    @if (TempData["Success"] != null)
+    {
+        <div class="alert success">@TempData["Success"]</div>
+    }
+
+    @if (TempData["Error"] != null)
+    {
+        <div class="alert error">@TempData["Error"]</div>
+    }
+
+    <div class="panel">
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Número</th>
+                    <th>ID Cliente</th>
+                    <th>Nombre Cliente</th>
+                    <th>Tipo</th>
+                    <th>Estado</th>
+                    <th class="center">Acciones</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                @if (ViewBag.Tarjetas != null && ViewBag.Tarjetas.Count > 0)
+                {
+                    foreach (var t in ViewBag.Tarjetas)
+                    {
+                        <tr>
+                            <td>@t.Numero</td>
+                            <td>@t.Cliente</td>
+                            <td>@t.Nombre</td>
+                            <td>@t.Tipo</td>
+
+                            <td>
+                                <span class="badge @(t.Estado == "Activa" ? "activo" : "inactivo")">
+                                    @t.Estado
+                                </span>
+                            </td>
+
+                            <td class="center">
+                                <a href="/TarjetaADM/Inactivar?numero=@t.Numero"
+                                   onclick="return confirm('¿Realmente desea inactivar la tarjeta?')"
+                                   class="btn-warning">
+                                    Inactivar
+                                </a>
+                            </td>
+                        </tr>
+                    }
+                }
+                else
+                {
+                    <tr>
+                        <td colspan="5" class="center">No hay tarjetas registradas</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+    </div>
+
+</div>
+
+<script>
+function filtrar() {
+    let id = document.getElementById("filtro").value.trim();
+
+    if (!id) {
+        window.location.href = "/TarjetaADM/Tarjetas";
+        return;
+    }
+
+    window.location.href = "/TarjetaADM/Tarjetas?filtro=" + encodeURIComponent(id);
+}
+</script>
+
+<style>
+
+/* CONTENEDOR */
+.wrapper {
+    max-width:1100px;
+    margin:40px auto;
+}
+
+/* HEADER */
+.header {
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:20px;
+}
+
+.right-section {
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+/* FILTRO */
+.tools {
+    display:flex;
+    gap:10px;
+}
+
+.tools input {
+    padding:8px 10px;
+    border-radius:6px;
+    border:1px solid #334155;
+    background:#0f172a;
+    color:white;
+}
+
+/* PANEL */
+.panel {
+    background:#1e293b;
+    padding:20px;
+    border-radius:12px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.4);
+}
+
+/* TABLA */
+table {
+    width:100%;
+    border-collapse:collapse;
+}
+
+th {
+    text-align:left;
+    padding:12px;
+    color:#94a3b8;
+    border-bottom:1px solid #334155;
+}
+
+td {
+    padding:12px;
+    color:#e2e8f0;
+}
+
+tr:hover {
+    background:#0f172a;
+}
+
+/* CENTRADO */
+.center {
+    text-align:center;
+}
+
+/* BADGE ESTADO */
+.badge {
+    padding:4px 10px;
+    border-radius:20px;
+    font-size:12px;
+    font-weight:500;
+}
+
+.activo {
+    background:#16a34a;
+    color:white;
+}
+
+.inactivo {
+    background:#dc2626;
+    color:white;
+}
+
+/* BOTONES */
+.btn-main {
+    background:#2563eb;
+    color:white;
+    padding:10px 16px;
+    border-radius:8px;
+    text-decoration:none;
+}
+
+.btn-alt {
+    background:#334155;
+    color:white;
+    padding:8px 12px;
+    border-radius:6px;
+    border:none;
+    cursor:pointer;
+}
+
+.btn-warning {
+    background:#f59e0b;
+    color:white;
+    padding:6px 10px;
+    border-radius:6px;
+    text-decoration:none;
+}
+
+/* ALERTAS */
+.alert {
+    padding:10px;
+    border-radius:6px;
+    margin-bottom:15px;
+}
+
+.success { background:#16a34a; }
+.error { background:#dc2626; }
+
+</style>

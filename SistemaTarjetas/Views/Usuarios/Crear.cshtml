@@ -1,0 +1,165 @@
+﻿@model WSAutenticador.UsuarioRegistro
+
+<h2 class="titulo">Crear Usuario</h2>
+
+<div class="form-wrapper">
+    <div class="form-panel">
+
+        @if (ViewBag.Error != null)
+        {
+            <div class="alert error">@ViewBag.Error</div>
+        }
+
+        <form asp-action="Crear" method="post">
+
+            <div class="field">
+                <label>Cédula (será el usuario)</label>
+                <input asp-for="Identificacion" required />
+            </div>
+
+            <div class="field">
+                <label>Nombre</label>
+                <input asp-for="Nombre" required />
+            </div>
+
+            <div class="field">
+                <label>Primer Apellido</label>
+                <input asp-for="PrimerApellido" required />
+            </div>
+
+            <div class="field">
+                <label>Segundo Apellido</label>
+                <input asp-for="SegundoApellido" />
+            </div>
+
+            <div class="field">
+                <label>Email</label>
+                <input asp-for="Email" />
+            </div>
+
+            <div class="field">
+                <label>Contraseña</label>
+                <input asp-for="Contrasena" type="password" required />
+            </div>
+
+            <div class="field">
+                <label>Tipo</label>
+                <select asp-for="Tipo">
+                    <option value="1">Administrador</option>
+                    <option value="2">Cliente</option>
+                </select>
+            </div>
+
+            <div class="actions">
+                <button type="submit" class="btn-success">Guardar</button>
+                <a asp-action="Usuarios" class="btn-alt">Cancelar</a>
+            </div>
+
+        </form>
+
+    </div>
+</div>
+
+<style>
+
+    /* TÍTULO */
+    .titulo {
+        text-align: center;
+        color: #e2e8f0;
+        margin-bottom: 10px;
+    }
+
+    /* CENTRADO */
+    .form-wrapper {
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+    }
+
+    /* PANEL */
+    .form-panel {
+        width: 420px;
+        background: #1e293b;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+    }
+
+    /* CAMPOS */
+    .field {
+        margin-bottom: 15px;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 5px;
+        color: #94a3b8;
+        font-size: 14px;
+    }
+
+    input, select {
+        width: 100%;
+        padding: 10px;
+        border-radius: 6px;
+        border: 1px solid #334155;
+        background: #0f172a;
+        color: white;
+        transition: 0.2s;
+    }
+
+        /* FOCUS */
+        input:focus, select:focus {
+            outline: none;
+            border-color: #2563eb;
+            box-shadow: 0 0 0 1px #2563eb;
+        }
+
+    /* BOTONES */
+    .actions {
+        display: flex;
+        gap: 10px;
+        margin-top: 20px;
+    }
+
+    .btn-success {
+        flex: 1;
+        background: #16a34a;
+        color: white;
+        padding: 10px;
+        border: none;
+        border-radius: 6px;
+        font-weight: 500;
+        cursor: pointer;
+    }
+
+        .btn-success:hover {
+            background: #15803d;
+        }
+
+    .btn-alt {
+        flex: 1;
+        background: #334155;
+        color: white;
+        padding: 10px;
+        text-align: center;
+        border-radius: 6px;
+        text-decoration: none;
+    }
+
+        .btn-alt:hover {
+            background: #475569;
+        }
+
+    /* ALERTA */
+    .alert {
+        padding: 10px;
+        border-radius: 6px;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+
+    .error {
+        background: #dc2626;
+    }
+
+</style>

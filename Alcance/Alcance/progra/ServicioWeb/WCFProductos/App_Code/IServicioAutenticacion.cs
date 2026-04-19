@@ -6,13 +6,27 @@ using System.ServiceModel;
 using System.Runtime.Serialization;
 
 [ServiceContract]
-public interface IServicioAutenticacion 
+public interface IServicioAutenticacion
 {
     [OperationContract]
     ResultadoAutenticacion ValidarLogin(Credenciales credenciales);
 
     [OperationContract]
     ResultadoRegistro RegistrarUsuario(UsuarioRegistro usuario);
+
+    //AdminUsuarios Obtener y editar.
+    [OperationContract]
+    List<UsuarioRegistro> ObtenerUsuarios();
+
+    [OperationContract]
+    ResultadoRegistro EditarUsuario(UsuarioRegistro usuario);
+
+    //Activar/Inactivas AdminUsuarios.
+    [OperationContract]
+    ResultadoRegistro InactivarUsuario(string identificacion);
+
+    [OperationContract]
+    ResultadoRegistro ActivarUsuario(string identificacion);
 }
 
 [DataContract]

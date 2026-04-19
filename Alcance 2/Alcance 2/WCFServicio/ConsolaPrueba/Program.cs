@@ -1,5 +1,5 @@
-﻿using System;
-using ConsolaPrueba.WCFRef;
+﻿using ConsolaPrueba.WCFRef;
+using System;
 
 namespace ConsolaPruebas
 {

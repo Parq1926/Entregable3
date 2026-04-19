@@ -26,6 +26,6 @@
     <BuildDependency Project="." />
   </Project>
   <Project Path="../WCFServicio.DataAccess/WCFServicio.DataAccess.csproj" Id="b3ee27e4-400d-4a30-bdf2-5e9ff443d412" />
-  <Project Path="../WCFServicio.Entities/WCFServicio.Entities.csproj" Id="b565c137-e7bd-4793-b953-7dcc18172af0" />
+  <Project Path="../WCFServicio.Entities/WCFServicio.Entities.csproj" Id="d148e066-44d3-40ac-b4a9-96cd3003d375" />
   <Project Path="../WCFServicio.Security/WCFServicio.Security.csproj" Id="98ed24a7-dde6-4579-8695-38dc22659e7a" />
 </Solution>

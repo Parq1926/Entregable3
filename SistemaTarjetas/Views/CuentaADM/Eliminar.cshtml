@@ -1,0 +1,82 @@
+﻿<h2 class="titulo">Eliminar Cuenta</h2>
+
+<div class="form-wrapper">
+    <div class="form-panel">
+
+        <p class="text">¿Realmente desea eliminar el registro seleccionado?</p>
+
+        <form method="post" action="/CuentaADM/EliminarConfirmado">
+            @Html.AntiForgeryToken()
+
+            <input type="hidden" name="Numero" value="@ViewBag.Numero" />
+
+            <div class="actions">
+                <button type="submit" class="btn-danger">Sí</button>
+                <a href="/CuentaADM/Cuentas" class="btn-alt">No</a>
+            </div>
+        </form>
+
+    </div>
+</div>
+
+<style>
+    .titulo {
+        text-align: center;
+        color: #e2e8f0;
+    }
+
+    .form-wrapper {
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+    }
+
+    .form-panel {
+        width: 400px;
+        background: #1e293b;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+    }
+
+    .text {
+        text-align: center;
+        color: #94a3b8;
+        margin-bottom: 20px;
+        font-size: 15px;
+    }
+
+    /* BOTONES */
+    .actions {
+        display: flex;
+        gap: 10px;
+    }
+
+    .btn-danger {
+        flex: 1;
+        background: #dc2626;
+        color: white;
+        padding: 10px;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+    }
+
+        .btn-danger:hover {
+            background: #b91c1c;
+        }
+
+    .btn-alt {
+        flex: 1;
+        background: #334155;
+        color: white;
+        padding: 10px;
+        text-align: center;
+        border-radius: 6px;
+        text-decoration: none;
+    }
+
+        .btn-alt:hover {
+            background: #475569;
+        }
+</style>

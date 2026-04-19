@@ -35,7 +35,7 @@ public class UsuarioMongo
     public string Contrasena { get; set; } // Almacenada ENCRIPTADA
 
     [BsonElement("estado")]
-    public string Estado { get; set; } // "activo" o "inactivo"
+    public int Estado { get; set; } // 1 = activo, 0 = inactivo - AdminUsuarios
 
     [BsonElement("tipo")]
     public int Tipo { get; set; } // 1=admin, 2=cliente

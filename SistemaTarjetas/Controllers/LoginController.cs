@@ -56,7 +56,7 @@ namespace SistemaTarjetas.Controllers
 
                 if (response.TipoUsuario == 1)
                 {
-                    return RedirectToAction("Clientes", "Clientes");
+                    return RedirectToAction("Clientes", "ClientesADM");
                 }
                 else if (response.TipoUsuario == 2)
                 {

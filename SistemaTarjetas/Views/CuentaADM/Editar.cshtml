@@ -1,0 +1,138 @@
+﻿<h2 class="titulo">Editar Cuenta</h2>
+
+<div class="form-wrapper">
+    <div class="form-panel">
+
+        <form method="post">
+            @Html.AntiForgeryToken()
+
+            <input type="hidden" name="Numero" value="@ViewBag.Cuenta.Numero" />
+
+            <div class="info-box">
+                <span class="label-info">ID Cliente</span>
+                <span class="value-info">@ViewBag.Cuenta.Identificacion</span>
+            </div>
+
+            <div class="field">
+                <label>Saldo</label>
+                <input name="Saldo" value="@ViewBag.Cuenta.Saldo" />
+            </div>
+
+            <div class="actions">
+                <button class="btn-main">Actualizar</button>
+                <a href="/CuentaADM/Cuentas" class="btn-alt">Cancelar</a>
+            </div>
+
+        </form>
+
+    </div>
+</div>
+
+<style>
+    /* TÍTULO */
+    .titulo {
+        text-align: center;
+        color: #e2e8f0;
+        margin-bottom: 10px;
+    }
+
+    /* CONTENEDOR */
+    .form-wrapper {
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+    }
+
+    /* PANEL */
+    .form-panel {
+        width: 420px;
+        background: #1e293b;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+    }
+
+    .info-box {
+        background: #0f172a;
+        padding: 12px;
+        border-radius: 8px;
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .label-info {
+        color: #94a3b8;
+        font-size: 13px;
+    }
+
+    .value-info {
+        color: #e2e8f0;
+        font-weight: 500;
+    }
+
+    /* CAMPOS */
+    .field {
+        margin-bottom: 15px;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 5px;
+        color: #94a3b8;
+        font-size: 14px;
+    }
+
+    input {
+        width: 100%;
+        padding: 10px;
+        border-radius: 6px;
+        border: 1px solid #334155;
+        background: #0f172a;
+        color: white;
+        transition: 0.2s;
+    }
+
+        input:focus {
+            outline: none;
+            border-color: #2563eb;
+            box-shadow: 0 0 0 1px #2563eb;
+        }
+
+    /* BOTONES */
+    .actions {
+        display: flex;
+        gap: 10px;
+        margin-top: 20px;
+    }
+
+    .btn-main {
+        flex: 1;
+        background: #2563eb;
+        color: white;
+        padding: 10px;
+        border: none;
+        border-radius: 6px;
+        font-weight: 500;
+        cursor: pointer;
+    }
+
+        .btn-main:hover {
+            background: #1d4ed8;
+        }
+
+    .btn-alt {
+        flex: 1;
+        background: #334155;
+        color: white;
+        padding: 10px;
+        text-align: center;
+        border-radius: 6px;
+        text-decoration: none;
+    }
+
+        .btn-alt:hover {
+            background: #475569;
+        }
+</style>

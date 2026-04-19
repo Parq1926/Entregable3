@@ -77,7 +77,10 @@ public class ServicioAutenticacion : IServicioAutenticacion
             Debug.WriteLine("[Servicio] Buscando usuario encriptado: " + usuarioEncriptado);
 
             // Buscar usuario en MongoDB por usuario ENCRIPTADO
-            var filter = Builders<UsuarioMongo>.Filter.Eq(u => u.Usuario, usuarioEncriptado);
+            var filter = Builders<UsuarioMongo>.Filter.Or(
+                Builders<UsuarioMongo>.Filter.Eq(u => u.Usuario, usuarioEncriptado),
+                Builders<UsuarioMongo>.Filter.Eq(u => u.Identificacion, usuario) //AdminUsuarios (CÉDULA).
+);
             var usuarioEncontrado = _coleccionUsuarios.Find(filter).FirstOrDefault();
 
             // Verificar si el usuario existe
@@ -107,7 +110,7 @@ public class ServicioAutenticacion : IServicioAutenticacion
             // Verificar contraseña y estado
             if (contrasenaAlmacenada == contrasena)
             {
-                if (usuarioEncontrado.Estado.ToLower() == "activo")
+                if (usuarioEncontrado.Estado == 1) //AdminUsuario
                 {
                     resultado.Resultado = true;
                     resultado.Mensaje = "Exitoso";
@@ -189,6 +192,11 @@ public class ServicioAutenticacion : IServicioAutenticacion
             }
 
             // ENCRIPTAR EL USUARIO Y LA CONTRASEÑA ANTES DE GUARDAR
+            // SOLO si viene vacío, usar cédula AdminUsuarios
+            if (string.IsNullOrEmpty(usuario.Usuario))
+            {
+                usuario.Usuario = usuario.Identificacion;
+            }
             string usuarioEncriptado = Encriptacion.Encriptar(usuario.Usuario);
             string contrasenaEncriptada = Encriptacion.Encriptar(usuario.Contrasena);
 
@@ -246,7 +254,7 @@ public class ServicioAutenticacion : IServicioAutenticacion
                 Email = usuario.Email ?? "",
                 Usuario = usuarioEncriptado,        // USUARIO ENCRIPTADO
                 Contrasena = contrasenaEncriptada,  // CONTRASEÑA ENCRIPTADA
-                Estado = "activo",
+                Estado = 1, //AdminUsuarios,
                 Tipo = usuario.Tipo
             };
 
@@ -278,6 +286,170 @@ public class ServicioAutenticacion : IServicioAutenticacion
                 error = ex.Message,
                 stackTrace = ex.StackTrace
             }, resultado);
+        }
+
+        return resultado;
+    }
+
+    //------ADMINUSUARIOS-----
+    /// <summary>
+    /// Obtiene todos los usuarios registrados
+    /// </summary>
+    public List<UsuarioRegistro> ObtenerUsuarios()
+    {
+        var lista = new List<UsuarioRegistro>();
+
+        try
+        {
+            var usuarios = _coleccionUsuarios.Find(_ => true).ToList();
+
+            foreach (var u in usuarios)
+            {
+                lista.Add(new UsuarioRegistro
+                {
+                    Identificacion = u.Identificacion,
+                    Nombre = u.Nombre,
+                    PrimerApellido = u.PrimerApellido,
+                    SegundoApellido = u.SegundoApellido,
+                    Email = u.Email,
+                    Usuario = Encriptacion.Desencriptar(u.Usuario), 
+                    Contrasena = "", //NO devuelve la contraseña.
+                    Tipo = u.Tipo
+                });
+            }
+
+            //Bitácora
+            Bitacora.Registrar("OBTENER_USUARIOS", null, new { cantidad = lista.Count });
+        }
+        catch (Exception ex)
+        {
+            Bitacora.Registrar("ERROR_OBTENER_USUARIOS", new { error = ex.Message }, null);
+        }
+
+        return lista;
+    }
+    //
+
+    //-----ADMINUSUARIO-----
+    /// <summary>
+    /// Actualiza los datos de un usuario existente
+    /// </summary>
+    public ResultadoRegistro EditarUsuario(UsuarioRegistro usuario)
+    {
+        var resultado = new ResultadoRegistro();
+
+        try
+        {
+            // Busca cédula
+            var filter = Builders<UsuarioMongo>.Filter.Eq(u => u.Identificacion, usuario.Identificacion);
+
+            var usuarioExistente = _coleccionUsuarios.Find(filter).FirstOrDefault();
+
+            if (usuarioExistente == null)
+            {
+                resultado.Exitoso = false;
+                resultado.Mensaje = "Usuario no encontrado";
+
+                Bitacora.Registrar("EDITAR_USUARIO_NO_EXISTE", usuario, resultado);
+                return resultado;
+            }
+
+            var update = Builders<UsuarioMongo>.Update
+                .Set(u => u.Nombre, usuario.Nombre)
+                .Set(u => u.PrimerApellido, usuario.PrimerApellido)
+                .Set(u => u.SegundoApellido, usuario.SegundoApellido)
+                .Set(u => u.Email, usuario.Email)
+                .Set(u => u.Tipo, usuario.Tipo);
+
+            _coleccionUsuarios.UpdateOne(filter, update);
+
+            resultado.Exitoso = true;
+            resultado.Mensaje = "Usuario actualizado correctamente";
+
+            Bitacora.Registrar("EDITAR_USUARIO_EXITOSO", usuario, resultado);
+        }
+        catch (Exception ex)
+        {
+            resultado.Exitoso = false;
+            resultado.Mensaje = "Error al actualizar";
+
+            Bitacora.Registrar("ERROR_EDITAR_USUARIO", new { error = ex.Message }, resultado);
+        }
+
+        return resultado;
+    }
+
+    //-----ADMINUSUARIOS-----
+    public ResultadoRegistro InactivarUsuario(string identificacion)
+    {
+        var resultado = new ResultadoRegistro();
+
+        try
+        {
+            var filter = Builders<UsuarioMongo>.Filter.Eq(u => u.Identificacion, identificacion);
+
+            var update = Builders<UsuarioMongo>.Update
+                .Set(u => u.Estado, 0);
+
+            var res = _coleccionUsuarios.UpdateOne(filter, update);
+
+            if (res.ModifiedCount > 0)
+            {
+                resultado.Exitoso = true;
+                resultado.Mensaje = "Usuario inactivado correctamente";
+            }
+            else
+            {
+                resultado.Exitoso = false;
+                resultado.Mensaje = "Usuario no encontrado";
+            }
+
+            Bitacora.Registrar("INACTIVAR_USUARIO", new { identificacion }, resultado);
+        }
+        catch (Exception ex)
+        {
+            resultado.Exitoso = false;
+            resultado.Mensaje = "Error al inactivar";
+
+            Bitacora.Registrar("ERROR_INACTIVAR", new { error = ex.Message }, resultado);
+        }
+
+        return resultado;
+    }
+
+    //-----ADMINUSUARIOS-----
+    public ResultadoRegistro ActivarUsuario(string identificacion)
+    {
+        var resultado = new ResultadoRegistro();
+
+        try
+        {
+            var filter = Builders<UsuarioMongo>.Filter.Eq(u => u.Identificacion, identificacion);
+
+            var update = Builders<UsuarioMongo>.Update
+                .Set(u => u.Estado, 1);
+
+            var res = _coleccionUsuarios.UpdateOne(filter, update);
+
+            if (res.ModifiedCount > 0)
+            {
+                resultado.Exitoso = true;
+                resultado.Mensaje = "Usuario activado correctamente";
+            }
+            else
+            {
+                resultado.Exitoso = false;
+                resultado.Mensaje = "Usuario no encontrado";
+            }
+
+            Bitacora.Registrar("ACTIVAR_USUARIO", new { identificacion }, resultado);
+        }
+        catch (Exception ex)
+        {
+            resultado.Exitoso = false;
+            resultado.Mensaje = "Error al activar";
+
+            Bitacora.Registrar("ERROR_ACTIVAR", new { error = ex.Message }, resultado);
         }
 
         return resultado;

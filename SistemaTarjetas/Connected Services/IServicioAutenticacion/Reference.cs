@@ -273,8 +273,29 @@ namespace WSAutenticador
         [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IServicioAutenticacion/ValidarLogin", ReplyAction = "http://tempuri.org/IServicioAutenticacion/ValidarLoginResponse")]
         System.Threading.Tasks.Task<WSAutenticador.ResultadoAutenticacion> ValidarLoginAsync(WSAutenticador.Credenciales credenciales);
 
+        //AdminUsuarios
         [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IServicioAutenticacion/RegistrarUsuario", ReplyAction = "http://tempuri.org/IServicioAutenticacion/RegistrarUsuarioResponse")]
         System.Threading.Tasks.Task<WSAutenticador.ResultadoRegistro> RegistrarUsuarioAsync(WSAutenticador.UsuarioRegistro usuario);
+        [System.ServiceModel.OperationContractAttribute(
+    Action = "http://tempuri.org/IServicioAutenticacion/ObtenerUsuarios",
+    ReplyAction = "http://tempuri.org/IServicioAutenticacion/ObtenerUsuariosResponse")]
+        System.Threading.Tasks.Task<WSAutenticador.UsuarioRegistro[]> ObtenerUsuariosAsync();
+
+        [System.ServiceModel.OperationContractAttribute(
+            Action = "http://tempuri.org/IServicioAutenticacion/EditarUsuario",
+            ReplyAction = "http://tempuri.org/IServicioAutenticacion/EditarUsuarioResponse")]
+        System.Threading.Tasks.Task<WSAutenticador.ResultadoRegistro> EditarUsuarioAsync(WSAutenticador.UsuarioRegistro usuario);
+
+        [System.ServiceModel.OperationContractAttribute(
+            Action = "http://tempuri.org/IServicioAutenticacion/ActivarUsuario",
+            ReplyAction = "http://tempuri.org/IServicioAutenticacion/ActivarUsuarioResponse")]
+        System.Threading.Tasks.Task<WSAutenticador.ResultadoRegistro> ActivarUsuarioAsync(string identificacion);
+
+        [System.ServiceModel.OperationContractAttribute(
+            Action = "http://tempuri.org/IServicioAutenticacion/InactivarUsuario",
+            ReplyAction = "http://tempuri.org/IServicioAutenticacion/InactivarUsuarioResponse")]
+        System.Threading.Tasks.Task<WSAutenticador.ResultadoRegistro> InactivarUsuarioAsync(string identificacion);
+        //AdminUsuarios
     }
 
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "8.0.0")]
@@ -332,10 +353,32 @@ namespace WSAutenticador
             return base.Channel.ValidarLoginAsync(credenciales);
         }
 
+        //AdminUsuario
+        public System.Threading.Tasks.Task<WSAutenticador.UsuarioRegistro[]> ObtenerUsuariosAsync()
+        {
+            return base.Channel.ObtenerUsuariosAsync();
+        }
+
+        public System.Threading.Tasks.Task<WSAutenticador.ResultadoRegistro> EditarUsuarioAsync(WSAutenticador.UsuarioRegistro usuario)
+        {
+            return base.Channel.EditarUsuarioAsync(usuario);
+        }
+
+        public System.Threading.Tasks.Task<WSAutenticador.ResultadoRegistro> ActivarUsuarioAsync(string identificacion)
+        {
+            return base.Channel.ActivarUsuarioAsync(identificacion);
+        }
+
+        public System.Threading.Tasks.Task<WSAutenticador.ResultadoRegistro> InactivarUsuarioAsync(string identificacion)
+        {
+            return base.Channel.InactivarUsuarioAsync(identificacion);
+        }
+
         public System.Threading.Tasks.Task<WSAutenticador.ResultadoRegistro> RegistrarUsuarioAsync(WSAutenticador.UsuarioRegistro usuario)
         {
             return base.Channel.RegistrarUsuarioAsync(usuario);
         }
+        //AdminUsurios
 
         public virtual System.Threading.Tasks.Task OpenAsync()
         {
@@ -388,4 +431,4 @@ namespace WSAutenticador
             BasicHttpBinding_IServicioAutenticacion,
         }
     }
-}
+} 
